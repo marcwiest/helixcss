@@ -1,0 +1,51 @@
+
+/*
+Screen reader text
+
+Text meant only for screen readers. A screen reader is a software
+application that enables people with severe visual impairments to
+use a computer.
+
+Source: github.com/Automattic/_s/blob/master/style.css#L634
+*/
+
+%screen-reader-text {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-shadow: none;
+    background-color: transparent;
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto;
+        color: #21759b;
+        display: block;
+        font-size: $font_size_text;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 999999; // place above WP adminbar
+    }
+}
+
+@if $css_componentes_reader {
+
+    .screen-reader,
+    .screen-reader-only,
+    .screen-reader-text {
+        @extend %screen-reader-text;
+    }
+
+} // endif

@@ -1,0 +1,52 @@
+
+@mixin center( $width:null ) {
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    @if null != $width {
+        width: $width;
+    }
+}
+
+@mixin uncenter( $width:false ) {
+    display: unset;
+    float: unset;
+    clear: unset;
+    margin-left: unset;
+    margin-right: unset;
+    @if true == $width {
+        width: unset;
+    }
+}
+
+%center { @include center; }
+%uncenter { @include uncenter; }
+
+@include md {
+    %center-md { @include center; }
+    %uncenter-md { @include uncenter; }
+}
+@include md-lg {
+    %center-md-lg { @include center; }
+    %uncenter-md-lg { @include uncenter; }
+}
+@include lg {
+    %center-lg { @include center; }
+    %uncenter-lg { @include uncenter; }
+}
+
+@if $css_componentes_center {
+
+    .center { @extend %center; }
+    .center-md { @extend %center-md; }
+    .center-md-lg { @extend %center-md-lg; }
+    .center-lg { @extend %center-lg; }
+
+    .uncenter { @extend %uncenter; }
+    .uncenter-md { @extend %uncenter-md; }
+    .uncenter-md-lg { @extend %uncenter-md-lg; }
+    .uncenter-lg { @extend %uncenter-lg; }
+
+} // endif

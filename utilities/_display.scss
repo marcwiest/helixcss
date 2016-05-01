@@ -1,0 +1,81 @@
+
+@if $css_utilities_display {
+
+/*
+List Reset
+*/
+
+.list-reset {
+    @include list-reset;
+}
+
+.list-reset-deep {
+    @include list-reset-deep;
+}
+
+/*
+Display
+*/
+
+.hidden { display: none; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.block { display: block; }
+
+@include md {
+    .hidden-md { display: none; }
+    .inline-md { display: inline; }
+    .inline-block-md { display: inline-block; }
+    .block-md { display: block; }
+}
+
+@include md-lg {
+    .hidden-md-lg { display: none; }
+    .inline-md-lg { display: inline; }
+    .inline-block-md-lg { display: inline-block; }
+    .block-md-lg { display: block; }
+}
+
+@include lg {
+    .hidden-lg { display: none; }
+    .inline-lg { display: inline; }
+    .inline-block-lg { display: inline-block; }
+    .block-lg { display: block; }
+}
+
+/*
+Retina visibility
+*/
+
+.hide-on-retina {
+    display: inherit;
+    @include retina {
+        display: none;
+    }
+}
+.retina-only {
+    display: none;
+    @include retina {
+        display: inherit;
+    }
+}
+
+/*
+Print visibility
+*/
+
+.hide-on-print {
+    display: inherit;
+    @media print {
+        display: none;
+    }
+}
+.print-only {
+    display: none;
+    @media print {
+        display: inherit;
+    }
+}
+
+
+} // endif

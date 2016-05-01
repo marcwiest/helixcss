@@ -1,0 +1,170 @@
+
+///
+// Flyout Mixin
+//
+// .flyout {
+//     @include flyout( ( direction : down ) );
+// }
+//
+// jQuery(document).ready(function() {
+//     jQuery('.flyout').click( function(event) {
+//         event.preventDefault;
+//         jQuery(this).toggleClass('flyout-visible');
+//     });
+// });
+//
+// <div class=flyout>
+//     <strong>Lid</strong>
+//     <div class=flyoutItem></div>
+// </div>
+///
+
+@mixin flyout( $args ) {
+
+    $args: map-merge( (
+        "direction" : "down-right",
+        "target" : ".flyoutItem",
+        "event" : "hover",
+        "event_selector" : ".flyout-visible",
+    ), $args );
+
+    $direction: map-get($args,direction);
+    $target: map-get($args,target);
+    $event: map-get($args,event);
+    $event_selector: map-get($args,event_selector);
+
+    position: relative;
+    overflow: hidden; // messes up inline-block parents
+    vertical-align: bottom; // fixes inline-block issue
+    display: inline-block;
+
+    @if "click" != $event {
+        $event_selector: ":hover";
+    }
+
+    &#{$event_selector} { overflow: visible; }
+
+    #{$target} {
+        white-space: normal;
+        position: absolute;
+        left: -99999px;
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        z-index: 999999;
+    }
+
+    @if "up" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: auto;
+            right: -50%;
+            bottom: 100%;
+            left: -50%;
+        }
+
+    } @elseif "up-left" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: auto;
+            right: 0;
+            bottom: 100%;
+            left: auto;
+        }
+
+    } @elseif "up-right" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: auto;
+            right: auto;
+            bottom: 100%;
+            left: 0;
+        }
+
+    } @elseif "right" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 100%;
+            @include vendor( transform, translateY(-50%) );
+        }
+
+    } @elseif "right-up" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 100%;
+        }
+
+    } @elseif "right-down" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 100%;
+        }
+
+    } @elseif "down" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 100%;
+            right: -50%;
+            bottom: auto;
+            left: -50%;
+        }
+
+    } @elseif "down-left" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 100%;
+            right: 0;
+            bottom: auto;
+            left: auto;
+        }
+
+    } @elseif "down-right" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 100%;
+            right: auto;
+            bottom: auto;
+            left: 0;
+        }
+
+    } @elseif "left" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 50%;
+            right: 100%;
+            bottom: auto;
+            left: auto;
+            @include vendor( transform, translateY(-50%) );
+        }
+
+    } @elseif "left-up" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: auto;
+            right: 100%;
+            bottom: 0;
+            left: auto;
+        }
+
+    } @elseif "left-down" == $direction {
+
+        &#{$event_selector} > #{$target} {
+            top: 0;
+            right: 100%;
+            bottom: auto;
+            left: auto;
+        }
+
+    }
+
+}

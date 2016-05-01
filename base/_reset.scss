@@ -1,0 +1,125 @@
+
+@if $css_base_reset {
+
+///
+// Additional reset rules and overwrites.
+///
+
+// Source: meyerweb.com/eric/tools/css/reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+// Helps with SVGs sizing.
+svg { max-height: 100%; }
+
+// Help IE to shrink images nicer.
+// Credit: css-tricks.com/ie-fix-bicubic-scaling-for-images/
+img { -ms-interpolation-mode: bicubic; }
+
+// Removes borders and outlines for these media elements.
+// Also removes whitespace from under the elements.
+audio, canvas, figure, img, svg,
+video, iframe, object, embed {
+    outline: 0;
+    border: 0;
+    vertical-align: middle;
+}
+
+// Normalize (75%) overwrite.
+sub, sup { font-size: 80%; }
+
+// Normalize box-sizing overwrite
+input[type="search"] { box-sizing: border-box; }
+
+// Normalize fieldset overwrite
+// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+// so we reset that to ensure it behaves more like a standard block element.
+// See: github.com/twbs/bootstrap/issues/12359.
+fieldset { min-width: 0; }
+
+// Normalize includes `font: inherit;`, so `font-family`. `font-size`, etc are
+// properly inherited. However, `line-height` isn't addressed there. Using this
+// ensures we don't need to unnecessarily redeclare the global font stack.
+input, button, select, textarea {
+    line-height: inherit;
+    &:focus { outline: none; }
+}
+
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+// Credit: https://github.com/suitcss/base
+[tabindex="-1"]:focus { outline: none !important; }
+
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+[hidden] { display: none !important; }
+
+// Set cursor for readonly & disabled.
+[readonly],
+[readonly]:focus {
+    cursor: default;
+}
+[disabled],
+[disabled]:focus {
+    cursor: not-allowed;
+}
+
+// Prevent list cursors other than default and apply correct cursor only to list items.
+ul, ol { cursor: default; }
+li { cursor: auto; }
+
+// Set cursor for abbr & dfn titles.
+abbr[title], dfn[title] { cursor: help; }
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+[role="button"] { cursor: pointer; }
+
+// Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+//
+// In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch devices and IE Mobile 10-11
+// DON'T remove the click delay when `<meta name="viewport" content="width=device-width">` is present.
+// However, they DO support removing the click delay via `touch-action: manipulation`.
+// See:
+// * http://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
+// * http://caniuse.com/#feat=css-touch-action
+// * http://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+// Attempt to fix firefox buttons.
+// Credit: davidwalsh.name/firefox-buttons
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+} // endif

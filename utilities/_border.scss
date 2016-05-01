@@ -1,0 +1,77 @@
+
+@if $css_utilities_border {
+
+/*
+Border Width
+*/
+
+@each $name, $width in $utility_border_widths {
+    .bd-#{$name} { border-width: $width; border-style: solid; }
+    .bd-top-#{$name} { border-top-width: $width; border-style: solid; }
+    .bd-right-#{$name} { border-right-width: $width; border-style: solid; }
+    .bd-bottom-#{$name} { border-bottom-width: $width; border-style: solid; }
+    .bd-left-#{$name} { border-left-width: $width; border-style: solid; }
+}
+
+/*
+Border Radius
+*/
+
+.circle {
+    background-clip: padding-box;
+    border-radius: 50%;
+}
+
+.radius,
+.radius-left,
+.radius-right,
+.radius-top,
+.radius-top-left,
+.radius-top-right,
+.radius-bottom,
+.radius-bottom-left,
+.radius-bottom-right {
+    background-clip: padding-box;
+}
+
+.radius {
+    border-radius: $utility_border_radius;
+}
+.radius-left {
+    border-top-left-radius: $utility_border_radius;
+    border-bottom-right-radius: $utility_border_radius;
+}
+.radius-right {
+    border-top-right-radius: $utility_border_radius;
+    border-bottom-right-radius: $utility_border_radius;
+}
+.radius-top {
+    border-top-left-radius: $utility_border_radius;
+    border-top-right-radius: $utility_border_radius;
+}
+.radius-top-left {
+    border-top-left-radius: $utility_border_radius;
+}
+.radius-top-right {
+    border-top-right-radius: $utility_border_radius;
+}
+.radius-bottom {
+    border-bottom-left-radius: $utility_border_radius;
+    border-bottom-right-radius: $utility_border_radius;
+}
+.radius-bottom-left {
+    border-bottom-left-radius: $utility_border_radius;
+}
+.radius-bottom-right {
+    border-bottom-right-radius: $utility_border_radius;
+}
+
+/*
+Border Reset
+*/
+
+.bd0 {
+    border: 0;
+}
+
+} // endif

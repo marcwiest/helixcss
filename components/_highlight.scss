@@ -1,0 +1,31 @@
+
+///
+// Highlight Mixin
+//
+// .highlight {
+//     @include highlight;
+//     color: #fff;
+//     background-color: #000;
+// }
+//
+// <div class="highlight">
+//    <strong>Text</strong>
+// </div>
+///
+
+@mixin highlight( $padding:$sm, $line-height:3 ) {
+
+    padding: $padding;
+    line-height: $padding * $line-height;
+
+    > * {
+        display: inline;
+        padding: $padding;
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow:
+            $padding 0 0 $bg,
+            -$padding 0 0 $bg;
+    }
+
+}

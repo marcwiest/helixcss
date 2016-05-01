@@ -1,0 +1,358 @@
+
+/////////////////////////////////////
+// Responsive Typography
+/////////////////////////////////////
+
+// If set to false, only the mobile (sm) sizes will be applied.
+
+$responsive_typography: true !default;
+
+// All em, rem and percent units are based on these values.
+
+$html_base_font_size: 9px !default;
+$html_base_font_size_md: 9.5px !default;
+$html_base_font_size_lg: 10px !default;
+
+// All line_height_ratio variables should be unitless numbers.
+
+$line_height_ratio_body: 1.75 !default;
+$line_height_ratio_body_md: 1.75 !default;
+$line_height_ratio_body_lg: 1.75 !default;
+
+$line_height_ratio_heading: 1.25 !default;
+$line_height_ratio_heading_md: 1.25 !default;
+$line_height_ratio_heading_lg: 1.25 !default;
+
+$line_height_ratio_lead: 1.5 !default;
+$line_height_ratio_lead_md: 1.5 !default;
+$line_height_ratio_lead_lg: 1.5 !default;
+
+$line_height_ratio_small: inherit !default;
+$line_height_ratio_small_md: inherit !default;
+$line_height_ratio_small_lg: inherit !default;
+
+$line_height_ratio_code: inherit !default;
+$line_height_ratio_code_md: inherit !default;
+$line_height_ratio_code_lg: inherit !default;
+
+// Letter spacing?
+
+
+/////////////////////////////////////
+// Font Size
+/////////////////////////////////////
+
+$font_size_h1: 4.6rem !default;
+$font_size_h2: 3.6rem !default;
+$font_size_h3: 2.8rem !default;
+$font_size_h4: 2.2rem !default;
+$font_size_h5: 1.8rem !default;
+$font_size_h6: 1.4rem !default;
+
+$font_size_lead: 2.2rem !default;
+$font_size_small: 1.4rem !default;
+
+$font_size_text: 1.8rem !default;
+$font_size_button: 1.8rem !default;
+$font_size_code: 1.4rem !default;
+$font_size_input: 1.8rem !default;
+$font_size_input_label: 1.8rem !default;
+$font_size_tabel_head: 1.8rem !default;
+$font_size_tabel_cell: 1.8rem !default;
+
+
+/////////////////////////////////////
+// Font Family
+/////////////////////////////////////
+
+$font_smoothing: true !default;
+
+$font_sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font_serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
+$font_mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
+
+$font_family_heading: $font_sans !default;
+$font_family_text: $font_sans !default;
+$font_family_button: $font_sans !default;
+$font_family_code: $font_mono !default;
+$font_family_input: $font_sans !default;
+$font_family_input_label: $font_sans !default;
+$font_family_tabel_head: $font_sans !default;
+$font_family_tabel_cell: $font_sans !default;
+
+
+/////////////////////////////////////
+// Font Weight
+/////////////////////////////////////
+
+$font_weight_heading: 400 !default;
+$font_weight_text: 400 !default;
+$font_weight_lead: 400 !default;
+$font_weight_small: 600 !default;
+$font_weight_button: 400 !default;
+$font_weight_code: 400 !default;
+$font_weight_input: 400 !default;
+$font_weight_input_label: 400 !default;
+$font_weight_tabel_head: 700 !default;
+$font_weight_tabel_cell: 400 !default;
+
+
+/////////////////////////////////////
+// Text Transform (uppercase)
+/////////////////////////////////////
+
+$text_transform_heading: none !default;
+$text_transform_button: none !default;
+$text_transform_input_label: none !default;
+$text_transform_tabel_head: none !default;
+
+
+/////////////////////////////////////
+// Font Style (italic)
+/////////////////////////////////////
+
+$font_style_heading: normal !default;
+$font_style_text: normal !default;
+$font_style_button: normal !default;
+$font_style_input: normal !default;
+$font_style_input_label: normal !default;
+$font_style_tabel_head: normal !default;
+$font_style_tabel_cell: normal !default;
+
+
+/////////////////////////////////////
+// Letter Spacing
+/////////////////////////////////////
+
+$letter_spacing_input: 0 !default;
+$letter_spacing_input_label: 0 !default;
+$letter_spacing_code: 0 !default;
+$letter_spacing_heading: 0 !default;
+$letter_spacing_lead: 0 !default;
+$letter_spacing_text: 0 !default;
+$letter_spacing_button: 0 !default;
+$letter_spacing_tabel_head: 0 !default;
+$letter_spacing_tabel_cell: 0 !default;
+
+
+/////////////////////////////////////
+// Colors
+/////////////////////////////////////
+
+// // "info" : #118bd9,
+// "success" : #5aba59,
+// "warning" : #fbd30a,
+// "alert" : #df5048,
+
+$utility_colors: (
+    'primary' : #00ffb9,
+    'accent' : #00ffb9,
+    'light' : #f4f5f6,
+    'dark' : #404040
+) !default;
+
+$color_body_bg: #fff !default;
+
+$color_text: #111 !default;
+$color_text_link: #85c51f !default;
+$color_text_link_hover: lighten(#85c51f,10%) !default;
+
+$color_heading: #111 !default;
+$color_heading_link: #111 !default;
+$color_heading_link_hover: #111 !default;
+
+$color_button: #fff !default;
+$color_button_hover: #fff !default;
+$color_button_bg: #85c51f !default;
+$color_button_bg_hover: lighten(#85c51f,10%) !default;
+$color_button_border: transparent !default;
+$color_button_border_hover: transparent !default;
+
+$color_badge: #fff !default;
+$color_badge_hover: #fff !default;
+$color_badge_bg: #85c51f !default;
+$color_badge_bg_hover: lighten(#85c51f,10%) !default;
+$color_badge_border: transparent !default;
+$color_badge_border_hover: transparent !default;
+
+$color_input: #111 !default;
+$color_input_hover: #111 !default;
+$color_input_focus: #111 !default;
+$color_input_bg: #f0f0f0 !default;
+$color_input_bg_hover: #f0f0f0 !default;
+$color_input_bg_focus: #f0f0f0 !default;
+$color_input_border: transparent !default;
+$color_input_border_hover: transparent !default;
+$color_input_border_focus: transparent !default;
+$color_input_placeholder: #999 !default;
+$color_input_label: #111 !default;
+
+$color_table_head: #111 !default;
+$color_table_cell: #111 !default;
+$color_table_border: #f0f0f0 !default;
+
+$color_pre: #111 !default;
+$color_pre_bg: #f0f0f0 !default;
+
+$color_hr: #f0f0f0 !default;
+
+
+/////////////////////////////////////
+// Border Width
+/////////////////////////////////////
+
+$utility_border_widths: (
+    '1' : 1px,
+    '2' : 2px,
+    '3' : 3px,
+    '4' : 4px,
+) !default;
+
+$border_width_hr: 1px !default;
+$border_width_input: 0 !default;
+$border_width_button: 0 !default;
+$border_width_badge: 0 !default;
+$border_width_table: 1px !default;
+
+
+/////////////////////////////////////
+// Border Radius
+/////////////////////////////////////
+
+$utility_border_radius: 4px !default;
+
+$border_radius_input: 2px !default;
+$border_radius_button: 2px !default;
+$border_radius_badge: 2px !default;
+$border_radius_icon_frame: 4px !default;
+
+
+/////////////////////////////////////
+// Transitions
+/////////////////////////////////////
+
+$transition_link: all .2s ease-in-out !default;
+$transition_button: all .2s ease-in-out !default;
+$transition_badge: all .2s ease-in-out !default;
+$transition_input: all .2s ease-in-out !default;
+
+
+/////////////////////////////////////
+// Grid
+/////////////////////////////////////
+
+$website_min_width: 360px !default;
+
+$grid_max_width: 1200px !default;
+
+$grid_item_padding: 20px !default;
+
+$grid_item_padding_narrow: 10px !default;
+
+
+/////////////////////////////////////
+// Breakpoints
+/////////////////////////////////////
+
+$md_begin: 800px !default;
+
+$lg_begin: $grid_max_width !default;
+
+
+/////////////////////////////////////
+// Dimensions
+/////////////////////////////////////
+
+$height_input: 4rem !default;
+
+$padding_input_left: .8rem !default;
+$padding_input_right: .8rem !default;
+$padding_input_top: .4rem !default;
+$padding_input_bottom: .4rem !default;
+
+$padding_button_left: 2.5rem !default;
+$padding_button_right: 2.5rem !default;
+$padding_button_top: .5rem !default;
+$padding_button_bottom: .5rem !default;
+
+$padding_badge_left: .6rem !default;
+$padding_badge_right: .6rem !default;
+$padding_badge_top: .266rem !default;
+$padding_badge_bottom: .266rem !default;
+
+$padding_table_cell_left: 1rem !default;
+$padding_table_cell_right: 1rem !default;
+$padding_table_cell_top: 1rem !default;
+$padding_table_cell_bottom: 1rem !default;
+
+$padding_pre_left: 1.6rem !default;
+$padding_pre_right: 1.6rem !default;
+$padding_pre_top: .8rem !default;
+$padding_pre_bottom: .8rem !default;
+
+
+/////////////////////////////////////
+// CSS Exports
+/////////////////////////////////////
+
+$css_vendors_print: true !default;
+$css_vendors_normalize: true !default;
+
+$css_base_code: true !default;
+$css_base_document: true !default;
+$css_base_form: true !default;
+$css_base_reset: true !default;
+$css_base_table: true !default;
+
+$css_componentes_badge: true !default;
+$css_componentes_button: true !default;
+$css_componentes_center: true !default;
+$css_componentes_clearfix: true !default;
+$css_componentes_embed: true !default;
+$css_componentes_grid: true !default;
+$css_componentes_group: true !default;
+$css_componentes_reader: true !default;
+$css_componentes_scrollbar: true !default;
+
+$css_utilities_alignment: true !default;
+$css_utilities_border: true !default;
+$css_utilities_color: true !default;
+$css_utilities_display: true !default;
+$css_utilities_offset: true !default;
+$css_utilities_spacing: true !default;
+$css_utilities_width: true !default;
+
+
+/////////////////////////////////////
+// Vertical Rhythem
+/////////////////////////////////////
+
+$vertical_rhythm: $font_size_text * $line_height_ratio_body !default;
+
+$vr: $vertical_rhythm !default;
+
+
+/////////////////////////////////////
+// Brand Colors
+/////////////////////////////////////
+
+// These are NOT used anywhere and are just here for reference.
+
+$wordpress: #21759b !default;
+$codepen: #000000 !default;
+$dribbble: #ea4c89 !default;
+$flickr: #ff0084 !default;
+$github: #171515 !default;
+$pinterest: #c8232c !default;
+$stack_overflow: #fe7a15 !default;
+$twitter: #33ccff !default;
+$youtube: #c4302b !default;
+$instagram: #3f729b !default;
+$facebook: #3b5998 !default;
+$skype: #02b0f6 !default;
+$tumblr: #34526f !default;
+$vimeo: #1ab7ea !default;
+$xing: #026466 !default;
+$google_plus: #dd4b39 !default;
+$linkedin: #0e76a8 !default;
+$yelp: #c41200 !default;

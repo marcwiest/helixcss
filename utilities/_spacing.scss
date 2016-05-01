@@ -1,0 +1,25 @@
+
+@if $css_utilities_spacing {
+
+.vr,
+.vertical-rhythm {
+    margin-bottom: $vertical_rhythm;
+}
+
+.half-vr,
+.half-vertical-rhythm {
+    margin-bottom: $vertical_rhythm / 2;
+}
+
+// .padding,
+// .pa { padding: $grid_item_padding; }
+// .pt { padding-top: $grid_item_padding; }
+// .pr { padding-right: $grid_item_padding; }
+// .pb { padding-bottom: $grid_item_padding; }
+// .pl { padding-left: $grid_item_padding; }
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+} // endif

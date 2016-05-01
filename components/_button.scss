@@ -1,0 +1,92 @@
+
+/*
+Button
+
+<a class="button" href="#"> </a>
+*/
+
+%button {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: inherit;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    font-family: $font_family_button;
+    font-size: $font_size_button;
+    font-weight: $font_weight_button;
+    font-style: $font_style_button;
+    text-transform: $text_transform_button;
+    letter-spacing: $letter_spacing_button;
+    padding-top: $padding_button_top;
+    padding-right: $padding_button_right;
+    padding-bottom: $padding_button_bottom;
+    padding-left: $padding_button_left;
+    transition: $transition_button;
+    border-style: solid;
+    border-width: $border_width_button;
+    @include border-radius( $border_radius_button );
+    color: $color_button;
+    border-color: $color_button_border;
+    background-color: $color_button_bg;
+    &:hover {
+        color: $color_button_hover;
+        border-color: $color_button_border_hover;
+        background-color: $color_button_bg_hover;
+        text-decoration: none;
+    }
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-user-drag: none;
+    // prevent button from line breaking
+    white-space: nowrap;
+}
+
+%button--round {
+    $radius: calc( #{$font_size_button} + #{$padding_button_top} + #{$padding_button_bottom} );
+    @include border-radius( $radius );
+}
+
+%button--sharp {
+    border-radius: 0;
+}
+
+%button--clear {
+    &,
+    &:focus,
+    &:hover,
+    &:focus:hover {
+        color: inherit;
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
+
+@if $css_componentes_button {
+
+    .button {
+        @extend %button;
+    }
+
+    .button--round {
+        @extend %button--round;
+    }
+
+    .button--sharp {
+        @extend %button--sharp;
+    }
+
+    .button--clear {
+        @extend %button--clear;
+    }
+
+} // endif

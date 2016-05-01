@@ -1,0 +1,21 @@
+
+/*
+Clearfixed elements
+Source: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+*/
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@if $css_componentes_clearfix {
+
+    .cf, .clearfix {
+        @extend %clearfix;
+    }
+
+} // endif

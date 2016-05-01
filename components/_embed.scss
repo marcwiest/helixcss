@@ -1,0 +1,43 @@
+
+/*
+Responsive embed
+
+<div class="embed">
+    <iframe src="https://www.youtube.com/embed/46U5LfRrybY" allowfullscreen></iframe>
+</div>
+*/
+
+%embed {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    height: 0;
+    embed, iframe, object, video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    // 4:3 aspect ratio
+    padding-bottom: 75%;
+}
+
+%embed--widescreen {
+    @extend %embed;
+    // 16:9 aspect ratio (HD/widescreen)
+    padding-bottom: 56.25%;
+}
+
+@if $css_componentes_embed {
+
+    .embed {
+        @extend %embed;
+    }
+
+    .embed--widescreen {
+        @extend %embed--widescreen;
+    }
+
+} // endif

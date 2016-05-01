@@ -1,0 +1,69 @@
+
+// www.ilikepixels.co.uk/drop/bubbler/
+
+// davidwalsh.name/css-triangles
+
+// &:before {
+//     content: '';
+//     position: absolute;
+//     left: 1rem;
+//     top: -1rem;
+//     @include triangle( 'up', 1rem, hsla(172,6%,10%,.8) );
+// }
+
+///
+// Triangle Mixin
+//
+// .triangle {
+//     @include triangle("right");
+// }
+//
+// <span class=triangle></span>
+///
+
+@mixin triangle( $direction:"down", $size:1rem, $color:inherit ) {
+
+    width: $size;
+    height: $size;
+    display: inline-block;
+    border: $size transparent solid;
+
+    @if "up" == $direction {
+
+        border-bottom-color: $color;
+
+    } @elseif "right" == $direction {
+
+        border-left-color: $color;
+
+    } @elseif "down" == $direction {
+
+        border-top-color: $color;
+
+    } @elseif "left" == $direction {
+
+        border-right-color: $color;
+
+    } @elseif "up-right" == $direction or "right-up" == $direction {
+
+        border-top-color: $color;
+        border-right-color: $color;
+
+    } @elseif "down-right" == $direction or "right-down" == $direction {
+
+        border-bottom-color: $color;
+        border-right-color: $color;
+
+    } @elseif "up-left" == $direction or "left-up" == $direction {
+
+        border-top-color: $color;
+        border-left-color: $color;
+
+    } @elseif "down-left" == $direction or "left-down" == $direction {
+
+        border-bottom-color: $color;
+        border-left-color: $color;
+
+    }
+
+}

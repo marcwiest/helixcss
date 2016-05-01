@@ -1,0 +1,70 @@
+
+@if $css_utilities_color {
+
+/*
+Foreground Color
+*/
+
+@each $name, $color in $utility_colors {
+    .fg-#{$name} { color: $color; }
+}
+
+.fg-transparent { color: transparent; }
+.fg-inherit { color: inherit; }
+
+/*
+Foreground Color Hover
+*/
+
+@each $name, $color in $utility_colors {
+    .fgh-#{$name}:hover { color: $color; }
+}
+
+.fgh-transparent:hover { color: transparent; }
+.fgh-inherit:hover { color: inherit; }
+
+/*
+Background Color
+*/
+
+@each $name, $color in $utility_colors {
+    .bg-#{$name} { background-color: $color; }
+}
+
+.bg-transparent { background-color: transparent; }
+.bg-inherit { background-color: inherit; }
+
+/*
+Background Color Hover
+*/
+
+@each $name, $color in $utility_colors {
+    .bgh-#{$name}:hover { background-color: $color; }
+}
+
+.bgh-transparent:hover { background-color: transparent; }
+.bgh-inherit:hover { background-color: inherit; }
+
+/*
+Border Color
+*/
+
+@each $name, $color in $utility_colors {
+    .bd-#{$name} { border-color: $color; }
+}
+
+.bd-transparent { border-color: transparent; }
+.bd-inherit { border-color: inherit; }
+
+/*
+Border Color Hover
+*/
+
+@each $name, $color in $utility_colors {
+    .bdh-#{$name}:hover { border-color: $color; }
+}
+
+.bdh-transparent:hover { border-color: transparent; }
+.bdh-inherit:hover { border-color: inherit; }
+
+} // endif

@@ -1,0 +1,199 @@
+
+@if $css_base_document {
+
+/*
+Document setup
+*/
+
+html {
+    height: 100%;
+    min-width: $website_min_width;
+    box-sizing: border-box;
+    font-size: $html_base_font_size;
+    @if $responsive_typography {
+        @include md { font-size: $html_base_font_size_md; }
+        @include lg { font-size: $html_base_font_size_lg; }
+    }
+}
+
+body {
+    min-height: 100%;
+    background-color: $color_body_bg;
+    font-size: $font_size_text;
+    font-family: $font_family_text;
+    font-weight: $font_weight_text;
+    font-style: $font_style_text;
+    letter-spacing: $letter_spacing_text;
+    color: $color_text;
+    line-height: $line_height_ratio_body;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_body_md; }
+        @include lg { line-height: $line_height_ratio_body_lg; }
+    }
+}
+
+/*
+Box sizing
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@if $font_smoothing {
+
+/*
+Font smoothing
+Sets antialiased typography for webkit and mozilla.
+*/
+body,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+} // endif
+
+/*
+Typographic elements
+*/
+
+address, hr, p, blockquote, pre, figure, audio, video,
+form, fieldset, table, dl, ol, ul {
+    margin-bottom: $vertical_rhythm;
+}
+
+%heading {
+    display: block;
+    margin-bottom: $vertical_rhythm;
+    font-family: $font_family_heading;
+    font-weight: $font_weight_heading;
+    font-style: $font_style_heading;
+    text-transform: $text_transform_heading;
+    letter-spacing: $letter_spacing_heading;
+    @include break-words;
+    color: $color_heading;
+    a { color: $color_heading_link; }
+    a:hover { color: $color_heading_link_hover; }
+    line-height: $line_height_ratio_heading;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_heading_md; }
+        @include lg { line-height: $line_height_ratio_heading_lg; }
+    }
+}
+
+%h1 { @extend %heading; font-size: $font_size_h1; }
+%h2 { @extend %heading; font-size: $font_size_h2; }
+%h3 { @extend %heading; font-size: $font_size_h3; }
+%h4 { @extend %heading; font-size: $font_size_h4; }
+%h5 { @extend %heading; font-size: $font_size_h5; }
+%h6 { @extend %heading; font-size: $font_size_h6; }
+
+h1, .h1 { @extend %h1; }
+h2, .h2 { @extend %h2; }
+h3, .h3 { @extend %h3; }
+h4, .h4 { @extend %h4; }
+h5, .h5 { @extend %h5; }
+h6, .h6 { @extend %h6; }
+
+%lead {
+    font-size: $font_size_lead;
+    font-weight: $font_weight_lead;
+    color: $color_heading;
+    letter-spacing: $letter_spacing_lead;
+    line-height: $line_height_ratio_lead;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_lead_md; }
+        @include lg { line-height: $line_height_ratio_lead_lg; }
+    }
+}
+
+.lead { @extend %lead; }
+
+%small {
+    font-size: $font_size_small;
+    font-weight: $font_weight_small;
+    line-height: $line_height_ratio_small;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_small_md; }
+        @include lg { line-height: $line_height_ratio_small_lg; }
+    }
+}
+
+small, .small { @extend %small; }
+
+%link {
+    color: $color_text_link;
+    transition: $transition_link;
+    text-decoration: none;
+    @include break-words;
+    &:hover { // &:active, &:focus
+        color: $color_text_link_hover;
+    }
+}
+
+a, .link { @extend %link; }
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+ul, ol { list-style-position: inside; }
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    margin-bottom: 0;
+    padding-left: $vertical_rhythm;
+}
+
+dl { list-style: none; }
+dt { font-weight: bold; color: $color_heading; }
+dd { margin-bottom: $vertical_rhythm / 4; }
+
+blockquote {
+    font-size: $font_size_lead;
+    font-style: italic;
+    small, cite {
+        font-size: $font_size_text;
+        font-style: normal;
+        font-weight: bold;
+    }
+    > * {
+        margin-bottom: 0;
+    }
+}
+
+address {
+    font-style: normal;
+    line-height: inherit;
+}
+
+hr {
+    display: block;
+    color: $color_hr;
+    border: none;
+    border-bottom-width: $border_width_hr;
+    border-bottom-style: solid;
+}
+
+figure, img { display: inline-block; }
+
+figcaption { font-size: $font_size_small; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+} // endif

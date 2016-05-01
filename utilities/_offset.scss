@@ -1,0 +1,74 @@
+
+@if $css_utilities_offset {
+
+/*
+Offset
+*/
+
+.offset-10 { margin-left: 10%; }
+.offset-20 { margin-left: 20%; }
+.offset-25 { margin-left: 25%; }
+.offset-33,
+.offset-34 { margin-left: 33.333333%; }
+.offset-40 { margin-left: 40%; }
+.offset-50 { margin-left: 50%; }
+.offset-60 { margin-left: 60%; }
+.offset-66,
+.offset-67 { margin-left: 66.333333%; }
+.offset-70 { margin-left: 70%; }
+.offset-75 { margin-left: 75%; }
+.offset-80 { margin-left: 80%; }
+.offset-90 { margin-left: 90%; }
+
+@include md {
+    .offset-10-md { margin-left: 10%; }
+    .offset-20-md { margin-left: 20%; }
+    .offset-25-md { margin-left: 25%; }
+    .offset-33-md,
+    .offset-34-md { margin-left: 33.333333%; }
+    .offset-40-md { margin-left: 40%; }
+    .offset-50-md { margin-left: 50%; }
+    .offset-60-md { margin-left: 60%; }
+    .offset-66-md,
+    .offset-67-md { margin-left: 66.333333%; }
+    .offset-70-md { margin-left: 70%; }
+    .offset-75-md { margin-left: 75%; }
+    .offset-80-md { margin-left: 80%; }
+    .offset-90-md { margin-left: 90%; }
+}
+
+@include md-lg {
+    .offset-10-md-lg { margin-left: 10%; }
+    .offset-20-md-lg { margin-left: 20%; }
+    .offset-25-md-lg { margin-left: 25%; }
+    .offset-33-md-lg,
+    .offset-34-md-lg { margin-left: 33.333333%; }
+    .offset-40-md-lg { margin-left: 40%; }
+    .offset-50-md-lg { margin-left: 50%; }
+    .offset-60-md-lg { margin-left: 60%; }
+    .offset-66-md-lg,
+    .offset-67-md-lg { margin-left: 66.333333%; }
+    .offset-70-md-lg { margin-left: 70%; }
+    .offset-75-md-lg { margin-left: 75%; }
+    .offset-80-md-lg { margin-left: 80%; }
+    .offset-90-md-lg { margin-left: 90%; }
+}
+
+@include lg {
+    .offset-10-lg { margin-left: 10%; }
+    .offset-20-lg { margin-left: 20%; }
+    .offset-25-lg { margin-left: 25%; }
+    .offset-33-lg,
+    .offset-34-lg { margin-left: 33.333333%; }
+    .offset-40-lg { margin-left: 40%; }
+    .offset-50-lg { margin-left: 50%; }
+    .offset-60-lg { margin-left: 60%; }
+    .offset-66-lg,
+    .offset-67-lg { margin-left: 66.333333%; }
+    .offset-70-lg { margin-left: 70%; }
+    .offset-75-lg { margin-left: 75%; }
+    .offset-80-lg { margin-left: 80%; }
+    .offset-90-lg { margin-left: 90%; }
+}
+
+} // endif
