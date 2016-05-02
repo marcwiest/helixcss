@@ -21,22 +21,22 @@ hope to provide you with a more detailed, written documentation and maybe a tuto
 
 ## Folders & Contents
 
-### Base
+#### Base
 
 This folder addresses mostly the default HTML tags, but there are a few components and utilities
 mixed in with it.
 
-### Components
+#### Components
 
 HelixCSS uses the BEM methodology primarily for the components. Components are elements that are
 comprised of multiple CSS properties. Not all components are made into CSS rule-sets, some are only
 available as sass mixins.
 
-### Utilities
+#### Utilities
 
 Utilities are single property declarations classes that are useful and sharable between different
 components without straying away too far from the BEM methodology.
 
-### Vendors
+#### Vendors
 
 Currently only holds normalize and H5BP's print styles.
