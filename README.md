@@ -2,6 +2,8 @@
 # HelixCSS
 ---
 
+A lean OOCSS and BEMified Sass library.
+
 ## Approach
 
 HelixCSS is an object oriented and BEMified CSS library. However, HelixCSS does not simply stick to
