@@ -35,9 +35,9 @@ available as sass mixins.
 
 #### Utilities
 
-Utilities are single property declarations classes that are useful and sharable between different
+Utilities are single property declaration classes that are useful and sharable between different
 components without straying away too far from the BEM methodology.
 
 #### Vendors
 
-Currently only holds normalize and H5BP's print styles.
+Currently only holds normalize-css and H5BP's print styles.
