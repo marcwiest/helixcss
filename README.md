@@ -16,8 +16,9 @@ base font-size value is set to.
 
 ## Documentation
 
-For the moment there are only code examples available inside the components folder. Over time we
-hope to provide you with a more detailed, written documentation and maybe a tutorial video or two.
+For the moment there are only code examples available inside the components folder and the index
+file. Over time, we hope to provide you with a more detailed, written documentation and maybe a
+tutorial video or two.
 
 ## Folders & Contents
 
