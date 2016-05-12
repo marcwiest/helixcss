@@ -256,3 +256,18 @@
     word-wrap: break-word; // fallback & alias to...
     overflow-wrap: break-word; // newest CSS3
 }
+
+///
+// Font Smoothing
+///
+
+@mixin font-smoothing( $active:true ) {
+    @if $active {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: auto;
+    }
+}
