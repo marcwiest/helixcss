@@ -76,52 +76,35 @@
 }
 
 ///
-// Background Gradient
-// @param {Color} $startColor [#3C3C3C] - Start Color
-// @param {Color} $endColor [#999999] - End Color
+// Linear Gradient
+//
+// Usage example:
+// @include linear-gradient( to bottom, red 33%, green 66%, blue );
 ///
 
-@mixin background-gradient( $startColor: #3C3C3C, $endColor: #999999 ) {
-    background-color: $startColor;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
-    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
-    background-image:    -moz-linear-gradient(top, $startColor, $endColor);
-    background-image:     -ms-linear-gradient(top, $startColor, $endColor);
-    background-image:      -o-linear-gradient(top, $startColor, $endColor);
-    background-image:         linear-gradient(top, $startColor, $endColor);
+@mixin linear-gradient( $direction, $color-stops... ) {
+    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
+    background-image: -webkit-linear-gradient(legacy-direction($direction),$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
+    background-image:    -moz-linear-gradient(legacy-direction($direction),$color-stops...); // Firefox 3.6 to 15
+    background-image:      -o-linear-gradient(legacy-direction($direction),$color-stops...); // Opera 11.1 to 12.0
+    // IE 10+, Chrome 26+, Safari 6.1+, iOS 7+, Android 4.4+, Firefox 16+, Opera 12.1+
+    background-image:         linear-gradient( $direction, $color-stops... );
 }
 
 ///
-// Background Horizontal
-// @param {Color} $startColor [#3C3C3C] - Start Color
-// @param {Color} $endColor [#999999] - End Color
+// Radial Gradient
+//
+// Usage example:
+// @include radial-gradient( red 33%, green 66%, blue );
 ///
 
-@mixin background-horizontal( $startColor: #3C3C3C, $endColor: #999999 ) {
-    background-color: $startColor;
-    background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
-    background-image: -webkit-linear-gradient(left, $startColor, $endColor);
-    background-image:    -moz-linear-gradient(left, $startColor, $endColor);
-    background-image:     -ms-linear-gradient(left, $startColor, $endColor);
-    background-image:      -o-linear-gradient(left, $startColor, $endColor);
-    background-image:         linear-gradient(left, $startColor, $endColor);
-}
-
-///
-// Background Radial
-// @param {Color} $startColor [#3C3C3C] - Start Color
-// @param {Percentage} $startPos [0%] - Start position
-// @param {Color} $endColor [#999999] - End Color
-// @param {Percentage} $endPos [100%] - End position
-///
-
-@mixin background-radial( $startColor: #FFFFFF, $startPos: 0%, $endColor: #000000, $endPos:100% ) {
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos,$startColor), color-stop($endPos,$endColor));
-    background: -webkit-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
-    background:    -moz-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
-    background:     -ms-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
-    background:      -o-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
-    background:         radial-gradient(ellipse at center, $startColor $startPos,$endColor $endPos);
+@mixin radial-gradient( $color-stops... ) {
+    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
+    background-image: -webkit-radial-gradient(center,ellipse cover,$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
+    background-image:    -moz-radial-gradient(center,ellipse cover,$color-stops...); // Firefox 3.6 to 15
+    background-image:      -o-radial-gradient(center,ellipse cover,$color-stops...); // Opera 11.1 to 12.0
+    // IE 10+, Chrome 26+, Safari 6.1+, iOS 7+, Android 4.4+, Firefox 16+, Opera 12.1+
+    background-image:         radial-gradient(ellipse at center,$color-stops...);
 }
 
 ///
