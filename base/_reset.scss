@@ -115,11 +115,4 @@ textarea {
     touch-action: manipulation;
 }
 
-// Attempt to fix firefox buttons.
-// Credit: davidwalsh.name/firefox-buttons
-::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
 } // endif
