@@ -1,7 +1,8 @@
 
 # HelixCSS
 
-A lean OOCSS and BEMified Sass library.
+A lean OOCSS and BEMified Sass library. HelixCSS primary goal is to give structure to your website
+or application and leave the design decisions to you.
 
 ## The OOCSS & BEM Approach
 
@@ -17,8 +18,8 @@ base font-size value is set to.
 ## Documentation
 
 For the moment there are only code examples available inside the components folder and the index
-file. Over time, we hope to provide you with a more detailed, written documentation and maybe a
-tutorial video or two.
+file. Over time, a more detailed, written documentation and maybe a tutorial video will be made
+available.
 
 ## Folders & Contents
 
@@ -41,3 +42,8 @@ components without straying away too far from the BEM methodology.
 #### Vendors
 
 Currently only holds normalize-css and H5BP's print styles.
+
+## Issues
+
+Android jellybean has trouble with the grid and the group components. That is because these
+components make use of `inline-block` and the `font-size:0;` hack. 
