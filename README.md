@@ -59,6 +59,6 @@ make use of the `inline-block` and `font-size:0;` hack.
 
 ## Browser Support Resources
 
-[http://caniuse.com/](http://caniuse.com/)
-[http://shouldiprefix.com/](http://shouldiprefix.com/)
-[http://html5please.com/](http://html5please.com/)
+- [http://caniuse.com/](http://caniuse.com/)
+- [http://shouldiprefix.com/](http://shouldiprefix.com/)
+- [http://html5please.com/](http://html5please.com/)
