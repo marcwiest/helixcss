@@ -47,18 +47,18 @@ resources like [animate.css](https://daneden.github.io/animate.css/).
 ## Known Issues
 
 Android jellybean has trouble with the grid and group components. That is because these components
-make use of `inline-block` and `font-size:0;` hack.
+make use of the `inline-block` and `font-size:0;` hack.
 
 ## Helix Roadmap
 
 1. Start using the CHANGLOG.md file and begin versioning.
-2. Rebuild grid to use flexbox and provide optional IE fallback.
 3. Build compiler using either gulp, grunt or postcss.
 4. Use [autoprefixer](https://github.com/postcss/autoprefixer) instead of manually writing prefixes.
+2. Rebuild grid to use flexbox and provide optional IE fallback.
 5. Clean mixin only components to avoid nested selectors and code bloat.
 
 ## Browser Support Resources
 
-- [http://caniuse.com/](http://caniuse.com/)
-- [http://shouldiprefix.com/](http://shouldiprefix.com/)
-- [http://html5please.com/](http://html5please.com/)
+[http://caniuse.com/](http://caniuse.com/)
+[http://shouldiprefix.com/](http://shouldiprefix.com/)
+[http://html5please.com/](http://html5please.com/)
