@@ -70,7 +70,6 @@
 @mixin keyframes( $animation_name ) {
     @-webkit-keyframes #{$animation_name} { @content; }
        @-moz-keyframes #{$animation_name} { @content; }
-        @-ms-keyframes #{$animation_name} { @content; }
          @-o-keyframes #{$animation_name} { @content; }
             @keyframes #{$animation_name} { @content; }
 }
