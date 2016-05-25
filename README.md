@@ -57,8 +57,11 @@ make use of the `inline-block` and `font-size:0;` hack.
 2. Rebuild grid to use flexbox and provide optional IE fallback.
 5. Clean mixin only components to avoid nested selectors and code bloat.
 
-## Browser Support Resources
+## Browser Support
 
+HelixCSS support IE9+.
+
+**Resources**
 - [http://caniuse.com/](http://caniuse.com/)
 - [http://shouldiprefix.com/](http://shouldiprefix.com/)
 - [http://html5please.com/](http://html5please.com/)
