@@ -59,7 +59,7 @@ make use of the `inline-block` and `font-size:0;` hack.
 
 ## Browser Support
 
-HelixCSS support IE9+.
+HelixCSS supports IE9+.
 
 **Resources**
 - [http://caniuse.com/](http://caniuse.com/)
