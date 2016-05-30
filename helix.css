@@ -1100,6 +1100,11 @@ Responsive embed
 .embed--widescreen {
   padding-bottom: 56.25%; }
 
+.grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
 /*
 Grid
 
