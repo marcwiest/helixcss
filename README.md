@@ -44,7 +44,12 @@ components without straying away too far from the BEM methodology.
 Currently only holds normalize-css and H5BP's print styles. In the future may include other external
 resources like [animate.css](https://daneden.github.io/animate.css/).
 
-## Helix Roadmap
+## Reminders
+
+- [IE 9 & 10](http://caniuse.com/#search=rem) do not support rem units when used in the `font`
+  shorthand property (the entire declaration is ignored) or when used on pseudo elements.
+
+## Roadmap
 
 1. Start using the CHANGLOG.md file and begin versioning.
 2. Build compiler using either gulp, grunt or postcss.
