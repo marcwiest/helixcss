@@ -53,8 +53,7 @@ resources like [animate.css](https://daneden.github.io/animate.css/).
 
 1. Start using the CHANGLOG.md file and begin versioning.
 2. Build compiler using either gulp, grunt or postcss.
-3. Use [autoprefixer](https://github.com/postcss/autoprefixer) instead of manually writing prefixes.
-4. Clean mixin only components to avoid nested selectors and code bloat.
+3. Clean mixin only components to avoid nested selectors and code bloat.
 
 ## Browser & OS Support
 
