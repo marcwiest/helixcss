@@ -52,8 +52,9 @@ resources like [animate.css](https://daneden.github.io/animate.css/).
 ## Roadmap
 
 1. Start using the CHANGLOG.md file and begin versioning.
-2. Build compiler using either gulp, grunt or postcss.
-3. Clean mixin only components to avoid nested selectors and code bloat.
+2. Build compiler using Gulp and [Autoprefixer](https://css-tricks.com/autoprefixer).
+3. Clean mixin-only components to avoid nested selectors and code bloat.
+4. Create a proper documentation.
 
 ## Browser & OS Support
 
