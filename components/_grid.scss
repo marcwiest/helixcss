@@ -2,10 +2,20 @@
 /*
 Grid
 
+This grid system was inspired by: http://hiloki.github.io/kitecss/
+
 <div class="grid">
     <div class="grid__item"> </div>
     <div class="grid__item"> </div>
-    <div class="grid__item"> </div>
+    <div class="grid__item grid__item--flush">
+
+        <div class="grid">
+            <div class="grid__item"> </div>
+            <div class="grid__item"> </div>
+            <div class="grid__item"> </div>
+        </div>
+
+    </div>
 </div>
 */
 
@@ -19,6 +29,7 @@ Grid
     font-size: 0 !important;
     letter-spacing: 0 !important;
     vertical-align: top;
+    width: 100%;
     max-width: $grid_max_width;
     padding: 0;
     margin: 0;
@@ -26,55 +37,51 @@ Grid
     margin-right: auto;
 }
 
-%grid--full-width {
+// Grid Full Width
+
+%grid--full {
     max-width: none;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-%grid--center-items {
+// Grid Horizontal Alignment
+
+%grid--center {
     text-align: center;
 }
 
-%grid--nested {
-    margin-left: -$grid_item_padding;
-    margin-right: -$grid_item_padding;
-}
-%grid--nested-narrow {
-    margin-left: -$grid_item_padding_narrow;
-    margin-right: -$grid_item_padding_narrow;
+%grid--justify {
+    display: block;
+    text-align: justify;
+    text-justify: distribute-all-lines;
 }
 
-@include md {
-    %grid--nested-md {
-        margin-left: -$grid_item_padding;
-        margin-right: -$grid_item_padding;
-    }
-    %grid--nested-narrow-md {
-        margin-left: -$grid_item_padding_narrow;
-        margin-right: -$grid_item_padding_narrow;
-    }
+// Grid Vertical Alignment
+
+%grid--top > %grid__item {
+    vertical-align: top;
 }
 
-@include md-lg {
-    %grid--nested-md-lg {
-        margin-left: -$grid_item_padding;
-        margin-right: -$grid_item_padding;
-    }
-    %grid--nested-narrow-md-lg {
-        margin-left: -$grid_item_padding_narrow;
-        margin-right: -$grid_item_padding_narrow;
-    }
+%grid--middle > %grid__item {
+    vertical-align: middle;
 }
 
-@include lg {
-    %grid--nested-lg {
-        margin-left: -$grid_item_padding;
-        margin-right: -$grid_item_padding;
-    }
-    %grid--nested-narrow-lg {
-        margin-left: -$grid_item_padding_narrow;
-        margin-right: -$grid_item_padding_narrow;
-    }
+%grid--bottom > %grid__item {
+    vertical-align: bottom;
 }
+
+// Grid Fill Mode
+
+%grid--fill > %grid__item {
+    display: table-cell;
+}
+
+%grid--fill-equal {
+    table-layout: fixed;
+}
+
+// Grid Items
 
 %grid__item {
     &:after {
@@ -84,41 +91,41 @@ Grid
     }
     display: inline-block;
     vertical-align: top;
+    font-size: medium; // lte ie8 rem fallback
     font-size: $font_size_text;
     letter-spacing: $letter_spacing_text;
     padding: $grid_item_padding;
     margin: 0;
-    width: 100%;
+    width: auto;
 }
 
-%grid__item--top { vertical-align: top; }
-%grid__item--middle { vertical-align: middle; }
-%grid__item--bottom { vertical-align: bottom; }
+// Grid Item Padding
 
 %grid__item--narrow { padding: $grid_item_padding_narrow; }
+
 %grid__item--flush { padding: 0; }
-%grid__item--flush-x { padding-left: 0; padding-right: 0; }
-%grid__item--flush-y { padding-top: 0; padding-bottom: 0; }
+%grid__item--flush > %grid { margin-left: 0; margin-right: 0; }
+
 
 @include md {
     %grid__item--narrow-md { padding: $grid_item_padding_narrow; }
+
     %grid__item--flush-md { padding: 0; }
-    %grid__item--flush-x-md { padding-left: 0; padding-right: 0; }
-    %grid__item--flush-y-md { padding-top: 0; padding-bottom: 0; }
+    %grid__item--flush-md > %grid { margin-left: 0; margin-right: 0; }
 }
 
 @include md-lg {
     %grid__item--narrow-md-lg { padding: $grid_item_padding_narrow; }
+
     %grid__item--flush-md-lg { padding: 0; }
-    %grid__item--flush-x-md-lg { padding-left: 0; padding-right: 0; }
-    %grid__item--flush-y-md-lg { padding-top: 0; padding-bottom: 0; }
+    %grid__item--flush-md-lg > %grid { margin-left: 0; margin-right: 0; }
 }
 
 @include lg {
     %grid__item--narrow-lg { padding: $grid_item_padding_narrow; }
+
     %grid__item--flush-lg { padding: 0; }
-    %grid__item--flush-x-lg { padding-left: 0; padding-right: 0; }
-    %grid__item--flush-y-lg { padding-top: 0; padding-bottom: 0; }
+    %grid__item--flush-lg > %grid { margin-left: 0; margin-right: 0; }
 }
 
 @if $css_componentes_grid {
@@ -127,48 +134,33 @@ Grid
 
     .grid { @extend %grid; }
 
-    .grid--full-width { @extend %grid--full-width; }
+    .grid--full { @extend %grid--full; }
 
-    .grid--center-items { @extend %grid--center-items; }
+    .grid--center { @extend %grid--center; }
 
-    .grid--nested { @extend %grid--nested; }
-    .grid--nested-narrow { @extend %grid--nested-narrow; }
+    .grid--justify { @extend %grid--justify; }
 
-    .grid--nested-md { @extend %grid--nested-md; }
-    .grid--nested-narrow-md { @extend %grid--nested-narrow-md; }
+    .grid--top { @extend %grid--top; }
+    .grid--middle { @extend %grid--middle; }
+    .grid--bottom { @extend %grid--bottom; }
 
-    .grid--nested-md-lg { @extend %grid--nested-md-lg; }
-    .grid--nested-narrow-md-lg { @extend %grid--nested-narrow-md-lg; }
-
-    .grid--nested-lg { @extend %grid--nested-lg; }
-    .grid--nested-narrow-lg { @extend %grid--nested-narrow-lg; }
+    .grid--fill { @extend %grid--fill; }
+    .grid--fill-equal { @extend %grid--fill-equal; }
 
     // grid__item
 
     .grid__item { @extend %grid__item; }
 
-    .grid__item--top { @extend %grid__item--top; }
-    .grid__item--middle { @extend %grid__item--middle; }
-    .grid__item--bottom { @extend %grid__item--bottom; }
-
     .grid__item--narrow { @extend %grid__item--narrow; }
     .grid__item--flush { @extend %grid__item--flush; }
-    .grid__item--flush-x { @extend %grid__item--flush-x; }
-    .grid__item--flush-y { @extend %grid__item--flush-y; }
 
     .grid__item--narrow-md { @extend %grid__item--narrow-md; }
     .grid__item--flush-md { @extend %grid__item--flush-md; }
-    .grid__item--flush-x-md { @extend %grid__item--flush-x-md; }
-    .grid__item--flush-y-md { @extend %grid__item--flush-y-md; }
 
     .grid__item--narrow-md-lg { @extend %grid__item--narrow-md-lg; }
     .grid__item--flush-md-lg { @extend %grid__item--flush-md-lg; }
-    .grid__item--flush-x-md-lg { @extend %grid__item--flush-x-md-lg; }
-    .grid__item--flush-y-md-lg { @extend %grid__item--flush-y-md-lg; }
 
     .grid__item--narrow-lg { @extend %grid__item--narrow-lg; }
     .grid__item--flush-lg { @extend %grid__item--flush-lg; }
-    .grid__item--flush-x-lg { @extend %grid__item--flush-x-lg; }
-    .grid__item--flush-y-lg { @extend %grid__item--flush-y-lg; }
 
 } // endif
