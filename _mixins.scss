@@ -212,6 +212,26 @@
 }
 
 ///
+// Clip
+// Hides an element but keeps it focusable. Good for hidding form elements like checkboxes, etc.
+// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// @link https://css-tricks.com/almanac/properties/c/clip/
+// @notes:
+// - inset-rectangle() may replace inset()
+// - rectangle() coming in SVG 2
+///
+
+@mixin clip {
+    position: absolute !important; // required by clip
+    overflow: hidden;
+    height: 1px; width: 1px;
+    clip: rect(1px, 1px, 1px, 1px); // depricated
+    // chrome 24+, safari 8+, opera 15+
+    -webkit-clip-path: inset(1px 1px 1px 1px);
+            clip-path: inset(1px 1px 1px 1px);
+}
+
+///
 // Truncate
 // Prevents a string of text from breaking into the 2nd line and adds an ellipsis to the end.
 ///
