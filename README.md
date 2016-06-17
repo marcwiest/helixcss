@@ -44,6 +44,11 @@ components without straying away too far from the BEM methodology.
 Currently only holds normalize-css and H5BP's print styles. In the future may include other external
 resources like [animate.css](https://daneden.github.io/animate.css/).
 
+#### CSS3
+
+Contains mixins that take care of CSS3 browser consistency. This eliminates the need for a 3rd party
+framework.
+
 ## Reminders
 
 - [IE 9 & 10](http://caniuse.com/#search=rem) do not support rem units when used in the `font`
@@ -52,9 +57,8 @@ resources like [animate.css](https://daneden.github.io/animate.css/).
 ## Roadmap
 
 1. Start using the CHANGLOG.md file and begin versioning.
-2. Build compiler using Gulp and [Autoprefixer](https://css-tricks.com/autoprefixer).
-3. Clean mixin-only components to avoid nested selectors and code bloat.
-4. Create a proper documentation.
+2. Clean mixin-only components to avoid nested selectors and code bloat.
+3. Create a proper documentation.
 
 ## Browser & OS Support
 
