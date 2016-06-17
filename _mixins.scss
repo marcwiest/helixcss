@@ -199,11 +199,9 @@
 ///
 
 @mixin image-replacement {
-    font: "0/0" a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
 }
 
 // alias
