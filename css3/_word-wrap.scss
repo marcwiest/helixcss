@@ -1,0 +1,20 @@
+
+///
+// Word Wrap
+// Using the "break-word" default argument will force words to break into the 2nd line.
+///
+
+@mixin word-wrap( $wrap:break-word ) {
+    word-wrap: $wrap; // fallback & alias to...
+    overflow-wrap: $wrap; // newest CSS3
+    @if $wrap == break-word {
+        word-break: break-all;
+    } @else {
+        word-break: $wrap;
+    }
+}
+
+// alias
+@mixin break-words {
+    @include word-wrap;
+}

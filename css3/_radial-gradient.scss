@@ -1,0 +1,16 @@
+
+///
+// Radial Gradient
+//
+// Usage example:
+// @include radial-gradient( red 33%, green 66%, blue );
+///
+
+@mixin radial-gradient( $color-stops... ) {
+    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
+    background-image: -webkit-radial-gradient(center,ellipse cover,$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
+    background-image:    -moz-radial-gradient(center,ellipse cover,$color-stops...); // Firefox 3.6 to 15
+    background-image:      -o-radial-gradient(center,ellipse cover,$color-stops...); // Opera 11.1 to 12.0
+    // IE 10+, Chrome 26+, Safari 6.1+, iOS 7+, Android 4.4+, Firefox 16+, Opera 12.1+
+    background-image:         radial-gradient(ellipse at center,$color-stops...);
+}

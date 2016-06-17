@@ -1,0 +1,10 @@
+
+///
+// Placeholder Styling
+///
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; } // Safari and Chrome
+         &:-ms-input-placeholder { @content; } // Internet Explorer 10+
+             &::-moz-placeholder { @content; opacity: 1; } // Firefox 19+
+}

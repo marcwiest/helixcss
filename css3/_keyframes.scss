@@ -1,0 +1,20 @@
+
+///
+// Keyframe
+//
+// .elem {
+//     @include vendor( animation, 1s shrink );
+// }
+// @include keyframes( shrink ) {
+//     0% {}
+//     50% {}
+//     100% {}
+// }
+///
+
+@mixin keyframes( $animation_name ) {
+    @-webkit-keyframes #{$animation_name} { @content; }
+       @-moz-keyframes #{$animation_name} { @content; }
+         @-o-keyframes #{$animation_name} { @content; }
+            @keyframes #{$animation_name} { @content; }
+}

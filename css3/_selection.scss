@@ -1,0 +1,9 @@
+
+///
+// Selection Styling
+///
+
+@mixin selection {
+    &::-moz-selection { @content; } // firefox
+         &::selection { @content; } // webkit, opera, IE9
+}
