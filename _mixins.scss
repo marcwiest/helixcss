@@ -247,9 +247,19 @@
 // Forces words to break into the 2nd line.
 ///
 
+@mixin word-wrap( $wrap:break-word ) {
+    word-wrap: $wrap; // fallback & alias to...
+    overflow-wrap: $wrap; // newest CSS3
+    @if $wrap == break-word {
+        word-break: break-all;
+    } @else {
+        word-break: $wrap;
+    }
+}
+
+// alias
 @mixin break-words {
-    word-wrap: break-word; // fallback & alias to...
-    overflow-wrap: break-word; // newest CSS3
+    @include word-wrap;
 }
 
 ///
