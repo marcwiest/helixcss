@@ -195,18 +195,13 @@
 }
 
 ///
-// Image replacement
+// Hide Text - Good got image replacement.
 ///
 
-@mixin image-replacement {
+@mixin hide-text {
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap;
-}
-
-// alias
-@mixin ir {
-    @include image-replacement;
 }
 
 ///
