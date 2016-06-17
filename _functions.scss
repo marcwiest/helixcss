@@ -4,7 +4,10 @@
 // Get a utility color
 ///
 
-@function get-color( $color_name ) {
+@function get-color( $color_name, $color_map:null ) {
+    @if $color_map == null and variable-exists(utility_colors) {
+        $color_map: $utility_colors;
+    }
     @return map-get( $utility_colors, $color_name );
 }
 
@@ -22,6 +25,12 @@
 
 @function tint( $color, $percent ) {
     @return mix( #fff, $color, $percent );
+}
+
+@function modular-scale( $increment, $base_font_size, $ratio ) {
+    @if variable-exists(font_size_text) { $base_font_size: $font_size_text; }
+    @if variable-exists(perfect_fourth) { $ratio: $perfect_fourth; }
+    @return ($increment * $base_font_size) * $ratio;
 }
 
 ///
