@@ -55,85 +55,13 @@
 }
 
 ///
-// Keyframe
-//
-// .elem {
-//     @include vendor( animation, 1s shrink );
-// }
-// @include keyframes( shrink ) {
-//     0% {}
-//     50% {}
-//     100% {}
-// }
+// Background Clip
+// Just her for reference.
+// Helps with leaking background-colors and images when using border-radius;
 ///
 
-@mixin keyframes( $animation_name ) {
-    @-webkit-keyframes #{$animation_name} { @content; }
-       @-moz-keyframes #{$animation_name} { @content; }
-         @-o-keyframes #{$animation_name} { @content; }
-            @keyframes #{$animation_name} { @content; }
-}
-
-///
-// Linear Gradient
-//
-// Usage example:
-// @include linear-gradient( to bottom, red 33%, green 66%, blue );
-///
-
-@mixin linear-gradient( $direction, $color-stops... ) {
-    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
-    background-image: -webkit-linear-gradient(legacy-direction($direction),$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
-    background-image:    -moz-linear-gradient(legacy-direction($direction),$color-stops...); // Firefox 3.6 to 15
-    background-image:      -o-linear-gradient(legacy-direction($direction),$color-stops...); // Opera 11.1 to 12.0
-    // IE 10+, Chrome 26+, Safari 6.1+, iOS 7+, Android 4.4+, Firefox 16+, Opera 12.1+
-    background-image:         linear-gradient( $direction, $color-stops... );
-}
-
-///
-// Radial Gradient
-//
-// Usage example:
-// @include radial-gradient( red 33%, green 66%, blue );
-///
-
-@mixin radial-gradient( $color-stops... ) {
-    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
-    background-image: -webkit-radial-gradient(center,ellipse cover,$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
-    background-image:    -moz-radial-gradient(center,ellipse cover,$color-stops...); // Firefox 3.6 to 15
-    background-image:      -o-radial-gradient(center,ellipse cover,$color-stops...); // Opera 11.1 to 12.0
-    // IE 10+, Chrome 26+, Safari 6.1+, iOS 7+, Android 4.4+, Firefox 16+, Opera 12.1+
-    background-image:         radial-gradient(ellipse at center,$color-stops...);
-}
-
-///
-// Placeholder Styling
-///
-
-@mixin placeholder-styles {
-    &::-webkit-input-placeholder { @content; } // Safari and Chrome
-         &:-ms-input-placeholder { @content; } // Internet Explorer 10+
-             &::-moz-placeholder { @content; opacity: 1; } // Firefox 19+
-}
-
-///
-// Selection Styling
-///
-
-@mixin selection-styles {
-    &::-moz-selection { @content; } // firefox
-         &::selection { @content; } // webkit, opera, IE9
-}
-
-///
-// Border Radius
-///
-
-@mixin border-radius( $radius:0 ) {
-    @if 0 != $radius {
-        background-clip: padding-box;
-        border-radius: $radius;
-    }
+@mixin background-clip {
+    background-clip: padding-box;
 }
 
 ///
@@ -195,16 +123,6 @@
 }
 
 ///
-// Hide Text - Good got image replacement.
-///
-
-@mixin hide-text {
-    overflow: hidden;
-    text-indent: 101%;
-    white-space: nowrap;
-}
-
-///
 // Hide
 // Hides an element but keeps it focusable. Good for hidding form elements like checkboxes, etc.
 // @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -225,6 +143,16 @@
 }
 
 ///
+// Hide Text - Good got image replacement.
+///
+
+@mixin hide-text {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+
+///
 // Truncate
 // Prevents a string of text from breaking into the 2nd line and adds an ellipsis to the end.
 ///
@@ -240,39 +168,4 @@
 // alias
 @mixin ellipsis( $width:100% ) {
     @include truncate( $width );
-}
-
-///
-// Word Break
-// Forces words to break into the 2nd line.
-///
-
-@mixin word-wrap( $wrap:break-word ) {
-    word-wrap: $wrap; // fallback & alias to...
-    overflow-wrap: $wrap; // newest CSS3
-    @if $wrap == break-word {
-        word-break: break-all;
-    } @else {
-        word-break: $wrap;
-    }
-}
-
-// alias
-@mixin break-words {
-    @include word-wrap;
-}
-
-///
-// Font Smoothing
-///
-
-@mixin font-smoothing( $active:true ) {
-    @if $active {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    @else {
-        -webkit-font-smoothing: none;
-        -moz-osx-font-smoothing: auto;
-    }
 }
