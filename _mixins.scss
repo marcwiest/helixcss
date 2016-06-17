@@ -212,7 +212,7 @@
 }
 
 ///
-// Clip
+// Hide
 // Hides an element but keeps it focusable. Good for hidding form elements like checkboxes, etc.
 // @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 // @link https://css-tricks.com/almanac/properties/c/clip/
@@ -221,7 +221,7 @@
 // - rectangle() coming in SVG 2
 ///
 
-@mixin clip {
+@mixin hide {
     position: absolute !important; // required by clip
     overflow: hidden;
     height: 1px; width: 1px;
