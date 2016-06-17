@@ -3,7 +3,7 @@
 // Get a utility color
 ///
 
-@function util-color( $color_name ) {
+@function get-color( $color_name ) {
     @return map-get( $utility_colors, $color_name );
 }
 
