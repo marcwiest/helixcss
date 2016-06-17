@@ -28,7 +28,7 @@ Button
     transition: $transition_button;
     border-style: solid;
     border-width: $border_width_button;
-    @include border-radius( $border_radius_button );
+    border-radius: $border_radius_button;
     color: $color_button;
     border-color: $color_button_border;
     background-color: $color_button_bg;
@@ -52,7 +52,7 @@ Button
 
 %button--round {
     $radius: calc( #{$font_size_button} + #{$padding_button_top} + #{$padding_button_bottom} );
-    @include border-radius( $radius );
+    border-radius: $radius;
 }
 
 %button--sharp {

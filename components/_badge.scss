@@ -33,7 +33,7 @@ Badge
 }
 
 %badge--round {
-    @include border-radius( $padding_badge_top * 2.6 );
+    border-radius: $padding_badge_top * 2.6;
 }
 
 %badge--sharp {
