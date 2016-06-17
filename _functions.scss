@@ -8,7 +8,7 @@
     @if $color_map == null and variable-exists(utility_colors) {
         $color_map: $utility_colors;
     }
-    @return map-get( $utility_colors, $color_name );
+    @return map-get( $color_map, $color_name );
 }
 
 ///
