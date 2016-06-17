@@ -76,7 +76,7 @@ input, textarea, select {
 
 input, textarea {
     &:active, &:focus { cursor: text; }
-    @include placeholder-styles {
+    @include placeholder {
         color: $color_input_placeholder;
     }
 }
