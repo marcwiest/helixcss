@@ -2,8 +2,6 @@
 /*
 Grid
 
-This grid system was inspired by: http://hiloki.github.io/kitecss/
-
 <div class="grid">
     <div class="grid__item"> </div>
     <div class="grid__item"> </div>
@@ -35,14 +33,29 @@ This grid system was inspired by: http://hiloki.github.io/kitecss/
     margin: 0;
     margin-left: auto;
     margin-right: auto;
+    %grid {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
-// Grid Full Width
+// Grid Width
 
 %grid--full {
-    max-width: none;
+    max-width: 100%;
     margin-left: 0;
     margin-right: 0;
+}
+
+// Grid Fill Mode
+
+%grid--fill > %grid__item {
+    display: table-cell;
+}
+
+%grid--fill-equal {
+    table-layout: fixed;
 }
 
 // Grid Horizontal Alignment
@@ -59,38 +72,14 @@ This grid system was inspired by: http://hiloki.github.io/kitecss/
 
 // Grid Vertical Alignment
 
-%grid--top > %grid__item {
-    vertical-align: top;
-}
-
-%grid--middle > %grid__item {
-    vertical-align: middle;
-}
-
-%grid--bottom > %grid__item {
-    vertical-align: bottom;
-}
-
-// Grid Fill Mode
-
-%grid--fill > %grid__item {
-    display: table-cell;
-}
-
-%grid--fill-equal {
-    table-layout: fixed;
-}
+%grid--top > %grid__item { vertical-align: top; }
+%grid--middle > %grid__item { vertical-align: middle; }
+%grid--bottom > %grid__item { vertical-align: bottom; }
 
 // Grid Padding
 
 %grid--narrow > %grid__item { padding: $grid_item_padding_narrow; }
-
 %grid--flush > %grid__item { padding: 0; }
-%grid--flush %grid {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-}
 
 // Grid Items
 
@@ -112,46 +101,21 @@ This grid system was inspired by: http://hiloki.github.io/kitecss/
 // Grid Item Padding
 
 %grid > %grid__item--narrow { padding: $grid_item_padding_narrow; }
-
 %grid > %grid__item--flush { padding: 0; }
-%grid__item--flush > %grid {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-}
-
 
 @include md {
     %grid > %grid__item--narrow-md { padding: $grid_item_padding_narrow; }
-
     %grid > %grid__item--flush-md { padding: 0; }
-    %grid__item--flush-md > %grid {
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
 @include md-lg {
     %grid > %grid__item--narrow-md-lg { padding: $grid_item_padding_narrow; }
-
     %grid > %grid__item--flush-md-lg { padding: 0; }
-    %grid__item--flush-md-lg > %grid {
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
 @include lg {
     %grid > %grid__item--narrow-lg { padding: $grid_item_padding_narrow; }
-
     %grid > %grid__item--flush-lg { padding: 0; }
-    %grid__item--flush-lg > %grid {
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
 @if $css_componentes_grid {
