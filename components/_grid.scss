@@ -18,19 +18,12 @@ Grid
 */
 
 %grid {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
     display: table;
     font-size: 0 !important;
     letter-spacing: 0 !important;
     vertical-align: top;
     width: 100%;
     max-width: $grid_max_width;
-    padding: 0;
-    margin: 0;
     margin-left: auto;
     margin-right: auto;
     %grid {
@@ -95,7 +88,6 @@ Grid
     font-size: $font_size_text;
     letter-spacing: $letter_spacing_text;
     padding: $grid_item_padding;
-    margin: 0;
 }
 
 // Grid Item Padding
