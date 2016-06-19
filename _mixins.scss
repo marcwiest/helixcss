@@ -55,8 +55,24 @@
 }
 
 ///
-// Background Clip
-// Just her for reference.
+// Justify Single Line
+// Because a simple text-align: justify; won't justify one-liners. This mixin does.
+///
+
+@mixin justify-line( $clearfix:true ) {
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    @if $clearfix {
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+///
+// Background Clip – Just her for reference.
 // Helps with leaking background-colors and images when using border-radius;
 ///
 
@@ -143,7 +159,7 @@
 }
 
 ///
-// Hide Text - Good got image replacement.
+// Hide Text - Good for image replacement.
 ///
 
 @mixin hide-text {
