@@ -42,16 +42,32 @@
 }
 
 ///
-// Create vendor-prefixed CSS in one go.
-// Source: github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss#L49
+// Creates specific vendor prefixes.
 ///
 
-@mixin vendor( $property, $value... ) {
-    -webkit-#{$property}: $value;
-       -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-         -o-#{$property}: $value;
-            #{$property}: $value;
+@mixin prefixer( $property, $value, $prefixes:null ) {
+
+    @if null == $prefixes { $prefixes: webkit moz ms o spec; }
+
+    @each $p in $prefixes {
+
+        @if webkit == $p { -webkit-#{$property}: $value; }
+        @else if moz == $p { -moz-#{$property}: $value; }
+        @else if ms == $p { -ms-#{$property}: $value; }
+        @else if o == $p { -o-#{$property}: $value; }
+        @else if spec == $p { #{$property}: $value; }
+        @else { @warn "Unrecognized prefix: #{$prefix}"; }
+
+    }
+}
+
+///
+// Creates all vendor-prefixes in one go.
+// Unlike the prefixer mixin, this mixin accepts multiple values in form of a comma separated list.
+///
+
+@mixin vendors( $property, $value... ) {
+    @include prefixer( $property, $value );
 }
 
 ///
