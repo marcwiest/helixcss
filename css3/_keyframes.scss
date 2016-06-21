@@ -1,10 +1,8 @@
+@charset "UTF-8";
 
 ///
 // Keyframe
 //
-// .elem {
-//     @include vendor( animation, 1s shrink );
-// }
 // @include keyframes( shrink ) {
 //     0% {}
 //     50% {}
@@ -13,8 +11,45 @@
 ///
 
 @mixin keyframes( $animation_name ) {
-    @-webkit-keyframes #{$animation_name} { @content; }
-       @-moz-keyframes #{$animation_name} { @content; }
-         @-o-keyframes #{$animation_name} { @content; }
-            @keyframes #{$animation_name} { @content; }
+
+    // cache original values
+    $webkit: $is_webkit_prefixed;
+    $mozilla: $is_mozilla_prefixed;
+    $microsoft: $is_microsoft_prefixed;
+    $opera: $is_opera_prefixed;
+
+    // test for original webkit value and only allow -webkit- prefix
+    @if $webkit {
+        @include disable-all-prefixes;
+        $is_webkit_prefixed: true !global;
+        @-webkit-keyframes #{$animation_name} { @content; }
+    }
+
+    // test for original mozilla value and only allow -moz- prefix
+    @if $mozilla {
+        @include disable-all-prefixes;
+        $is_mozilla_prefixed: true !global;
+        @-moz-keyframes #{$animation_name} { @content; }
+    }
+
+    // test for original microsoft value and only allow -ms- prefix
+    @if $microsoft {
+        @include disable-all-prefixes;
+        $is_microsoft_prefixed: true !global;
+        @-ms-keyframes #{$animation_name} { @content; }
+    }
+
+    // test for original opera value and only allow -o- prefix
+    @if $opera {
+        @include disable-all-prefixes;
+        $is_opera_prefixed: true !global;
+        @-o-keyframes #{$animation_name} { @content; }
+    }
+
+    // reactivate and use all prefixes for spec keyframes
+    @include enable-all-prefixes;
+    @keyframes #{$animation_name} {
+        @content;
+    }
+    
 }
