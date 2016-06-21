@@ -62,15 +62,6 @@
 }
 
 ///
-// Creates all vendor-prefixes in one go.
-// Unlike the prefixer mixin, this mixin accepts multiple values in form of a comma separated list.
-///
-
-@mixin vendors( $property, $value... ) {
-    @include prefixer( $property, $value );
-}
-
-///
 // Justify Single Line
 // Because a simple text-align: justify; won't justify one-liners. This mixin does.
 ///
