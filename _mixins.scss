@@ -50,19 +50,47 @@
 // Creates specific vendor prefixes.
 ///
 
+// Do NOT edit these variables!
+$is_webkit_included: true;
+$is_mozilla_included: true;
+$is_microsoft_included: true;
+$is_opera_included: true;
+$is_spec_included: true;
+
+@mixin disable-all-vendors {
+    $is_webkit_included: false !global;
+    $is_mozilla_included: false !global;
+    $is_microsoft_included: false !global;
+    $is_opera_included: false !global;
+    $is_spec_included: false !global;
+}
+
+@mixin enable-all-vendors {
+    $is_webkit_included: true !global;
+    $is_mozilla_included: true !global;
+    $is_microsoft_included: true !global;
+    $is_opera_included: true !global;
+    $is_spec_included: true !global;
+}
+
 @mixin prefixer( $property, $value, $prefixes:null ) {
 
     @if null == $prefixes { $prefixes: webkit moz ms o spec; }
 
     @each $p in $prefixes {
-
-        @if webkit == $p { -webkit-#{$property}: $value; }
-        @else if moz == $p { -moz-#{$property}: $value; }
-        @else if ms == $p { -ms-#{$property}: $value; }
-        @else if o == $p { -o-#{$property}: $value; }
-        @else if spec == $p { #{$property}: $value; }
-        @else { @warn "Unrecognized prefix: #{$prefix}"; }
-
+        @if webkit == $p {
+            @if $is_webkit_included { -webkit-#{$property}: $value; }
+        } @else if moz == $p {
+            @if $is_mozilla_included { -moz-#{$property}: $value; }
+        } @else if ms == $p {
+            @if $is_microsoft_included { -ms-#{$property}: $value; }
+        } @else if o == $p {
+            @if $is_opera_included { -o-#{$property}: $value; }
+        } @else if spec == $p {
+            @if $is_spec_included { #{$property}: $value; }
+        } @else {
+            @warn "Unrecognized prefix: #{$p}";
+        }
     }
 }
 
