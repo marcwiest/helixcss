@@ -39,21 +39,16 @@ Button
         background-color: $color_button_bg_hover;
         text-decoration: none;
     }
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    @include appearance(none);
+    @include user-select(none);
     -webkit-user-drag: none;
     // prevent button from line breaking
     white-space: nowrap;
 }
 
 %button--round {
-    $radius: calc( #{$font_size_button} + #{$padding_button_top} + #{$padding_button_bottom} );
-    border-radius: $radius;
+    $radius: $font_size_button + $padding_button_top + $padding_button_bottom;
+    @include calc( border-radius, $radius );
 }
 
 %button--sharp {
