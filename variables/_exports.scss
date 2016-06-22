@@ -1,0 +1,45 @@
+
+/////////////////////////////////////
+// Vendors
+/////////////////////////////////////
+
+$css_vendors_print: true !default;
+$css_vendors_normalize: true !default;
+
+
+/////////////////////////////////////
+// Base
+/////////////////////////////////////
+
+$css_base_code: true !default;
+$css_base_document: true !default;
+$css_base_form: true !default;
+$css_base_reset: true !default;
+$css_base_table: true !default;
+
+
+/////////////////////////////////////
+// Components & Utilities
+/////////////////////////////////////
+
+// Components are disabled by default.
+
+$css_components_badge: false !default;
+$css_components_button: false !default;
+$css_components_center: false !default;
+$css_components_clearfix: false !default;
+$css_components_embed: false !default;
+$css_components_grid: false !default;
+$css_components_group: false !default;
+$css_components_reader: false !default;
+$css_components_scrollbar: false !default;
+
+// Utilities are disabled by default.
+
+$css_utilities_alignment: false !default;
+$css_utilities_border: false !default;
+$css_utilities_color: false !default;
+$css_utilities_display: false !default;
+$css_utilities_offset: false !default;
+$css_utilities_spacing: false !default;
+$css_utilities_width: false !default;

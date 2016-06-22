@@ -1,0 +1,61 @@
+
+/////////////////////////////////////
+// Colors
+/////////////////////////////////////
+
+// // "info" : #118bd9,
+// "success" : #5aba59,
+// "warning" : #fbd30a,
+// "alert" : #df5048,
+
+$utility_colors: (
+    'primary' : #00ffb9,
+    'accent' : #00ffb9,
+    'light' : #f4f5f6,
+    'dark' : #404040
+) !default;
+
+$color_body_bg: #fff !default;
+
+$color_text: #111 !default;
+$color_text_link: #85c51f !default;
+$color_text_link_hover: lighten(#85c51f,10%) !default;
+
+$color_heading: #111 !default;
+$color_heading_link: #111 !default;
+$color_heading_link_hover: #111 !default;
+
+$color_button: #fff !default;
+$color_button_hover: #fff !default;
+$color_button_bg: #85c51f !default;
+$color_button_bg_hover: lighten(#85c51f,10%) !default;
+$color_button_border: transparent !default;
+$color_button_border_hover: transparent !default;
+
+$color_badge: #fff !default;
+$color_badge_hover: #fff !default;
+$color_badge_bg: #85c51f !default;
+$color_badge_bg_hover: lighten(#85c51f,10%) !default;
+$color_badge_border: transparent !default;
+$color_badge_border_hover: transparent !default;
+
+$color_input: #111 !default;
+$color_input_hover: #111 !default;
+$color_input_focus: #111 !default;
+$color_input_bg: #f0f0f0 !default;
+$color_input_bg_hover: #f0f0f0 !default;
+$color_input_bg_focus: #f0f0f0 !default;
+$color_input_border: transparent !default;
+$color_input_border_hover: transparent !default;
+$color_input_border_focus: transparent !default;
+$color_input_placeholder: #999 !default;
+$color_input_label: #111 !default;
+
+$color_table_head: #111 !default;
+$color_table_cell: #111 !default;
+$color_table_border: #f0f0f0 !default;
+
+$color_pre: #111 !default;
+$color_pre_bg: #f0f0f0 !default;
+
+$color_hr: #f0f0f0 !default;
