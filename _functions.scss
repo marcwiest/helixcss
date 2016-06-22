@@ -27,12 +27,6 @@
     @return mix( #fff, $color, $percent );
 }
 
-@function modular-scale( $increment, $base_font_size, $ratio ) {
-    @if variable-exists(font_size_text) { $base_font_size: $font_size_text; }
-    @if variable-exists(perfect_fourth) { $ratio: $perfect_fourth; }
-    @return ($increment * $base_font_size) * $ratio;
-}
-
 ///
 // Test if `$value` is a valid CSS3 gradient direction.
 //
@@ -85,4 +79,39 @@
     }
 
     @return 90deg - $value;
+}
+
+///
+// Prefixes a single property.
+//
+// @param {$properties} Single property (e.g. transform).
+// @param {$vendor} Only one vendor prefix (e.g. moz) accepted per function call.
+///
+
+@function _prefix-property( $property, $vendor:false ) {
+
+    @if $vendor and $property == transform {
+        @return unquote('-'+$vendor+'-'+$property);
+    }
+    @else {
+        @return $property;
+    }
+}
+
+///
+// Prefixes multiple properties.
+//
+// @param {$properties} Single property or comma separated list of properties.
+// @param {$vendor} Only one vendor prefix accepted per function call.
+///
+
+@function _prefix-properties( $properties, $vendor:false ) {
+
+    $return: ();
+
+    @each $p in $properties {
+        $return: append( $return, _prefix-property($p,$vendor), comma);
+    }
+
+    @return $return;
 }
