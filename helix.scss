@@ -1,11 +1,43 @@
+@charset "UTF-8";
 
 /*!
 HelixCSS v1.0 | License: MIT | Author: Marc Wiest
 */
 
-@import "defaults";
 @import "functions";
 @import "mixins";
+
+// Variables
+
+@import "variables/typography";
+@import "variables/grid";
+@import "variables/borders";
+@import "variables/brands";
+@import "variables/colors";
+@import "variables/dimensions";
+@import "variables/exports";
+@import "variables/timing";
+@import "variables/transitions";
+
+// CSS3 Mixins
+
+@import "css3/animation";
+@import "css3/appearance";
+@import "css3/backface-visibility";
+@import "css3/filter";
+@import "css3/flexbox";
+@import "css3/font-smoothing";
+@import "css3/hyphens";
+@import "css3/keyframes";
+@import "css3/linear-gradient";
+@import "css3/perspective";
+@import "css3/placeholder";
+@import "css3/radial-gradient";
+@import "css3/selection";
+@import "css3/text-decoration";
+@import "css3/transform";
+@import "css3/transition";
+@import "css3/word-wrap";
 
 // Vendors
 
