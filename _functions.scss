@@ -36,7 +36,7 @@
 // @return {bool}
 ///
 
-@function is-direction( $value ) {
+@function _is-direction( $value ) {
     $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
     $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
 
@@ -53,7 +53,7 @@
 // @return {string} legacy direction
 ///
 
-@function legacy-direction( $value ) {
+@function _legacy-direction( $value ) {
 
     @if is-direction( $value ) == false {
         @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
