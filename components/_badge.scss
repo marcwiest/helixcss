@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 /*
 Badge
@@ -51,7 +52,7 @@ Badge
     }
 }
 
-@if $css_componentes_badge {
+@if $css_components_badge {
 
     .badge {
         @extend %badge;

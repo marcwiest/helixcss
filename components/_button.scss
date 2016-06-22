@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 /*
 Button
@@ -70,7 +71,7 @@ Button
     }
 }
 
-@if $css_componentes_button {
+@if $css_components_button {
 
     .button {
         @extend %button;

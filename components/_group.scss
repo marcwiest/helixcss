@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 /*
 Group
@@ -50,7 +51,7 @@ form %group__item {
     border: 0;
 }
 
-@if $css_componentes_group {
+@if $css_components_group {
 
     .group {
         @extend %group;

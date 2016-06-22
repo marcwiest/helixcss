@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 @mixin center( $width:null ) {
     display: block;
@@ -37,7 +38,7 @@
     %uncenter-lg { @include uncenter; }
 }
 
-@if $css_componentes_center {
+@if $css_components_center {
 
     .center { @extend %center; }
     .center-md { @extend %center-md; }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 /*
 Clearfixed elements
@@ -12,7 +13,7 @@ Source: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
     }
 }
 
-@if $css_componentes_clearfix {
+@if $css_components_clearfix {
 
     .cf, .clearfix {
         @extend %clearfix;

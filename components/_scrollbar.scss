@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 /*
 Scrollable
@@ -36,7 +37,7 @@ Scrollable
     @include scrollable;
 }
 
-@if $css_componentes_scrollbar {
+@if $css_components_scrollbar {
 
     .scrollbar {
         @extend %scrollbar;

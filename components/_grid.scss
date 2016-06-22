@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 /*
 Grid
@@ -116,7 +117,7 @@ Grid
     %grid > %grid__item--flush-lg { padding: 0; }
 }
 
-@if $css_componentes_grid {
+@if $css_components_grid {
 
     // grid
 
