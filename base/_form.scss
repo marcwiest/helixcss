@@ -102,9 +102,7 @@ input[type='text'],
 input[type='url'],
 textarea,
 select {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    @include appearance(none);
     border-radius: $border_radius_input;
     transition: $transition_input;
 }
@@ -128,9 +126,7 @@ input[type="submit"] {
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
-       -moz-appearance: textfield;
-            appearance: textfield;
+    @include appearance(textfield);
 }
 
 input[type="checkbox"],
@@ -152,9 +148,8 @@ textarea {
 
 select {
     letter-spacing: $letter_spacing_input;
+    @include appearance(menulist);
     -webkit-appearance: menulist-button;
-       -moz-appearance: menulist;
-            appearance: menulist;
     cursor: pointer;
     // make multiple select elements height not fixed
     &[multiple], &[size] { height: auto; }
