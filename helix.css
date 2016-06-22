@@ -862,6 +862,8 @@ textarea,
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
   appearance: none;
   border-radius: 2px;
   transition: all 0.2s ease-in-out; }
@@ -885,6 +887,8 @@ input[type="submit"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  -o-appearance: textfield;
   appearance: textfield; }
 
 input[type="checkbox"],
@@ -904,9 +908,12 @@ textarea {
 
 select {
   letter-spacing: 0;
-  -webkit-appearance: menulist-button;
+  -webkit-appearance: menulist;
   -moz-appearance: menulist;
+  -ms-appearance: menulist;
+  -o-appearance: menulist;
   appearance: menulist;
+  -webkit-appearance: menulist-button;
   cursor: pointer; }
   select[multiple], select[size] {
     height: auto; }
