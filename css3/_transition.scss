@@ -1,0 +1,72 @@
+// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
+// Example: @include transition (all 2s ease-in-out);
+//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+//          @include transition-property (transform, opacity);
+
+@mixin transition( $properties... ) {
+
+    // needed for prefixed parameter
+    $webkit: ();
+    $moz: ();
+    $spec: ();
+
+    // loop over multiple (comma separated) properties
+    @each $prop in $properties {
+
+        @if nth($prop,1) == "transform" {
+
+            $needs_prefixes: true;
+
+            $webkit_values: -webkit-transform;
+            $moz_values: -moz-transform;
+            $spec_values: ();
+
+            // loop over each individual transition value
+            @each $val in $prop {
+                $spec_values: join( $spec_values, $val );
+                @if $val != "transform" {
+                    $webkit_values: join( $webkit_values, $val );
+                    $moz_values: join( $moz_values, $val );
+                }
+            }
+
+            $webkit: append( $webkit, $webkit_values );
+            $moz: append( $moz, $moz_values );
+            $spec: append( $spec, $spec_values );
+
+        }
+
+    }
+
+    @if variable-exists(needs-prefixes) {
+
+        -webkit-transition: $webkit;
+           -moz-transition: $moz;
+                transition: $spec;
+
+    } @else if length($properties) >= 1 {
+
+        @include prefixer(transition, $properties, webkit moz spec);
+
+    }
+
+}
+
+@mixin transition-property( $properties... ) {
+    -webkit-transition-property: _prefix-properties( $properties, "webkit" );
+       -moz-transition-property: _prefix-properties( $properties, "moz" );
+            transition-property: _prefix-properties( $properties, false );
+}
+
+// ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+@mixin transition-timing-function( $motions... ) {
+    @include prefixer(transition-timing-function, $motions, webkit moz spec);
+}
+
+@mixin transition-duration( $times... ) {
+    @include prefixer(transition-duration, $times, webkit moz spec);
+}
+
+@mixin transition-delay( $times... ) {
+    @include prefixer(transition-delay, $times, webkit moz spec);
+}

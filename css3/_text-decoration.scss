@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// none | underline | overline | line-through
+@mixin text-decoration-line( $line:none ) {
+    @include prefixer(text-decoration-line, $line, moz);
+}
+
+// solid | double | dotted | dashed | wavy
+@mixin text-decoration-style( $style:solid ) {
+    @include prefixer(text-decoration-style, $style, moz webkit);
+}
+
+// currentColor | <color>
+@mixin text-decoration-color( $color:currentColor ) {
+    @include prefixer(text-decoration-color, $color, moz);
+}
+
+// shorthand mixin
+// <text-decoration-line> | <text-decoration-style> | <text-decoration-color>
+// @mixin text-decoration( $value ) {
+//     @include prefixer(text-decoration, $value, moz);
+// }
