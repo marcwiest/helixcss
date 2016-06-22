@@ -75,7 +75,7 @@ form, fieldset, table, dl, ol, ul {
     font-style: $font_style_heading;
     text-transform: $text_transform_heading;
     letter-spacing: $letter_spacing_heading;
-    @include break-words;
+    @include word-wrap;
     color: $color_heading;
     a { color: $color_heading_link; }
     a:hover { color: $color_heading_link_hover; }
@@ -130,7 +130,7 @@ small, .small { @extend %small; }
     color: $color_text_link;
     transition: $transition_link;
     text-decoration: none;
-    @include break-words;
+    @include word-wrap;
     &:hover { // &:active, &:focus
         color: $color_text_link_hover;
     }
