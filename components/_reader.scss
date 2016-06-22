@@ -11,11 +11,7 @@ Source: github.com/Automattic/_s/blob/master/style.css#L634
 */
 
 %screen-reader-text {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    width: 1px;
+    @include hide;
     margin: 0;
     padding: 0;
     border: 0;
