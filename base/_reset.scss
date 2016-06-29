@@ -5,7 +5,6 @@
 // Additional reset rules and overwrites.
 ///
 
-// Source: meyerweb.com/eric/tools/css/reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -13,9 +12,9 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label, legend, progress,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
+article, aside, canvas, details, embed, svg,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -25,8 +24,24 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-// Helps with SVGs sizing.
-svg { max-height: 100%; }
+*,
+::before,
+::after { background-repeat: no-repeat; }
+
+// Prevent font size adjustments after orientation changes in IE and iOS.
+html {
+	-webkit-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+}
+
+// 1) Helps with SVGs sizing.
+// 2) Change the fill color to match the text color in all browsers.
+// 3) Hide the overflow in IE.
+svg {
+	max-height: 100%; // 1
+	fill: currentColor; // 2
+	&:not(:root) { overflow: hidden; } // 3
+}
 
 // Help IE to shrink images nicer.
 // Credit: css-tricks.com/ie-fix-bicubic-scaling-for-images/
@@ -47,6 +62,19 @@ sub, sup { font-size: 80%; }
 // Normalize box-sizing overwrite
 input[type="search"] { box-sizing: border-box; }
 
+// Remove the default appearance of temporal inputs to avoid a Mobile Safari
+// bug where setting a custom line-height prevents text from being vertically
+// centered within the input.
+// Bug report: https://github.com/twbs/bootstrap/issues/11266
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+    -webkit-appearance: listbox;
+}
+
 // Normalize fieldset overwrite
 // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
 // so we reset that to ensure it behaves more like a standard block element.
@@ -65,10 +93,7 @@ input, button, select, textarea {
 // This prevents an unwanted focus outline from appearing around elements that
 // might still respond to pointer events.
 // Credit: https://github.com/suitcss/base
-[tabindex="-1"]:focus { outline: none !important; }
-
-// Always hide an element with the `hidden` HTML attribute (from PureCSS).
-[hidden] { display: none !important; }
+[tabindex="-1"]:focus { outline: none; }
 
 // Set cursor for readonly & disabled.
 [readonly],
@@ -79,6 +104,23 @@ input, button, select, textarea {
 [disabled]:focus {
     cursor: not-allowed;
 }
+
+// Change the display on visually hidden accessible elements.
+[hidden][aria-hidden="false"] {
+	clip: rect(0, 0, 0, 0);
+	display: inherit;
+	position: absolute;
+	&:focus { clip: auto; }
+}
+
+// Change the cursor on busy elements.
+[aria-busy="true"] { cursor: progress; }
+
+// Change the cursor on control elements.
+[aria-controls] { cursor: pointer; }
+
+// Change the cursor on disabled, not-editable, or otherwise inoperable elements.
+[aria-disabled] { cursor: default; }
 
 // Prevent list cursors other than default and apply correct cursor only to list items.
 ul, ol { cursor: default; }
@@ -110,9 +152,27 @@ button,
 input,
 label,
 select,
-summary,
-textarea {
-    touch-action: manipulation;
+textarea,
+[tabindex] {
+	-ms-touch-action: manipulation;
+        touch-action: manipulation;
+}
+
+// 1) Remove the gray background on active links in IE 10.
+// 2) Remove the gaps in underlines in iOS 8+ and Safari 8+.
+a {
+	background-color: transparent; // 1
+	-webkit-text-decoration-skip: objects; // 2
+}
+
+// And undo these styles for placeholder links/named anchors (without href)
+// which have not been made explicitly keyboard-focusable (without tabindex).
+a:not([href]):not([tabindex]) {
+	&, &:hover, &:focus {
+		color: inherit;
+		text-decoration: none;
+	}
+	&:focus { outline: none; }
 }
 
 } // endif
