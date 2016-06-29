@@ -16,6 +16,7 @@ caption {
     margin-bottom: $padding_table_cell_bottom;
     font-size: $font_size_small;
     text-align: left;
+    caption-side: bottom;
 }
 
 tr {
