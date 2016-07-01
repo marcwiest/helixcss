@@ -19,22 +19,33 @@ $css_base_table: true !default;
 
 
 /////////////////////////////////////
-// Components & Utilities
+// Objects
 /////////////////////////////////////
 
-// Components are disabled by default.
+$css_objects_center: false !default;
+$css_objects_clearfix: false !default;
+$css_objects_embed: false !default;
+$css_objects_grid: false !default;
+$css_objects_group: false !default;
+$css_objects_reader: false !default;
+$css_objects_scrollbar: false !default;
 
-$css_components_badge: false !default;
-$css_components_button: false !default;
-$css_components_center: false !default;
-$css_components_clearfix: false !default;
-$css_components_embed: false !default;
-$css_components_grid: false !default;
-$css_components_group: false !default;
-$css_components_reader: false !default;
-$css_components_scrollbar: false !default;
 
-// Utilities are disabled by default.
+/////////////////////////////////////
+// Components
+/////////////////////////////////////
+
+$css_components_heading: true !default;
+$css_components_lead: true !default;
+$css_components_link: true !default;
+$css_components_small: true !default;
+$css_components_badge: true !default;
+$css_components_button: true !default;
+
+
+/////////////////////////////////////
+// Utilities
+/////////////////////////////////////
 
 $css_utilities_alignment: false !default;
 $css_utilities_border: false !default;
