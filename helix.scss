@@ -54,20 +54,27 @@ HelixCSS v1.0 | License: MIT | Author: Marc Wiest
 @import "base/table";
 @import "base/form";
 
+// Objects
+
+@import "objects/center";
+@import "objects/clearfix";
+@import "objects/embed";
+@import "objects/flyout";
+@import "objects/grid";
+@import "objects/group";
+@import "objects/reader";
+@import "objects/scrollbar";
+
 // Components
 
 @import "components/badge";
 @import "components/burger";
 @import "components/button";
-@import "components/center";
-@import "components/clearfix";
-@import "components/embed";
-@import "components/flyout";
-@import "components/grid";
-@import "components/group";
+@import "components/heading";
 @import "components/highlight";
-@import "components/reader";
-@import "components/scrollbar";
+@import "components/lead";
+@import "components/link";
+@import "components/small";
 @import "components/triangle";
 
 // Utilities
