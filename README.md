@@ -10,16 +10,10 @@ In OOCSS the separation of structure and skin is encouraged while nested selecto
 The BEM naming convention helps CSS authors comply with the OOCSS principle of using a flat selector
 hierarchy composed of equally-specific class selectors.
 
-## Responsive Typography
-
-Throughout your project, use 'rem' whenever you want the size to be adaptable to whatever the HTML's
-base font-size value is set to.
-
 ## Documentation
 
-For the moment there are only code examples available inside the components folder and the index
-file. Over time, a more detailed, written documentation and maybe a tutorial video will be made
-available.
+For the moment there are only code examples available inside the objects and components folder. Over
+time, a more detailed documentation will be made available.
 
 ## Folders & Contents
 
@@ -55,10 +49,17 @@ Holds external resources such as normalize-css.
 Contains mixins that take care of CSS3 browser consistency and eliminate the need for a 3rd party
 framework.
 
+## Responsive Sizing
+
+Throughout your project, use `rem` whenever you want a size to be adaptable to whatever the HTML's
+base font-size value is set to. The base font-size varies between breakpoints. This allows for
+responsive typography and sizing.
+
 ## Reminders
 
 - [IE 9 & 10](http://caniuse.com/#search=rem) do not support rem units when used in the `font`
-  shorthand property (the entire declaration is ignored) or when used on pseudo elements.
+  shorthand property (the entire declaration is ignored) or when used on pseudo elements like
+  `:before` & `:after`.
 
 ## Roadmap
 
