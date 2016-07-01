@@ -23,30 +23,36 @@ available.
 
 ## Folders & Contents
 
+#### Variables
+
+To help you find the variables you are looking for faster, variables have their own folder and files.
+
 #### Base
 
-This folder addresses mostly the default HTML tags, but there are a few components and utilities
-mixed in with it.
+This folder addresses mostly the default HTML tags, but there are also a couple of silent component
+classes (%heading, %link & %small) within `_document.scss`.
+
+#### Objects
+
+Objects are purely structural elements that handle skeletal aspects, without ever actually looking
+like designed ‘things’.
 
 #### Components
 
-HelixCSS uses the BEM methodology primarily for the components. Components are elements that are
-comprised of multiple CSS properties. Not all components are made into CSS rule-sets, some are only
-available as sass mixins.
+The components folder holds specific UI elements like buttons and badges.
 
 #### Utilities
 
 Utilities are single property declaration classes that are useful and sharable between different
-components without straying away too far from the BEM methodology.
+components.
 
 #### Vendors
 
-Currently only holds normalize-css and H5BP's print styles. In the future may include other external
-resources like [animate.css](https://daneden.github.io/animate.css/).
+Holds external resources such as normalize-css.
 
 #### CSS3
 
-Contains mixins that take care of CSS3 browser consistency. This eliminates the need for a 3rd party
+Contains mixins that take care of CSS3 browser consistency and eliminate the need for a 3rd party
 framework.
 
 ## Reminders
