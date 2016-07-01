@@ -1,0 +1,8 @@
+
+@if $css_components_small {
+
+    // See base/_document.scss for %small.
+
+    .small { @extend %small; }
+
+}

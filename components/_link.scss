@@ -1,0 +1,8 @@
+
+@if $css_components_link {
+
+    // See base/_document.scss for %link.
+
+    .link { @extend %link; }
+
+}
