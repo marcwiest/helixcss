@@ -37,7 +37,7 @@ Source: github.com/Automattic/_s/blob/master/style.css#L634
     }
 }
 
-@if $css_components_reader {
+@if $css_objects_reader {
 
     .screen-reader,
     .screen-reader-only,

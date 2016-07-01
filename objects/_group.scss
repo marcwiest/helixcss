@@ -51,7 +51,7 @@ form %group__item {
     border: 0;
 }
 
-@if $css_components_group {
+@if $css_objects_group {
 
     .group {
         @extend %group;

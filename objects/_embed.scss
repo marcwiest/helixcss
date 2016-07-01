@@ -31,7 +31,7 @@ Responsive embed
     padding-bottom: 56.25%;
 }
 
-@if $css_components_embed {
+@if $css_objects_embed {
 
     .embed {
         @extend %embed;
