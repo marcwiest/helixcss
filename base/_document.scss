@@ -93,26 +93,12 @@ form, fieldset, table, dl, ol, ul {
 %h5 { @extend %heading; font-size: $font_size_h5; }
 %h6 { @extend %heading; font-size: $font_size_h6; }
 
-h1, .h1 { @extend %h1; }
-h2, .h2 { @extend %h2; }
-h3, .h3 { @extend %h3; }
-h4, .h4 { @extend %h4; }
-h5, .h5 { @extend %h5; }
-h6, .h6 { @extend %h6; }
-
-%lead {
-    font-size: $font_size_lead;
-    font-weight: $font_weight_lead;
-    color: $color_heading;
-    letter-spacing: $letter_spacing_lead;
-    line-height: $line_height_ratio_lead;
-    @if $responsive_typography {
-        @include md { line-height: $line_height_ratio_lead_md; }
-        @include lg { line-height: $line_height_ratio_lead_lg; }
-    }
-}
-
-.lead { @extend %lead; }
+h1 { @extend %h1; }
+h2 { @extend %h2; }
+h3 { @extend %h3; }
+h4 { @extend %h4; }
+h5 { @extend %h5; }
+h6 { @extend %h6; }
 
 %small {
     font-size: $font_size_small;
@@ -124,7 +110,7 @@ h6, .h6 { @extend %h6; }
     }
 }
 
-small, .small { @extend %small; }
+small { @extend %small; }
 
 %link {
     color: $color_text_link;
@@ -136,7 +122,7 @@ small, .small { @extend %small; }
     }
 }
 
-a, .link { @extend %link; }
+a { @extend %link; }
 
 strong, b {
     font-weight: bold;
