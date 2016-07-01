@@ -36,6 +36,12 @@
             $moz: append( $moz, $moz_values );
             $spec: append( $spec, $spec_values );
 
+        } @else {
+
+            $webkit: append( $webkit, $prop, comma );
+            $moz: append( $moz, $prop, comma );
+            $spec: append( $spec, $prop, comma );
+
         }
 
     }
