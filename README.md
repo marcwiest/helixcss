@@ -12,8 +12,8 @@ hierarchy composed of equally-specific class selectors.
 
 ## Documentation
 
-For the moment there are only code examples available inside the objects and components folder. Over
-time, a more detailed documentation will be made available.
+For the moment there are only code examples available inside the objects and components folders.
+Over time, a more detailed documentation will be made available.
 
 ## Folders & Contents
 
