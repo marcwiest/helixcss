@@ -21,33 +21,27 @@ Over time, a more detailed documentation will be made available.
 
 To help you find the variables you are looking for faster, variables have their own folder and files.
 
+#### Vendors
+
+Holds external resources such as normalize-css.
+
 #### Base
 
 This folder addresses mostly the default HTML tags, but there are also a couple of silent component
 classes (%heading, %link & %small) within `_document.scss`.
 
-#### Objects
-
-Objects are purely structural elements that handle skeletal aspects, without ever actually looking
-like designed ‘things’.
-
-#### Components
-
-The components folder holds specific UI elements like buttons and badges.
-
-#### Utilities
-
-Utilities are single property declaration classes that are useful and sharable between different
-components.
-
-#### Vendors
-
-Holds external resources such as normalize-css.
-
 #### CSS3
 
 Contains mixins that take care of CSS3 browser consistency and eliminate the need for a 3rd party
 framework.
+
+#### Objects
+
+- **Layout Folder:** The layout folder holds purely structural elements that handle skeletal aspects,
+without ever actually looking like designed ‘things’.
+- **Interface Folder:** The interface folder holds specific UI elements like buttons and badges.
+- **Utilities Folder:** Utilities are single property declaration classes that are useful and sharable
+between different components.
 
 ## Responsive Sizing
 
