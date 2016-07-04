@@ -30,11 +30,6 @@ Holds external resources such as normalize-css.
 This folder addresses mostly the default HTML tags, but there are also a couple of silent component
 classes (%heading, %link & %small) within `_document.scss`.
 
-#### CSS3
-
-Contains mixins that take care of CSS3 browser consistency and eliminate the need for a 3rd party
-framework.
-
 #### Objects
 
 - **Layout Folder:** The layout folder holds purely structural elements that handle skeletal aspects,
@@ -42,6 +37,11 @@ without ever actually looking like designed ‘things’.
 - **Interface Folder:** The interface folder holds specific UI elements like buttons and badges.
 - **Utilities Folder:** Utilities are single property declaration classes that are useful and sharable
 between different components.
+
+#### CSS3
+
+Contains mixins that take care of CSS3 browser consistency and eliminate the need for a 3rd party
+framework.
 
 ## Responsive Sizing
 
