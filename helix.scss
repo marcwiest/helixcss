@@ -56,33 +56,29 @@ HelixCSS v1.0 | License: MIT | Author: Marc Wiest
 
 // Objects
 
-@import "objects/center";
-@import "objects/clearfix";
-@import "objects/embed";
-@import "objects/flyout";
-@import "objects/grid";
-@import "objects/group";
-@import "objects/reader";
-@import "objects/scrollbar";
+@import "objects/layout/center";
+@import "objects/layout/clearfix";
+@import "objects/layout/embed";
+@import "objects/layout/flyout";
+@import "objects/layout/grid";
+@import "objects/layout/group";
+@import "objects/layout/reader";
+@import "objects/layout/scrollbar";
 
-// Components
+@import "objects/interface/badge";
+@import "objects/interface/burger";
+@import "objects/interface/button";
+@import "objects/interface/heading";
+@import "objects/interface/highlight";
+@import "objects/interface/lead";
+@import "objects/interface/link";
+@import "objects/interface/small";
+@import "objects/interface/triangle";
 
-@import "components/badge";
-@import "components/burger";
-@import "components/button";
-@import "components/heading";
-@import "components/highlight";
-@import "components/lead";
-@import "components/link";
-@import "components/small";
-@import "components/triangle";
-
-// Utilities
-
-@import "utilities/alignment";
-@import "utilities/border";
-@import "utilities/color";
-@import "utilities/display";
-@import "utilities/offset";
-@import "utilities/spacing";
-@import "utilities/width";
+@import "objects/utilities/alignment";
+@import "objects/utilities/border";
+@import "objects/utilities/color";
+@import "objects/utilities/display";
+@import "objects/utilities/offset";
+@import "objects/utilities/spacing";
+@import "objects/utilities/width";
