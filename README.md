@@ -28,7 +28,7 @@ Holds external resources such as normalize-css.
 #### Base
 
 This folder addresses mostly the default HTML tags, but there are also a couple of silent component
-classes (%heading, %link & %small) within `_document.scss`.
+classes (i.e. `%heading`, `%link` & `%small`) within `_document.scss`.
 
 #### Objects
 
