@@ -423,9 +423,9 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label, legend, progress,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
+article, aside, canvas, details, embed, svg,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -434,8 +434,20 @@ time, mark, audio, video {
   border: 0;
   vertical-align: baseline; }
 
+*,
+::before,
+::after {
+  background-repeat: no-repeat; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
 svg {
-  max-height: 100%; }
+  max-height: 100%;
+  fill: currentColor; }
+  svg:not(:root) {
+    overflow: hidden; }
 
 img {
   -ms-interpolation-mode: bicubic; }
@@ -452,6 +464,14 @@ sub, sup {
 input[type="search"] {
   box-sizing: border-box; }
 
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+  -webkit-appearance: listbox; }
+
 fieldset {
   min-width: 0; }
 
@@ -461,10 +481,7 @@ input, button, select, textarea {
     outline: none; }
 
 [tabindex="-1"]:focus {
-  outline: none !important; }
-
-[hidden] {
-  display: none !important; }
+  outline: none; }
 
 [readonly],
 [readonly]:focus {
@@ -473,6 +490,22 @@ input, button, select, textarea {
 [disabled],
 [disabled]:focus {
   cursor: not-allowed; }
+
+[hidden][aria-hidden="false"] {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute; }
+  [hidden][aria-hidden="false"]:focus {
+    clip: auto; }
+
+[aria-busy="true"] {
+  cursor: progress; }
+
+[aria-controls] {
+  cursor: pointer; }
+
+[aria-disabled] {
+  cursor: default; }
 
 ul, ol {
   cursor: default; }
@@ -493,15 +526,26 @@ button,
 input,
 label,
 select,
-summary,
-textarea {
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
   touch-action: manipulation; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none; }
+a:not([href]):not([tabindex]):focus {
+  outline: none; }
 
 /*
 Document setup
 */
 html {
-  height: 100%;
+  height: 100vh;
   min-width: 360px;
   box-sizing: border-box;
   font-size: 9px; }
@@ -513,7 +557,7 @@ html {
       font-size: 10px; } }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   background-color: #fff;
   font-size: 1.8rem;
   font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -556,7 +600,7 @@ address, hr, p, blockquote, pre, figure, audio, video,
 form, fieldset, table, dl, ol, ul {
   margin-bottom: 3.15rem; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, h2, h3, h4, h5, h6 {
   display: block;
   margin-bottom: 3.15rem;
   font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -564,72 +608,56 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-style: normal;
   text-transform: none;
   letter-spacing: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-all;
   color: #111;
   line-height: 1.25; }
-  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #111; }
-  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover, h5 a:hover, .h5 a:hover, h6 a:hover, .h6 a:hover {
+  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     color: #111; }
   @media only screen and (min-width: 800px) and (max-width: 1199px) {
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    h1, h2, h3, h4, h5, h6 {
       line-height: 1.25; } }
   @media only screen and (min-width: 1200px) {
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    h1, h2, h3, h4, h5, h6 {
       line-height: 1.25; } }
 
-h1, .h1 {
+h1 {
   font-size: 4.6rem; }
 
-h2, .h2 {
+h2 {
   font-size: 3.6rem; }
 
-h3, .h3 {
+h3 {
   font-size: 2.8rem; }
 
-h4, .h4 {
+h4 {
   font-size: 2.2rem; }
 
-h5, .h5 {
+h5 {
   font-size: 1.8rem; }
 
-h6, .h6 {
+h6 {
   font-size: 1.4rem; }
 
-.lead {
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #111;
-  letter-spacing: 0;
-  line-height: 1.5; }
-  @media only screen and (min-width: 800px) and (max-width: 1199px) {
-    .lead {
-      line-height: 1.5; } }
-  @media only screen and (min-width: 1200px) {
-    .lead {
-      line-height: 1.5; } }
-
-small, .small {
+small {
   font-size: 1.4rem;
   font-weight: 600;
   line-height: inherit; }
   @media only screen and (min-width: 800px) and (max-width: 1199px) {
-    small, .small {
+    small {
       line-height: inherit; } }
   @media only screen and (min-width: 1200px) {
-    small, .small {
+    small {
       line-height: inherit; } }
 
-a, .link {
+a {
   color: #85c51f;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-all; }
-  a:hover, .link:hover {
+  a:hover {
     color: #9fe037; }
 
 strong, b {
@@ -739,13 +767,16 @@ pre {
 Table
 */
 table {
+  border-collapse: collapse;
+  border-spacing: 0;
   max-width: 100%;
   width: 100%; }
 
 caption {
   margin-bottom: 1rem;
   font-size: 1.4rem;
-  text-align: left; }
+  text-align: left;
+  caption-side: bottom; }
 
 tr {
   border-bottom: 1px solid #f0f0f0; }
@@ -922,16 +953,6 @@ optgroup {
   font-weight: bold; }
 
 /*
-Badge
-
-<span class="badge"> </span>
-*/
-/*
-Button
-
-<a class="button" href="#"> </a>
-*/
-/*
 Clearfixed elements
 Source: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 */
@@ -983,15 +1004,6 @@ Input group:
 </form>
 */
 /*
-Screen reader text
-
-Text meant only for screen readers. A screen reader is a software
-application that enables people with severe visual impairments to
-use a computer.
-
-Source: github.com/Automattic/_s/blob/master/style.css#L634
-*/
-/*
 Scrollable
 
 <nav class="scrollbar">
@@ -999,4 +1011,28 @@ Scrollable
     <a class="button" href=#> </a>
     <a class="button" href=#> </a>
 </nav>
+*/
+/*
+Badge
+
+<span class="badge"> </span>
+*/
+/*
+Button
+
+<a class="button" href="#"> </a>
+*/
+/*
+Lead
+
+<p class="lead"> </p>
+*/
+/*
+Screen reader text
+
+Text meant only for screen readers. A screen reader is a software
+application that enables people with severe visual impairments to
+use a computer.
+
+Source: github.com/Automattic/_s/blob/master/style.css#L634
 */
