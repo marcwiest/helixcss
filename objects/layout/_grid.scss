@@ -100,17 +100,6 @@ Grid
 
 %grid > %grid__item--flush { padding: 0; }
 
-@include md {
-    %grid > %grid__item--flush-md { padding: 0; }
-}
-
-@include md-lg {
-    %grid > %grid__item--flush-md-lg { padding: 0; }
-}
-
-@include lg {
-    %grid > %grid__item--flush-lg { padding: 0; }
-}
 
 @if $css_objects_grid {
 
@@ -138,8 +127,5 @@ Grid
     .grid__item { @extend %grid__item; }
 
     .grid__item--flush { @extend %grid__item--flush; }
-    .grid__item--flush-md { @extend %grid__item--flush-md; }
-    .grid__item--flush-md-lg { @extend %grid__item--flush-md-lg; }
-    .grid__item--flush-lg { @extend %grid__item--flush-lg; }
 
 } // endif
