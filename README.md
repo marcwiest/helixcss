@@ -71,3 +71,4 @@ HelixCSS supports IE9+ & Android2.3+.
 - [http://shouldiprefix.com/](http://shouldiprefix.com/)
 - [http://html5please.com/](http://html5please.com/)
 - [http://www.cssfontstack.com/](http://www.cssfontstack.com/)
+- [sitepoint.com/top-9-animation-libraries-use-2016/](https://www.sitepoint.com/top-9-animation-libraries-use-2016/)
