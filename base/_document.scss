@@ -75,7 +75,6 @@ form, fieldset, table, dl, ol, ul {
     font-style: $font_style_heading;
     text-transform: $text_transform_heading;
     letter-spacing: $letter_spacing_heading;
-    @include word-wrap;
     color: $color_heading;
     a { color: $color_heading_link; }
     a:hover { color: $color_heading_link_hover; }
