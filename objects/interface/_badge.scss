@@ -19,9 +19,10 @@ Badge
     padding-left: $padding_badge_left;
     transition: $transition_badge;
     border-width: $border_width_badge;
+    border-color: $color_badge_border;
+    border-radius: $border_radius_badge;
     border-style: solid;
     color: $color_badge;
-    border-color: $color_badge_border;
     background-color: $color_badge_bg;
     text-decoration: none;
     outline: none;
