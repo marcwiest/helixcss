@@ -1,17 +1,6 @@
 @charset "UTF-8";
 
 ///
-// Get a utility color
-///
-
-@function get-color( $color_name, $color_map:null ) {
-    @if $color_map == null and variable-exists(utility_colors) {
-        $color_map: $utility_colors;
-    }
-    @return map-get( $color_map, $color_name );
-}
-
-///
 // Mixes a color with black.
 ///
 
