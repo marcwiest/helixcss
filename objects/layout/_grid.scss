@@ -78,7 +78,6 @@ Grid
 
 // Grid Padding
 
-%grid--narrow > %grid__item { padding: $grid_item_padding_narrow; }
 %grid--flush > %grid__item { padding: 0; }
 
 // Grid Items
@@ -99,21 +98,17 @@ Grid
 
 // Grid Item Padding
 
-%grid > %grid__item--narrow { padding: $grid_item_padding_narrow; }
 %grid > %grid__item--flush { padding: 0; }
 
 @include md {
-    %grid > %grid__item--narrow-md { padding: $grid_item_padding_narrow; }
     %grid > %grid__item--flush-md { padding: 0; }
 }
 
 @include md-lg {
-    %grid > %grid__item--narrow-md-lg { padding: $grid_item_padding_narrow; }
     %grid > %grid__item--flush-md-lg { padding: 0; }
 }
 
 @include lg {
-    %grid > %grid__item--narrow-lg { padding: $grid_item_padding_narrow; }
     %grid > %grid__item--flush-lg { padding: 0; }
 }
 
@@ -125,6 +120,9 @@ Grid
 
     .grid--full { @extend %grid--full; }
 
+    .grid--fill { @extend %grid--fill; }
+    .grid--fill-equal { @extend %grid--fill-equal; }
+
     .grid--center { @extend %grid--center; }
 
     .grid--justify { @extend %grid--justify; }
@@ -133,23 +131,15 @@ Grid
     .grid--middle { @extend %grid--middle; }
     .grid--bottom { @extend %grid--bottom; }
 
-    .grid--fill { @extend %grid--fill; }
-    .grid--fill-equal { @extend %grid--fill-equal; }
+    .grid--flush { @extend %grid--flush; }
 
     // grid__item
 
     .grid__item { @extend %grid__item; }
 
-    .grid__item--narrow { @extend %grid__item--narrow; }
     .grid__item--flush { @extend %grid__item--flush; }
-
-    .grid__item--narrow-md { @extend %grid__item--narrow-md; }
     .grid__item--flush-md { @extend %grid__item--flush-md; }
-
-    .grid__item--narrow-md-lg { @extend %grid__item--narrow-md-lg; }
     .grid__item--flush-md-lg { @extend %grid__item--flush-md-lg; }
-
-    .grid__item--narrow-lg { @extend %grid__item--narrow-lg; }
     .grid__item--flush-lg { @extend %grid__item--flush-lg; }
 
 } // endif
