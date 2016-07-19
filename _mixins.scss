@@ -48,6 +48,19 @@
 }
 
 ///
+// Widths
+// Helps you create the widths faster.
+//
+// @params  $lg, $md, $sm  The width in percent (e.g. 50%) for each respective breakpoint.
+///
+
+@mixin widths( $lg, $md, $sm ) {
+    @if $sm { width: $sm; }
+    @if $md { @include md-lg { width: $md; } }
+    @if $lg { @include lg { width: $lg; } }
+}
+
+///
 // Justify Single Line
 // Because a simple text-align: justify; won't justify one-liners. This mixin does.
 ///
