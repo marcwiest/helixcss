@@ -133,7 +133,7 @@ Grid
     @for $i from 1 through $grid_columns_count {
         .grid__item--#{$i} { width: (100% / $i); }
     }
-    
+
     @include md {
         @for $i from 1 through $grid_columns_count {
             .grid__item--#{$i}-md { width: (100% / $i); }
