@@ -9,13 +9,13 @@
 // jQuery(document).ready(function() {
 //     jQuery('.flyout').click( function(event) {
 //         event.preventDefault;
-//         jQuery(this).toggleClass('flyout-visible');
+//         jQuery(this).toggleClass('flyout--visible');
 //     });
 // });
 //
 // <div class=flyout>
 //     <strong>Lid</strong>
-//     <div class=flyoutItem></div>
+//     <div class=flyout__item></div>
 // </div>
 ///
 
@@ -23,9 +23,9 @@
 
     $args: map-merge( (
         "direction" : "down-right",
-        "target" : ".flyoutItem",
-        "event" : "hover",
-        "event_selector" : ".flyout-visible",
+        "target" : ".flyout__item",
+        "event" : "hover", // or click
+        "event_selector" : ".flyout--visible",
     ), $args );
 
     $direction: map-get($args,direction);
