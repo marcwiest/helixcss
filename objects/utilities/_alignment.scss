@@ -1,13 +1,40 @@
+@charset "UTF-8";
 
 @if $css_utilities_alignment {
 
 /*
-Alignment
+Float
 */
 
 .float-none { float: none; }
 .float-left { float: left; }
 .float-right { float: right; }
+
+@include md {
+    .float-none-md { float: none; }
+    .float-left-md { float: left; }
+    .float-right-md { float: right; }
+}
+@include md-lg {
+    .float-none-md-lg { float: none; }
+    .float-left-md-lg { float: left; }
+    .float-right-md-lg { float: right; }
+}
+@include lg {
+    .float-none-lg { float: none; }
+    .float-left-lg { float: left; }
+    .float-right-lg { float: right; }
+}
+
+/**
+ * Clear
+ */
+
+.clear { clear: both; }
+
+/**
+ * Text Align
+ */
 
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -15,36 +42,22 @@ Alignment
 .text-justify { text-align: justify; }
 
 @include md {
-    .float-none-md { float: none; }
-    .float-left-md { float: left; }
-    .float-right-md { float: right; }
-
     .text-left-md { text-align: left; }
     .text-right-md { text-align: right; }
     .text-center-md { text-align: center; }
     .text-justify-md { text-align: justify; }
 }
 @include md-lg {
-    .float-none-md-lg { float: none; }
-    .float-left-md-lg { float: left; }
-    .float-right-md-lg { float: right; }
-
     .text-left-md-lg { text-align: left; }
     .text-right-md-lg { text-align: right; }
     .text-center-md-lg { text-align: center; }
     .text-justify-md-lg { text-align: justify; }
 }
 @include lg {
-    .float-none-lg { float: none; }
-    .float-left-lg { float: left; }
-    .float-right-lg { float: right; }
-
     .text-left-lg { text-align: left; }
     .text-right-lg { text-align: right; }
     .text-center-lg { text-align: center; }
     .text-justify-lg { text-align: justify; }
 }
-
-.clear { clear: both; }
 
 } // endif
