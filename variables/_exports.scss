@@ -20,32 +20,32 @@ $css_base_table: true !default;
 
 
 /////////////////////////////////////
-// Objects
+// Objects > Layout
 /////////////////////////////////////
 
-$css_objects_center: false !default;
-$css_objects_clearfix: false !default;
-$css_objects_embed: false !default;
-$css_objects_grid: false !default;
-$css_objects_group: false !default;
-$css_objects_reader: false !default;
-$css_objects_scrollbar: false !default;
-
-
-/////////////////////////////////////
-// Components
-/////////////////////////////////////
-
-$css_components_heading: true !default;
-$css_components_lead: true !default;
-$css_components_link: true !default;
-$css_components_small: true !default;
-$css_components_badge: true !default;
-$css_components_button: true !default;
+$css_layout_center: false !default;
+$css_layout_clearfix: false !default;
+$css_layout_embed: false !default;
+$css_layout_grid: false !default;
+$css_layout_group: false !default;
+$css_layout_scrollbar: false !default;
 
 
 /////////////////////////////////////
-// Utilities
+// Objects > Interface
+/////////////////////////////////////
+
+$css_interface_heading: false !default;
+$css_interface_lead: false !default;
+$css_interface_link: false !default;
+$css_interface_small: false !default;
+$css_interface_badge: false !default;
+$css_interface_button: false !default;
+$css_interface_reader: false !default;
+
+
+/////////////////////////////////////
+// Objects > Utilities
 /////////////////////////////////////
 
 $css_utilities_alignment: false !default;
