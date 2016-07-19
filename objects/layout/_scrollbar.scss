@@ -37,7 +37,7 @@ Scrollable
     @include scrollable;
 }
 
-@if $css_objects_scrollbar {
+@if $css_layout_scrollbar {
 
     .scrollbar {
         @extend %scrollbar;

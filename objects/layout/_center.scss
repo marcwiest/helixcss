@@ -38,7 +38,7 @@
     %uncenter-lg { @include uncenter; }
 }
 
-@if $css_objects_center {
+@if $css_layout_center {
 
     .center { @extend %center; }
     .center-md { @extend %center-md; }

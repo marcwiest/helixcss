@@ -52,7 +52,7 @@ Badge
     }
 }
 
-@if $css_components_badge {
+@if $css_interface_badge {
 
     .badge {
         @extend %badge;
