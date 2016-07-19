@@ -128,4 +128,28 @@ Grid
 
     .grid__item--flush { @extend %grid__item--flush; }
 
+    // grid__item width
+
+    @for $i from 1 through $grid_columns_count {
+        .grid__item--#{$i} { width: (100% / $i); }
+    }
+    
+    @include md {
+        @for $i from 1 through $grid_columns_count {
+            .grid__item--#{$i}-md { width: (100% / $i); }
+        }
+    }
+
+    @include md-lg {
+        @for $i from 1 through $grid_columns_count {
+            .grid__item--#{$i}-md-lg { width: (100% / $i); }
+        }
+    }
+
+    @include lg {
+        @for $i from 1 through $grid_columns_count {
+            .grid__item--#{$i}-lg { width: (100% / $i); }
+        }
+    }
+
 } // endif
