@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
 ///
-// Flyout Mixin
-//
-// .flyout {
-//     @include flyout( ( direction : down ) );
-// }
+// Flyout
 //
 // jQuery(document).ready(function() {
 //     jQuery('.flyout').click( function(event) {
@@ -13,6 +9,12 @@
 //         jQuery(this).toggleClass('flyout--visible');
 //     });
 // });
+//
+// .flyout {
+//     @include flyout((
+//         'direction' : 'down'
+//     ));
+// }
 //
 // <div class=flyout>
 //     <strong>Lid</strong>
