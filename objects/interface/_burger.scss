@@ -1,130 +1,163 @@
 @charset "UTF-8";
 
 ///
-// Sass Burger
-//
-// Source: github.com/jorenvanhee/sass-burger
-//
-// (---) top    -> &::before
-// [---] middle -> &
-// (---) bottom -> &::after
-//
-//
-// Use jQuery for @mixin burger-to-cross:
+// Burger
 //
 // jQuery(document).ready(function($) {
 //     "use strict";
-//     $('.main-menu-btn').click(function(){
-//         $(this).find('.icon').toggleClass('active');
+//     $('.burger').click(function(){
+//         $(this).toggleClass('active');
 //     });
 // });
+//
+// .burger {
+//     @include burger((
+//         'padding' : 20px,
+//         'color' : #ccc,
+//     ));
+//     &.active {
+//         @include burger-to-cross;
+//     }
+// }
+//
+// <a class="burger" href="#">
+//     <span></span>
+// </a>
 ///
 
-// Vendor prefixes
-$sass-burger-add-vendor-prefixes: true !default;
+@mixin burger( $args ) {
 
-// Burger
-@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
-    $burger-height: $height !global;
-    $burger-gutter: $gutter !global;
+    $args: map-merge( (
+        'width'   : 24px,
+        'height'  : 20px,
+        'gutter'  : 3px,
+        'color'   : #000,
+        'speed'   : .3s,
+        'padding' : 10px,
+    ), $args );
 
-    position: relative;
-    margin-top: $height + $gutter;
-    margin-bottom: $height + $gutter;
+    $width: map-get($args,'width');
+    $height: map-get($args,'height');
+    $gutter: map-get($args,'gutter');
+    $color: map-get($args,'color');
+    $speed: map-get($args,'speed');
+    $padding: map-get($args,'padding');
 
-    @if $sass-burger-add-vendor-prefixes {
+    $padding: if( $padding == 0, 0px, $padding );
+
+    $layer_height: round(($height - ($gutter * 2)) / 3);
+
+    $new_height: ($layer_height * 3) + ($gutter * 2);
+    $dif: $height - $new_height;
+    @if $new_height > $height {
+        $dif: $new_height - $height;
+    }
+
+    $burger_layer_height: $layer_height !global;
+    $burger_gutter: $gutter !global;
+
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: yellow;
+    @if $padding and 0px != $padding {
+        $padding_x: $padding + ($width / 2);
+        $padding_y: $padding + ($height / 2);
+        padding: $padding_y $padding_x;
+        @if $new_height > $height {
+            padding-bottom: $padding_y + $dif;
+        } @else {
+            padding-bottom: $padding_y - $dif;
+        }
+    }
+
+    > * {
+        position: relative;
+        margin-top: $layer_height + $gutter;
+        margin-bottom: $layer_height + $gutter;
         -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-    }
-    user-select: none;
-
-    &, &::before, &::after {
-        display: block;
-        width: $width;
-        height: $height;
-        background-color: $color;
-        @if $border-radius != 0 {
-            border-radius: $border-radius;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        top: $layer_height + $gutter;
+        @if $padding and 0px != $padding {
+            top: -($height / 2);
+            left: -($width / 2);
         }
 
-        @if $sass-burger-add-vendor-prefixes {
+        &, &::before, &::after {
+            display: block;
+            width: $width;
+            height: $layer_height;
+            background-color: $color;
+            transition-duration: $speed;
             -webkit-transition-property: background-color, -webkit-transform;
-            -moz-transition-property: background-color, -moz-transform;
-            -o-transition-property: background-color, -o-transform;
+               -moz-transition-property: background-color, -moz-transform;
+                    transition-property: background-color, transform;
         }
-        transition-property: background-color, transform;
 
-        @if $sass-burger-add-vendor-prefixes {
-            -webkit-transition-duration: $transition-duration;
-            -moz-transition-duration: $transition-duration;
-            -o-transition-duration: $transition-duration;
+        &::before, &::after {
+            position: absolute;
+            content: '';
         }
-        transition-duration: $transition-duration;
-    }
 
-    &::before, &::after {
-        position: absolute;
-        content: "";
-    }
+        &::before {
+            top: -($layer_height + $gutter);
+        }
 
-    &::before {
-        top: -($height + $gutter);
-    }
-
-    &::after {
-        top: $height + $gutter;
+        &::after {
+            top: $layer_height + $gutter;
+        }
     }
 }
 
-
 // Select parts of the burger
 @mixin burger-parts {
-    &, &::before, &::after {
+    > *,
+    > *::before,
+    > *::after {
         @content;
     }
 }
 
 @mixin burger-top {
-    &::before {
+    > *::before {
         @content;
     }
 }
 
 @mixin burger-middle {
-    & {
+    > * {
         @content;
     }
 }
 
 @mixin burger-bottom {
-    &::after {
+    > *::after {
         @content;
     }
 }
 
 
 // Burger animations
-@mixin burger-to-cross {
-    & {
-        background-color: transparent;
-    }
-    &::before {
-        @if $sass-burger-add-vendor-prefixes {
-            -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-            -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-            -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-            -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+@mixin burger-to-cross() {
+    > * {
+        & {
+            background-color: transparent;
         }
-        transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-    }
-    &::after {
-        @if $sass-burger-add-vendor-prefixes {
-            -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-            -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-            -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-            -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        &::before {
+            -webkit-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
+               -moz-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
+                -ms-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
+                 -o-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
+                    transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
         }
-        transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        &::after {
+            -webkit-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
+               -moz-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
+                -ms-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
+                 -o-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
+                    transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
+        }
     }
 }
