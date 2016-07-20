@@ -9,29 +9,29 @@ $responsive_typography: true !default;
 
 // All em, rem and percent units are based on these values.
 
-$html_base_font_size: 9px !default;
+$html_base_font_size:    9px !default;
 $html_base_font_size_md: 9.5px !default;
 $html_base_font_size_lg: 10px !default;
 
 // All line_height_ratio variables should be unitless numbers.
 
-$line_height_ratio_body: 1.75 !default;
+$line_height_ratio_body:    1.75 !default;
 $line_height_ratio_body_md: 1.75 !default;
 $line_height_ratio_body_lg: 1.75 !default;
 
-$line_height_ratio_heading: 1.25 !default;
+$line_height_ratio_heading:    1.25 !default;
 $line_height_ratio_heading_md: 1.25 !default;
 $line_height_ratio_heading_lg: 1.25 !default;
 
-$line_height_ratio_lead: 1.5 !default;
+$line_height_ratio_lead:    1.5 !default;
 $line_height_ratio_lead_md: 1.5 !default;
 $line_height_ratio_lead_lg: 1.5 !default;
 
-$line_height_ratio_small: inherit !default;
+$line_height_ratio_small:    inherit !default;
 $line_height_ratio_small_md: inherit !default;
 $line_height_ratio_small_lg: inherit !default;
 
-$line_height_ratio_code: inherit !default;
+$line_height_ratio_code:    inherit !default;
 $line_height_ratio_code_md: inherit !default;
 $line_height_ratio_code_lg: inherit !default;
 
@@ -42,15 +42,15 @@ $line_height_ratio_code_lg: inherit !default;
 // Font Size
 /////////////////////////////////////
 
-$font_size_text: 1.8rem !default;
-$font_size_lead: 2.2rem !default;
-$font_size_small: 1.4rem !default;
-$font_size_button: 1.8rem !default;
-$font_size_code: 1.4rem !default;
-$font_size_input: 1.8rem !default;
+$font_size_text:        1.8rem !default;
+$font_size_lead:        2.2rem !default;
+$font_size_small:       1.4rem !default;
+$font_size_button:      1.8rem !default;
+$font_size_code:        1.4rem !default;
+$font_size_input:       1.8rem !default;
 $font_size_input_label: 1.8rem !default;
-$font_size_tabel_head: 1.8rem !default;
-$font_size_tabel_cell: 1.8rem !default;
+$font_size_tabel_head:  1.8rem !default;
+$font_size_tabel_cell:  1.8rem !default;
 
 $font_size_h1: 4.6rem !default;
 $font_size_h2: 3.6rem !default;
@@ -66,72 +66,84 @@ $font_size_h6: 1.4rem !default;
 
 $font_smoothing: true !default;
 
-$font_sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font_serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
-$font_mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
+// Abstracts
 
-$font_family_heading: $font_sans !default;
-$font_family_text: $font_sans !default;
-$font_family_button: $font_sans !default;
-$font_family_code: $font_mono !default;
-$font_family_input: $font_sans !default;
-$font_family_input_label: $font_sans !default;
-$font_family_tabel_head: $font_sans !default;
-$font_family_tabel_cell: $font_sans !default;
+$ff_sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$ff_serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
+$ff_mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
+
+// Elements
+
+$font_family_heading:     $ff_sans !default;
+$font_family_text:        $ff_sans !default;
+$font_family_button:      $ff_sans !default;
+$font_family_code:        $ff_mono !default;
+$font_family_input:       $ff_sans !default;
+$font_family_input_label: $ff_sans !default;
+$font_family_tabel_head:  $ff_sans !default;
+$font_family_tabel_cell:  $ff_sans !default;
 
 
 /////////////////////////////////////
 // Font Weight
 /////////////////////////////////////
 
-$font_weight_heading: 400 !default;
-$font_weight_text: 400 !default;
-$font_weight_lead: 400 !default;
-$font_weight_small: 600 !default;
-$font_weight_button: 400 !default;
-$font_weight_code: 400 !default;
-$font_weight_input: 400 !default;
-$font_weight_input_label: 400 !default;
-$font_weight_tabel_head: 700 !default;
-$font_weight_tabel_cell: 400 !default;
+// Abstracts
+
+$fw_light: 200;
+$fw_normal: 400;
+$fw_bold: 600;
+
+// Elements
+
+$font_weight_heading:     $fw_normal !default;
+$font_weight_text:        $fw_normal !default;
+$font_weight_lead:        $fw_normal !default;
+$font_weight_small:       $fw_bold !default;
+$font_weight_button:      $fw_normal !default;
+$font_weight_code:        $fw_normal !default;
+$font_weight_input:       $fw_normal !default;
+$font_weight_input_label: $fw_normal !default;
+$font_weight_tabel_head:  $fw_bold !default;
+$font_weight_tabel_cell:  $fw_normal !default;
 
 
 /////////////////////////////////////
 // Text Transform (uppercase)
 /////////////////////////////////////
 
-$text_transform_heading: none !default;
-$text_transform_button: none !default;
+$text_transform_heading:     none !default;
+$text_transform_button:      none !default;
 $text_transform_input_label: none !default;
-$text_transform_tabel_head: none !default;
+$text_transform_tabel_head:  none !default;
 
 
 /////////////////////////////////////
 // Font Style (italic)
 /////////////////////////////////////
 
-$font_style_heading: normal !default;
-$font_style_text: normal !default;
-$font_style_button: normal !default;
-$font_style_input: normal !default;
+$font_style_heading:     normal !default;
+$font_style_text:        normal !default;
+$font_style_button:      normal !default;
+$font_style_input:       normal !default;
 $font_style_input_label: normal !default;
-$font_style_tabel_head: normal !default;
-$font_style_tabel_cell: normal !default;
+$font_style_tabel_head:  normal !default;
+$font_style_tabel_cell:  normal !default;
 
 
 /////////////////////////////////////
 // Letter Spacing
 /////////////////////////////////////
 
-$letter_spacing_input: 0 !default;
+$letter_spacing_input:       0 !default;
 $letter_spacing_input_label: 0 !default;
-$letter_spacing_code: 0 !default;
-$letter_spacing_heading: 0 !default;
-$letter_spacing_lead: 0 !default;
-$letter_spacing_text: 0 !default;
-$letter_spacing_button: 0 !default;
-$letter_spacing_tabel_head: 0 !default;
-$letter_spacing_tabel_cell: 0 !default;
+$letter_spacing_code:        0 !default;
+$letter_spacing_heading:     0 !default;
+$letter_spacing_lead:        0 !default;
+$letter_spacing_text:        0 !default;
+$letter_spacing_button:      0 !default;
+$letter_spacing_tabel_head:  0 !default;
+$letter_spacing_tabel_cell:  0 !default;
 
 
 /////////////////////////////////////
