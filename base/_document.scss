@@ -115,7 +115,6 @@ small { @extend %small; }
     color: $color_text_link;
     transition: $transition_link;
     text-decoration: none;
-    @include word-wrap;
     &:hover { // &:active, &:focus
         color: $color_text_link_hover;
     }
