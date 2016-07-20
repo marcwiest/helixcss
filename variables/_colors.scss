@@ -13,8 +13,8 @@ $c_accent: #2ecc71 !default;
 $c_accent_light: lighten($c_accent,12.5%);
 $c_accent_dark: darken($c_accent,12.5%);
 
-$c_light_gray: #B6B6B6 !default;
-$c_dark_gray: #212121 !default;
+$c_gray_light: #B6B6B6 !default;
+$c_gray_dark: #212121 !default;
 
 $c_text_primary: #212121 !default;
 $c_text_muted: #727272 !default;
@@ -52,9 +52,9 @@ $color_badge_border_hover: transparent !default;
 $color_input:              $c_text_primary !default;
 $color_input_hover:        $c_text_primary !default;
 $color_input_focus:        $c_text_primary !default;
-$color_input_bg:           $c_light_gray !default;
-$color_input_bg_hover:     $c_light_gray !default;
-$color_input_bg_focus:     $c_light_gray !default;
+$color_input_bg:           $c_gray_light !default;
+$color_input_bg_hover:     $c_gray_light !default;
+$color_input_bg_focus:     $c_gray_light !default;
 $color_input_border:       transparent !default;
 $color_input_border_hover: transparent !default;
 $color_input_border_focus: transparent !default;
@@ -63,11 +63,11 @@ $color_input_label:        $c_text_primary !default;
 
 $color_table_head:   $c_text_primary !default;
 $color_table_cell:   $c_text_primary !default;
-$color_table_border: $c_light_gray !default;
+$color_table_border: $c_gray_light !default;
 
 $color_pre:    $c_text_primary !default;
-$color_pre_bg: $c_light_gray !default;
+$color_pre_bg: $c_gray_light !default;
 
-$color_hr: $c_light_gray !default;
+$color_hr: $c_gray_light !default;
 
 $color_main_bg: #fff !default;
