@@ -17,6 +17,14 @@
 }
 
 ///
+// Removes the unit (e.g. px) from a number.
+///
+
+@function strip-unit( $num ) {
+    @return $num / ($num * 0 + 1);
+}
+
+///
 // Test if `$value` is a valid CSS3 gradient direction.
 //
 // Source: sitepoint.com/building-linear-gradient-mixin-sass/
