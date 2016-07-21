@@ -22,7 +22,7 @@
 // </div>
 ///
 
-@mixin flyout( $args ) {
+@mixin flyout( $args:() ) {
 
     $args: map-merge( (
         "direction" : "down-right",

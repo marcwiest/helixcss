@@ -25,7 +25,7 @@
 // </a>
 ///
 
-@mixin burger( $args ) {
+@mixin burger( $args:() ) {
 
     $args: map-merge( (
         'width'   : 24px,
