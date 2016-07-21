@@ -33,7 +33,7 @@
         'gutter'  : 3px,
         'color'   : #000,
         'speed'   : .3s,
-        'padding' : 10px,
+        'padding' : 0,
     ), $args );
 
     $width: map-get($args,'width');
