@@ -56,7 +56,7 @@
     $burger_layer_height: $layer_height !global;
     $burger_gutter: $gutter !global;
 
-    display: block;
+    display: inline-block;
     height: $height;
     width: $width;
     @if $padding and 0px != $padding {
@@ -78,7 +78,6 @@
            -moz-user-select: none;
             -ms-user-select: none;
                 user-select: none;
-        top: $layer_height + $gutter;
         @if $padding and 0px != $padding {
             top: -($height / 2);
             left: -($width / 2);
