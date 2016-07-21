@@ -59,7 +59,6 @@
     display: block;
     height: $height;
     width: $width;
-    background-color: yellow;
     @if $padding and 0px != $padding {
         $padding_x: $padding + ($width / 2);
         $padding_y: $padding + ($height / 2);
