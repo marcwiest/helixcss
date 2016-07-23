@@ -61,6 +61,19 @@
 }
 
 ///
+// Clearfix
+// Source: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+///
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+///
 // Justify Single Line
 // Because a simple text-align: justify; won't justify one-liners. This mixin does.
 ///
