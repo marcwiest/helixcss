@@ -59,6 +59,14 @@ input[type="reset"] {
 } // endif
 
 /*
+Clearfixed elements
+*/
+
+%cf, %clearfix {
+    @include clearfix;
+}
+
+/*
 Typographic elements
 */
 
