@@ -9,70 +9,77 @@ HelixCSS v1.0 | License: MIT | Author: Marc Wiest
 
 // Variables
 
-@import "variables/typography";
-@import "variables/grid";
-@import "variables/borders";
-@import "variables/brands";
-@import "variables/colors";
-@import "variables/sizes";
-@import "variables/exports";
-@import "variables/timing";
-@import "variables/transitions";
+@import
+    "variables/typography",
+    "variables/grid",
+    "variables/borders",
+    "variables/brands",
+    "variables/colors",
+    "variables/sizes",
+    "variables/exports",
+    "variables/timing",
+    "variables/transitions";
 
 // CSS3 Mixins
 
-@import "css3/animation";
-@import "css3/appearance";
-@import "css3/backface-visibility";
-@import "css3/calc";
-@import "css3/filter";
-@import "css3/flexbox";
-@import "css3/font-smoothing";
-@import "css3/hyphens";
-@import "css3/keyframes";
-@import "css3/linear-gradient";
-@import "css3/perspective";
-@import "css3/placeholder";
-@import "css3/radial-gradient";
-@import "css3/selection";
-@import "css3/text-decoration";
-@import "css3/transform";
-@import "css3/transition";
-@import "css3/user-select";
-@import "css3/word-wrap";
+@import
+    "css3/animation",
+    "css3/appearance",
+    "css3/backface-visibility",
+    "css3/calc",
+    "css3/filter",
+    "css3/flexbox",
+    "css3/font-smoothing",
+    "css3/hyphens",
+    "css3/keyframes",
+    "css3/linear-gradient",
+    "css3/perspective",
+    "css3/placeholder",
+    "css3/radial-gradient",
+    "css3/selection",
+    "css3/text-decoration",
+    "css3/transform",
+    "css3/transition",
+    "css3/user-select",
+    "css3/word-wrap";
 
 // Vendors
 
-@import "vendors/print";
-@import "vendors/normalize";
+@import
+    "vendors/print",
+    "vendors/normalize";
 
 // Base
 
-@import "base/reset";
-@import "base/document";
-@import "base/code";
-@import "base/table";
-@import "base/form";
+@import
+    "base/reset",
+    "base/document",
+    "base/code",
+    "base/table",
+    "base/form";
 
 // Objects
 
-@import "objects/containers/clearfix";
-@import "objects/containers/embed";
-@import "objects/containers/flyout";
-@import "objects/containers/grid";
-@import "objects/containers/group";
-@import "objects/containers/scrollbar";
+@import
+    "objects/containers/embed",
+    "objects/containers/flyout",
+    "objects/containers/grid",
+    "objects/containers/group",
+    "objects/containers/scrollbar";
 
-@import "objects/components/badge";
-@import "objects/components/burger";
-@import "objects/components/button";
-@import "objects/components/heading";
-@import "objects/components/highlight";
-@import "objects/components/lead";
-@import "objects/components/link";
-@import "objects/components/reader";
-@import "objects/components/small";
-@import "objects/components/triangle";
+@import
+    "objects/components/badge",
+    "objects/components/burger",
+    "objects/components/button",
+    "objects/components/heading",
+    "objects/components/highlight",
+    "objects/components/lead",
+    "objects/components/link",
+    "objects/components/reader",
+    "objects/components/small",
+    "objects/components/triangle";
 
-@import "objects/utilities/alignment";
-@import "objects/utilities/display";
+@import
+    "objects/utilities/alignment",
+    "objects/utilities/clearfix",
+    "objects/utilities/display";
