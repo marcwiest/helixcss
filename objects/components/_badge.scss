@@ -49,7 +49,7 @@ Badge
     }
 }
 
-@if $css_interface_badge {
+@if $export_component_badge {
 
     .badge {
         @extend %badge;
