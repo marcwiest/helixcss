@@ -31,15 +31,3 @@ Scrollable
         overflow-x: auto;
     }
 }
-
-%scrollbar {
-    @include scrollable;
-}
-
-@if $css_layout_scrollbar {
-
-    .scrollbar {
-        @extend %scrollbar;
-    }
-
-} // endif
