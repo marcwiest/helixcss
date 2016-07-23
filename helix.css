@@ -1,5 +1,5 @@
 /*!
-HelixCSS v1.0 | License: MIT | Author: Marc Wiest
+HelixCSS v1.1 | License: MIT | Author: Marc Wiest
 */
 /*!
 H5BP Print Reset
@@ -1600,6 +1600,100 @@ Float
 
   .text-justify-lg {
     text-align: justify; } }
+/*
+Foreground Colors
+*/
+.fg-primary,
+.fgh-primary:hover {
+  color: #2c3e50; }
+
+.fg-primary-light,
+.fgh-primary-light:hover {
+  color: #435e79; }
+
+.fg-primary-dark,
+.fgh-primary-dark:hover {
+  color: #151e27; }
+
+.fg-accent,
+.fgh-accent:hover {
+  color: #2ecc71; }
+
+.fg-accent-light,
+.fgh-accent-light:hover {
+  color: #5fdb93; }
+
+.fg-accent-dark,
+.fgh-accent-dark:hover {
+  color: #229854; }
+
+.fg-gray-light,
+.fgh-gray-light:hover {
+  color: #B6B6B6; }
+
+.fg-gray-dark,
+.fgh-gray-dark:hover {
+  color: #212121; }
+
+.fg-text-primary,
+.fgh-text-primary:hover {
+  color: #212121; }
+
+.fg-text-muted,
+.fgh-text-muted:hover {
+  color: #727272; }
+
+.fg-text-inverted,
+.fgh-text-inverted:hover {
+  color: #FFFFFF; }
+
+/*
+Background Colors
+*/
+.bg-primary,
+.bgh-primary:hover {
+  background-color: #2c3e50; }
+
+.bg-primary-light,
+.bgh-primary-light:hover {
+  background-color: #435e79; }
+
+.bg-primary-dark,
+.bgh-primary-dark:hover {
+  background-color: #151e27; }
+
+.bg-accent,
+.bgh-accent:hover {
+  background-color: #2ecc71; }
+
+.bg-accent-light,
+.bgh-accent-light:hover {
+  background-color: #5fdb93; }
+
+.bg-accent-dark,
+.bgh-accent-dark:hover {
+  background-color: #229854; }
+
+.bg-gray-light,
+.bgh-gray-light:hover {
+  background-color: #B6B6B6; }
+
+.bg-gray-dark,
+.bgh-gray-dark:hover {
+  background-color: #212121; }
+
+.bg-text-primary,
+.bgh-text-primary:hover {
+  background-color: #212121; }
+
+.bg-text-muted,
+.bgh-text-muted:hover {
+  background-color: #727272; }
+
+.bg-text-inverted,
+.bgh-text-inverted:hover {
+  background-color: #FFFFFF; }
+
 /*
 Display
 */

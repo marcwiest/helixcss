@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@if $export_utilities_colors {
+
+/*
+Foreground Colors
+*/
+
+@each $name, $color in $utility_colors {
+    .fg-#{$name},
+    .fgh-#{$name}:hover, {
+        color: $color;
+    }
+}
+
+/*
+Background Colors
+*/
+
+@each $name, $color in $utility_colors {
+    .bg-#{$name},
+    .bgh-#{$name}:hover, {
+        background-color: $color;
+    }
+}
+
+} // endif

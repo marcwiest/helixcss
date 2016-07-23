@@ -20,10 +20,26 @@ $c_text_primary: #212121 !default;
 $c_text_muted: #727272 !default;
 $c_text_inverted: #FFFFFF !default;
 
-// $c_info: #118bd9 !default;
 // $c_success: #5aba59 !default;
+// $c_info: #118bd9 !default;
 // $c_warning: #fbd30a !default;
 // $c_error: #df5048 !default;
+
+// Utilities
+
+$utility_colors: (
+    'primary' : $c_primary,
+    'primary-light' : $c_primary_light,
+    'primary-dark' : $c_primary_dark,
+    'accent' : $c_accent,
+    'accent-light' : $c_accent_light,
+    'accent-dark' : $c_accent_dark,
+    'gray-light' : $c_gray_light,
+    'gray-dark' : $c_gray_dark,
+    'text-primary' : $c_text_primary,
+    'text-muted' : $c_text_muted,
+    'text-inverted' : $c_text_inverted,
+) !default;
 
 // Elements
 
