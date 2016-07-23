@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/*
+Scrollable
+
+<nav class="scrollbar">
+    <a class="button" href=#> </a>
+    <a class="button" href=#> </a>
+    <a class="button" href=#> </a>
+</nav>
+*/
+
+@mixin scrollable( $height:0px ) {
+
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @if strip-unit($height) > 0 {
+        // scroll vertical
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: $height;
+        width: 100%;
+    } @else {
+        // scroll horizontal
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+}
+
+%scrollbar {
+    @include scrollable;
+}
+
+@if $css_layout_scrollbar {
+
+    .scrollbar {
+        @extend %scrollbar;
+    }
+
+} // endif
