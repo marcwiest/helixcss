@@ -119,7 +119,7 @@ h6 { @extend %h6; }
 
 small { @extend %small; }
 
-%link {
+a {
     color: $color_text_link;
     transition: $transition_link;
     text-decoration: none;
@@ -127,8 +127,6 @@ small { @extend %small; }
         color: $color_text_link_hover;
     }
 }
-
-a { @extend %link; }
 
 strong, b {
     font-weight: bold;
