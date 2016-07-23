@@ -2,6 +2,8 @@
 
 @if $css_layout_clearfix {
 
+    // See base/_document.scss for %clearfix.
+
     .cf, .clearfix {
         @extend %clearfix;
     }
