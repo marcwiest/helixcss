@@ -6,12 +6,12 @@
 // Abstracts
 
 $c_primary: #2c3e50 !default;
-$c_primary_light: lighten($c_primary,12.5%);
-$c_primary_dark: darken($c_primary,12.5%);
+$c_primary_light: lighten($c_primary,12.5%) !default;
+$c_primary_dark: darken($c_primary,12.5%) !default;
 
 $c_accent: #2ecc71 !default;
-$c_accent_light: lighten($c_accent,12.5%);
-$c_accent_dark: darken($c_accent,12.5%);
+$c_accent_light: lighten($c_accent,12.5%) !default;
+$c_accent_dark: darken($c_accent,12.5%) !default;
 
 $c_gray_light: #B6B6B6 !default;
 $c_gray_dark: #212121 !default;
