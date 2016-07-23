@@ -10,27 +10,26 @@ Scrollable
 </nav>
 */
 
-@mixin scrollable( $height:'' ) {
+@mixin scrollable( $height:0px ) {
 
     -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: none;
-
-    // hide scrollbar (webkit only)
-    &::-webkit-scrollbar { display: none; }
-
-    // scroll horizontal
-    overflow-y: hidden;
-    overflow-x: auto;
+    -ms-overflow-style: none;
     white-space: nowrap;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-    // scroll vertical
-    @if '' != $height {
+    @if strip-unit($height) > 0 {
+        // scroll vertical
         overflow-y: scroll;
         overflow-x: hidden;
         height: $height;
         width: 100%;
+    } @else {
+        // scroll horizontal
+        overflow-y: hidden;
+        overflow-x: auto;
     }
-
 }
 
 %scrollbar {
