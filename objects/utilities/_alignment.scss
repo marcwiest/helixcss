@@ -52,20 +52,6 @@ Float
     .uncenter-lg { @include uncenter; }
 }
 
-// @if $css_layout_center {
-//
-//     .center { @extend %center; }
-//     .center-md { @extend %center-md; }
-//     .center-md-lg { @extend %center-md-lg; }
-//     .center-lg { @extend %center-lg; }
-//
-//     .uncenter { @extend %uncenter; }
-//     .uncenter-md { @extend %uncenter-md; }
-//     .uncenter-md-lg { @extend %uncenter-md-lg; }
-//     .uncenter-lg { @extend %uncenter-lg; }
-//
-// } // endif
-
 /**
  * Text Align
  */
