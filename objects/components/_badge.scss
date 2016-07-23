@@ -34,7 +34,7 @@ Badge
 }
 
 %badge--round {
-    border-radius: $padding_badge_top * 2.6;
+    border-radius: 50%;
 }
 
 %badge--sharp {
@@ -42,10 +42,7 @@ Badge
 }
 
 %badge--clear {
-    &,
-    &:focus,
-    &:hover,
-    &:focus:hover {
+    &, &:hover {
         color: inherit;
         border-color: transparent;
         background-color: transparent;
