@@ -10,10 +10,18 @@
 [semver.org](semver.org)
 [keepachangelog.com](keepachangelog.com)
 
-**DEMO ENTRY**
+**EXAMPLE ENTRY**
 ----
 # v1.0.0 - February 1, 2016
 ## Added (green)
 ## Updated (blue)
 ## Fixed (yellow)
 ## Removed (red)
+
+**CHANGELOG**
+---
+# v1.1 – July 23, 2016
+[Added] Utility colors.
+
+# v1.0 – July 23, 2016
+Official 1.0 release.

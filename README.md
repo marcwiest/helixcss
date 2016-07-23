@@ -1,5 +1,5 @@
 
-# HelixCSS
+# HelixCSS v1.1
 
 A lean OOCSS and BEMified Sass library. HelixCSS primary goal is to give structure to your website
 or application and leave the design decisions to you.
@@ -57,9 +57,8 @@ responsive typography and sizing.
 
 ## Roadmap
 
-1. Start using the CHANGLOG.md file and begin versioning.
-2. Clean mixin-only components to avoid nested selectors and code bloat.
-3. Create a proper documentation.
+1. Clean mixin-only components to avoid nested selectors and code bloat.
+2. Create a proper documentation.
 
 ## Browser & OS Support
 
