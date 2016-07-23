@@ -56,24 +56,23 @@ HelixCSS v1.0 | License: MIT | Author: Marc Wiest
 
 // Objects
 
-@import "objects/layout/center";
-@import "objects/layout/clearfix";
-@import "objects/layout/embed";
-@import "objects/layout/flyout";
-@import "objects/layout/grid";
-@import "objects/layout/group";
-@import "objects/layout/scrollbar";
+@import "objects/containers/clearfix";
+@import "objects/containers/embed";
+@import "objects/containers/flyout";
+@import "objects/containers/grid";
+@import "objects/containers/group";
+@import "objects/containers/scrollbar";
 
-@import "objects/interface/badge";
-@import "objects/interface/burger";
-@import "objects/interface/button";
-@import "objects/interface/heading";
-@import "objects/interface/highlight";
-@import "objects/interface/lead";
-@import "objects/interface/link";
-@import "objects/interface/reader";
-@import "objects/interface/small";
-@import "objects/interface/triangle";
+@import "objects/components/badge";
+@import "objects/components/burger";
+@import "objects/components/button";
+@import "objects/components/heading";
+@import "objects/components/highlight";
+@import "objects/components/lead";
+@import "objects/components/link";
+@import "objects/components/reader";
+@import "objects/components/small";
+@import "objects/components/triangle";
 
 @import "objects/utilities/alignment";
 @import "objects/utilities/display";

@@ -116,7 +116,33 @@
 }
 
 ///
-// Centering
+// Center
+///
+
+@mixin center( $width:null ) {
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    @if null != $width {
+        width: $width;
+    }
+}
+
+@mixin uncenter( $width:false ) {
+    display: unset;
+    float: unset;
+    clear: unset;
+    margin-left: unset;
+    margin-right: unset;
+    @if true == $width {
+        width: unset;
+    }
+}
+
+///
+// Center Absolute
 // This needs to be within a non static positioned parent.
 ///
 
