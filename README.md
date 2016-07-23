@@ -1,7 +1,7 @@
 
 # HelixCSS v1.1
 
-A lean OOCSS and BEMified Sass library. HelixCSS primary goal is to give structure to your website
+A lean OOCSS and BEMified CSS framework. HelixCSS primary goal is to give structure to your website
 or application and leave the design decisions to you.
 
 ## The OOCSS & BEM Approach
@@ -12,48 +12,49 @@ hierarchy composed of equally-specific class selectors.
 
 ## Documentation
 
-For the moment there are only code examples available inside the objects and components folders.
-Over time, a more detailed documentation will be made available.
+For the moment there are only code examples available inside the objects folders. Over time, a more
+detailed documentation will be made available.
 
 ## Folders & Contents
 
 #### Variables
 
 To help you find the variables you are looking for faster, variables have their own folder and files.
+Some variable groups have abstract variables. These abstract variables are there to shorten the setup
+of the element and utility variables.
 
 #### Vendors
 
-Holds external resources such as normalize-css.
+Holds external resources such as normalize-css and H5BP's print styles.
 
 #### Base
 
-This folder addresses mostly the default HTML tags, but there are also a couple of silent component
-classes (i.e. `%heading`, `%link` & `%small`) within `_document.scss`.
+This folder addresses mostly the default HTML tags, but there are also a couple of component and
+utility classes within `_document.scss`.
 
 #### Objects
 
-- **Layout Folder:** The layout folder holds purely structural elements that handle skeletal aspects,
+- **Containers Folder:** The containers folder holds purely structural elements that handle skeletal aspects,
 without ever actually looking like designed ‘things’.
-- **Interface Folder:** The interface folder holds specific UI elements like buttons and badges.
-- **Utilities Folder:** Utilities are single property declaration classes that are useful and sharable
-between different components.
+- **Components Folder:** The components folder holds specific UI elements like buttons and badges.
+- **Utilities Folder:** Utilities are small declaration classes that are useful when manipulating components.
 
 #### CSS3
 
-Contains mixins that take care of CSS3 browser consistency and eliminate the need for a 3rd party
-framework.
+Contains mixins that take care of CSS3 browser consistencies. This eliminate the need for a 3rd party
+framework and allows for compiling on the server with, for example, [scssphp](http://leafo.net/scssphp/).
 
 ## Responsive Sizing
 
-Throughout your project, use `rem` whenever you want a size to be adaptable to whatever the HTML's
-base font-size value is set to. The base font-size varies between breakpoints. This allows for
+Throughout your project, use `rem` or `em` whenever you want a size to be adaptable to whatever the
+HTML's base font-size value is set to. The base font-size varies between breakpoints. This allows for
 responsive typography and sizing.
 
 ## Reminders
 
 - [IE 9 & 10](http://caniuse.com/#search=rem) do not support rem units when used in the `font`
   shorthand property (the entire declaration is ignored) or when used on pseudo elements like
-  `:before` & `:after`.
+  `::before` & `::after`.
 
 ## Roadmap
 
