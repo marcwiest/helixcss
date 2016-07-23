@@ -56,11 +56,6 @@ responsive typography and sizing.
   shorthand property (the entire declaration is ignored) or when used on pseudo elements like
   `::before` & `::after`.
 
-## Roadmap
-
-1. Clean mixin-only components to avoid nested selectors and code bloat.
-2. Create a proper documentation.
-
 ## Browser & OS Support
 
 HelixCSS supports IE9+ & Android2.3+.
