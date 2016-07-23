@@ -18,7 +18,7 @@ Requires: scrollable mixin.
     }
 }
 
-@if $css_layout_scrollbar {
+@if $export_container_scrollbar {
 
     .scrollbar {
         @extend %scrollbar;

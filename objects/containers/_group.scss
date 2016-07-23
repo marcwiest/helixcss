@@ -51,7 +51,7 @@ form %group__item {
     border: 0;
 }
 
-@if $css_layout_group {
+@if $export_container_group {
 
     .group {
         @extend %group;
