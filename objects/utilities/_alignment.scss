@@ -27,12 +27,6 @@ Float
 }
 
 /**
- * Clear
- */
-
-.clear { clear: both; }
-
-/**
  * Center
  */
 
@@ -51,6 +45,12 @@ Float
     .center-lg { @include center; }
     .uncenter-lg { @include uncenter; }
 }
+
+/**
+ * Clear
+ */
+
+.clear { clear: both; }
 
 /**
  * Text Align
