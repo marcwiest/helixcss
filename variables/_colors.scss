@@ -6,18 +6,18 @@
 
 // Abstracts
 
-$c_primary: #2c3e50 !default;
+$c_primary: #f1c40f !default;
 $c_primary_light: lighten($c_primary,12.5%) !default;
 $c_primary_dark: darken($c_primary,12.5%) !default;
 
-$c_accent: #2ecc71 !default;
+$c_accent: #3498db !default;
 $c_accent_light: lighten($c_accent,12.5%) !default;
 $c_accent_dark: darken($c_accent,12.5%) !default;
 
-$c_gray_light: #B6B6B6 !default;
-$c_gray_dark: #212121 !default;
+$c_gray_light: #f0f0f0 !default;
+$c_gray_dark: #202020 !default;
 
-$c_text_primary: #212121 !default;
+$c_text_primary: #202020 !default;
 $c_text_muted: #727272 !default;
 $c_text_inverted: #FFFFFF !default;
 
@@ -46,7 +46,7 @@ $utility_colors: (
 
 $color_text:            $c_text_primary !default;
 $color_text_link:       $c_accent !default;
-$color_text_link_hover: $c_accent_light !default;
+$color_text_link_hover: $c_accent_dark !default;
 
 $color_heading:            $c_text_primary !default;
 $color_heading_link:       $c_text_primary !default;
@@ -55,7 +55,7 @@ $color_heading_link_hover: $c_text_primary !default;
 $color_button:              $c_text_inverted !default;
 $color_button_hover:        $c_text_inverted !default;
 $color_button_bg:           $c_accent !default;
-$color_button_bg_hover:     $c_accent_light !default;
+$color_button_bg_hover:     $c_accent_dark !default;
 $color_button_border:       transparent !default;
 $color_button_border_hover: transparent !default;
 
