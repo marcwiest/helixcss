@@ -1,7 +1,7 @@
 
-# HelixCSS v1.1.1
+# HelixCSS v1.1.2
 
-A lean OOCSS and BEMified CSS framework. HelixCSS primary goal is to give structure to your website
+A lean OOCSS and BEMified SCSS framework. HelixCSS primary goal is to give structure to your website
 or application and leave the design decisions to you.
 
 ## The OOCSS & BEM Approach
@@ -37,11 +37,11 @@ utility classes within `_document.scss`.
 - **Containers Folder:** The containers folder holds purely structural elements that handle skeletal aspects,
 without ever actually looking like designed ‘things’.
 - **Components Folder:** The components folder holds specific UI elements like buttons and badges.
-- **Utilities Folder:** Utilities are small declaration classes that are useful when manipulating components.
+- **Utilities Folder:** Utilities are classes that help manipulate containers and components.
 
 #### CSS3
 
-Contains mixins that take care of CSS3 browser consistencies. This eliminate the need for a 3rd party
+These mixins take care of CSS3 browser consistencies. This eliminate the need for a 3rd party
 framework and allows for compiling on the server with, for example, [scssphp](http://leafo.net/scssphp/).
 
 ## Responsive Sizing

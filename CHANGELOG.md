@@ -11,9 +11,13 @@ For more information, please visit: [semver.org](semver.org) & [keepachangelog.c
 
 ---
 
+## v1.1.2 - July 25, 2016
+- [Updated] Refined color variables.
+- [Fixed] Reversed grid column with.
+
 ## v1.1.1 – July 23, 2016
-[Added] Utility colors.
-[Added] Missing charsets.
+- [Added] Utility colors.
+- [Added] Missing charsets patch.
 
 ## v1.0 – July 23, 2016
-Official 1.0 release.
+- Official 1.0 release.
