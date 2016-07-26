@@ -61,21 +61,23 @@ HelixCSS v1.1.2 | License: MIT | Author: Marc Wiest
 // Objects
 
 @import
+    "objects/mixins/burger",
+    "objects/mixins/flyout",
+    "objects/mixins/highlight",
+    "objects/mixins/scrollable",
+    "objects/mixins/triangle";
+
+@import
     "objects/containers/embed",
-    "objects/containers/flyout.mixin",
     "objects/containers/grid",
     "objects/containers/group",
-    "objects/containers/scrollable.mixin",
     "objects/containers/scrollbar";
 
 @import
     "objects/components/badge",
-    "objects/components/burger.mixin",
     "objects/components/button",
-    "objects/components/highlight.mixin",
     "objects/components/lead",
-    "objects/components/reader",
-    "objects/components/triangle.mixin";
+    "objects/components/reader";
 
 @import
     "objects/utilities/alignment",
