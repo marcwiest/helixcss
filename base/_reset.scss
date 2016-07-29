@@ -40,11 +40,6 @@ video, iframe, object, embed {
     vertical-align: middle;
 }
 
-address, hr, p, blockquote, pre, figure, audio, video,
-form, fieldset, table, dl, ol, ul {
-    margin-bottom: $vertical_rhythm;
-}
-
 html {
 	// Prevent font size adjustments after orientation changes in IE and iOS.
 	-webkit-text-size-adjust: 100%;

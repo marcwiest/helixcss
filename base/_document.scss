@@ -51,6 +51,11 @@ input[type="reset"] {
 
 } // endif
 
+pre, address, hr, p, blockquote, pre, figure, audio, video,
+form, fieldset, table, dl, ol, ul {
+    margin-bottom: $vertical_rhythm;
+}
+
 .cf, .clearfix,
 %cf, %clearfix {
     @include clearfix;
@@ -119,6 +124,8 @@ dt { font-weight: bold; color: $color_heading; }
 dd, li { margin-bottom: $vertical_rhythm / 4; }
 
 blockquote {
+    padding: 0 $vr;
+    border-left: 4px solid $gray;
     font-style: italic;
     small, cite {
         font-style: normal;
