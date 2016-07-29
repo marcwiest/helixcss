@@ -90,11 +90,6 @@ h6, .h6 { @extend %h6; }
 %small {
     font-size: $font_size_small;
     font-weight: $font_weight_small;
-    line-height: $line_height_ratio_small;
-    @if $responsive_typography {
-        @include md { line-height: $line_height_ratio_small_md; }
-        @include lg { line-height: $line_height_ratio_small_lg; }
-    }
 }
 
 small, .small { @extend %small; }
