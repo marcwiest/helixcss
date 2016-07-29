@@ -26,19 +26,19 @@ Float
  * Center
  */
 
-.mx-auto { margin-left: auto; margin-right: auto; }
+.center, .mx-auto { margin-left: auto; margin-right: auto; }
 // .uncenter { margin-left: inherit; margin-right: inherit; }
 
 @include md {
-    .mx-auto-md { margin-left: auto; margin-right: auto; }
+    .center-md, .mx-auto-md { margin-left: auto; margin-right: auto; }
     // .uncenter-md { margin-left: inherit; margin-right: inherit; }
 }
 @include md-lg {
-    .mx-auto-md-lg { margin-left: auto; margin-right: auto; }
+    .center-md-lg, .mx-auto-md-lg { margin-left: auto; margin-right: auto; }
     // .uncenter-md-lg { margin-left: inherit; margin-right: inherit; }
 }
 @include lg {
-    .mx-auto-lg { margin-left: auto; margin-right: auto; }
+    .center-lg, .mx-auto-lg { margin-left: auto; margin-right: auto; }
     // .uncenter-lg { margin-left: inherit; margin-right: inherit; }
 }
 
@@ -46,7 +46,7 @@ Float
  * Clear
  */
 
-.clear { clear: both; }
+.clear-both { clear: both; }
 
 /**
  * Text Align
