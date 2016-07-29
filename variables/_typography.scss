@@ -28,16 +28,6 @@ $line_height_ratio_lead:    1.5 !default;
 $line_height_ratio_lead_md: 1.5 !default;
 $line_height_ratio_lead_lg: 1.5 !default;
 
-$line_height_ratio_small:    inherit !default;
-$line_height_ratio_small_md: inherit !default;
-$line_height_ratio_small_lg: inherit !default;
-
-$line_height_ratio_code:    inherit !default;
-$line_height_ratio_code_md: inherit !default;
-$line_height_ratio_code_lg: inherit !default;
-
-// Responsive letter spacing?
-
 
 /////////////////////////////////////
 // Font Size
@@ -100,7 +90,7 @@ $fw_bold: 600;
 $font_weight_heading:     $fw_normal !default;
 $font_weight_text:        $fw_normal !default;
 $font_weight_lead:        $fw_normal !default;
-$font_weight_small:       $fw_bold !default;
+$font_weight_small:       $fw_normal !default;
 $font_weight_button:      $fw_normal !default;
 $font_weight_code:        $fw_normal !default;
 $font_weight_input:       $fw_normal !default;
