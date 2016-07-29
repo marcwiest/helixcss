@@ -1,5 +1,5 @@
 
-# HelixCSS v2.0
+# HelixCSS v2.1
 
 A lean SCSS framework. HelixCSS primary goal is to give structure to your website or application and
 leave the design decisions to you.

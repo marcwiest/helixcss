@@ -11,6 +11,10 @@ For more information, please visit: [semver.org](semver.org) & [keepachangelog.c
 
 ---
 
+## v2.1 - July 28, 2016
+- [Removed] Removed line-height for code & small.
+- [Removed] Removed line-height variables for code & small.
+
 ## v2.0 - July 28, 2016
 - All new 2.0 update.
 
