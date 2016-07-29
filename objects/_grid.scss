@@ -57,16 +57,12 @@ Grid
 
 // Grid Horizontal Alignment
 
-%grid--left {
-    text-align: left;
+%grid--center {
+    text-align: center;
 }
 
 %grid--right {
     text-align: right;
-}
-
-%grid--center {
-    text-align: center;
 }
 
 %grid--justify {
@@ -90,7 +86,7 @@ Grid
     display: inline-block;
     width: 100%;
     vertical-align: top;
-    font-size: medium; // lte ie8 rem fallback
+    font-size: medium; // needed lte ie8 rem fallback
     font-size: $font_size_text;
     letter-spacing: $letter_spacing_text;
 }
@@ -108,7 +104,7 @@ Grid
     .grid--fill-equal { @extend %grid--fill-equal; }
 
     .grid--center { @extend %grid--center; }
-
+    .grid--right { @extend %grid--right; }
     .grid--justify { @extend %grid--justify; }
 
     .grid--top { @extend %grid--top; }
