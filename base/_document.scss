@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-@if $export_base_document {
+@if $export_document {
 
 /*
-Document setup
+Document
 */
 
 html {
     height: 100vh;
-    min-width: $website_min_width;
     box-sizing: border-box;
+    min-width: $website_min_width;
     font-size: $html_base_font_size;
     @if $responsive_typography {
         @include md { font-size: $html_base_font_size_md; }
@@ -33,10 +33,6 @@ body {
     }
 }
 
-/*
-Box sizing
-*/
-
 *,
 *::before,
 *::after {
@@ -45,10 +41,6 @@ Box sizing
 
 @if $font_smoothing {
 
-/*
-Font smoothing
-Sets antialiased typography for webkit and mozilla.
-*/
 body,
 button,
 input[type="button"],
@@ -59,25 +51,12 @@ input[type="reset"] {
 
 } // endif
 
-/*
-Clearfixed elements
-*/
-
+.cf, .clearfix,
 %cf, %clearfix {
     @include clearfix;
 }
 
-/*
-Typographic elements
-*/
-
-address, hr, p, blockquote, pre, figure, audio, video,
-form, fieldset, table, dl, ol, ul {
-    margin-bottom: $vertical_rhythm;
-}
-
 %heading {
-    display: block;
     margin-bottom: $vertical_rhythm;
     font-family: $font_family_heading;
     font-weight: $font_weight_heading;
@@ -129,14 +108,6 @@ a {
     }
 }
 
-strong, b {
-    font-weight: bold;
-}
-
-em, i {
-    font-style: italic;
-}
-
 ul, ol { list-style-position: inside; }
 
 ul ul,
@@ -149,13 +120,12 @@ ol ol {
 
 dl { list-style: none; }
 dt { font-weight: bold; color: $color_heading; }
-dd { margin-bottom: $vertical_rhythm / 4; }
+
+dd, li { margin-bottom: $vertical_rhythm / 4; }
 
 blockquote {
-    font-size: $font_size_lead;
     font-style: italic;
     small, cite {
-        font-size: $font_size_text;
         font-style: normal;
         font-weight: bold;
     }
@@ -166,14 +136,13 @@ blockquote {
 
 address {
     font-style: normal;
-    line-height: inherit;
 }
 
 hr {
     display: block;
-    color: $color_hr;
-    border: none;
-    border-bottom-width: $border_width_hr;
+    color: $color_border;
+    border: 0;
+    border-bottom-width: 1px;
     border-bottom-style: solid;
 }
 

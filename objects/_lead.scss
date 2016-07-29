@@ -2,8 +2,6 @@
 
 /*
 Lead
-
-<p class="lead"> </p>
 */
 
 %lead {
@@ -18,7 +16,7 @@ Lead
     }
 }
 
-@if $export_component_lead {
+@if $export_lead {
 
     .lead { @extend %lead; }
 

@@ -4,17 +4,19 @@
 // Border Width
 /////////////////////////////////////
 
-$border_width_hr: 1px !default;
-$border_width_input: 0 !default;
-$border_width_button: 0 !default;
-$border_width_badge: 0 !default;
-$border_width_table: 1px !default;
+$border_width_input: 1px !default;
+$border_width_button: 1px !default;
 
 
 /////////////////////////////////////
 // Border Radius
 /////////////////////////////////////
 
-$border_radius_input: 2px !default;
-$border_radius_button: 2px !default;
-$border_radius_badge: 2px !default;
+// Abstracts
+
+$br: 3px;
+
+// Elements
+
+$border_radius_input: $br !default;
+$border_radius_button: $br !default;

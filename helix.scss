@@ -1,11 +1,37 @@
 @charset "UTF-8";
 
 /*!
-HelixCSS v1.1.2 | License: MIT | Author: Marc Wiest
+HelixCSS v2.0 | License: MIT | Author: Marc Wiest (marcwiest.com)
 */
 
-@import "functions";
-@import "mixins";
+// Utilities
+
+@import
+    "utilities/brands",
+    "utilities/easing",
+    "utilities/functions",
+    "utilities/mixins";
+
+@import
+    "utilities/css3/animation",
+    "utilities/css3/appearance",
+    "utilities/css3/backface-visibility",
+    "utilities/css3/calc",
+    "utilities/css3/filter",
+    "utilities/css3/flexbox",
+    "utilities/css3/font-smoothing",
+    "utilities/css3/hyphens",
+    "utilities/css3/keyframes",
+    "utilities/css3/linear-gradient",
+    "utilities/css3/perspective",
+    "utilities/css3/placeholder",
+    "utilities/css3/radial-gradient",
+    "utilities/css3/selection",
+    "utilities/css3/text-decoration",
+    "utilities/css3/transform",
+    "utilities/css3/transition",
+    "utilities/css3/user-select",
+    "utilities/css3/word-wrap";
 
 // Variables
 
@@ -13,45 +39,17 @@ HelixCSS v1.1.2 | License: MIT | Author: Marc Wiest
     "variables/typography",
     "variables/grid",
     "variables/borders",
-    "variables/brands",
     "variables/colors",
     "variables/sizes",
     "variables/exports",
-    "variables/timing",
     "variables/transitions";
 
 // CSS3 Mixins
 
-@import
-    "css3/animation",
-    "css3/appearance",
-    "css3/backface-visibility",
-    "css3/calc",
-    "css3/filter",
-    "css3/flexbox",
-    "css3/font-smoothing",
-    "css3/hyphens",
-    "css3/keyframes",
-    "css3/linear-gradient",
-    "css3/perspective",
-    "css3/placeholder",
-    "css3/radial-gradient",
-    "css3/selection",
-    "css3/text-decoration",
-    "css3/transform",
-    "css3/transition",
-    "css3/user-select",
-    "css3/word-wrap";
-
-// Vendors
-
-@import
-    "vendors/print",
-    "vendors/normalize";
-
 // Base
 
 @import
+    "base/normalize",
     "base/reset",
     "base/document",
     "base/code",
@@ -64,23 +62,21 @@ HelixCSS v1.1.2 | License: MIT | Author: Marc Wiest
     "objects/mixins/burger",
     "objects/mixins/flyout",
     "objects/mixins/highlight",
+    "objects/mixins/reader",
     "objects/mixins/scrollable",
     "objects/mixins/triangle";
 
 @import
-    "objects/containers/embed",
-    "objects/containers/grid",
-    "objects/containers/group",
-    "objects/containers/scrollbar";
-
-@import
-    "objects/components/badge",
-    "objects/components/button",
-    "objects/components/lead",
-    "objects/components/reader";
-
-@import
-    "objects/utilities/alignment",
-    "objects/utilities/clearfix",
-    "objects/utilities/colors",
-    "objects/utilities/display";
+    "objects/alignment",
+    "objects/border",
+    "objects/button",
+    "objects/color",
+    "objects/display",
+    "objects/embed",
+    "objects/grid",
+    "objects/height",
+    "objects/lead",
+    "objects/list",
+    "objects/typography",
+    "objects/whitespace",
+    "objects/width";

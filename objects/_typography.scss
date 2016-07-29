@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@if $export_typography {
+
+/*
+Font variations
+*/
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.italic { font-style: italic; }
+
+/*
+Font weight
+*/
+
+.light { font-weight: $fw_light; }
+.bold { font-weight: $fw_bold; }
+.regular { font-weight: $fw_normal; }
+
+} // endif

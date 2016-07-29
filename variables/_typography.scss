@@ -4,17 +4,17 @@
 // Responsive Typography
 /////////////////////////////////////
 
-// If set to false, only the mobile (sm) sizes will be applied.
+// If false, only mobile sizes will be used.
 
 $responsive_typography: true !default;
 
-// All em, rem and percent units are based on these values.
+// These set the basis for: em, rem & %.
 
 $html_base_font_size:    9px !default;
 $html_base_font_size_md: 9.5px !default;
 $html_base_font_size_lg: 10px !default;
 
-// All line_height_ratio variables should be unitless numbers.
+// All ratios should be unitless numbers.
 
 $line_height_ratio_body:    1.75 !default;
 $line_height_ratio_body_md: 1.75 !default;

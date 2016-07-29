@@ -4,6 +4,14 @@
 // Height & Padding
 /////////////////////////////////////
 
+// Abstracts
+
+$space1: 10px !default;
+$space2: 20px !default;
+$space3: 30px !default;
+
+// Elements
+
 $height_input: 4rem !default;
 
 $padding_input_left: .8rem !default;
@@ -11,15 +19,10 @@ $padding_input_right: .8rem !default;
 $padding_input_top: .4rem !default;
 $padding_input_bottom: .4rem !default;
 
-$padding_button_left: 2.5rem !default;
-$padding_button_right: 2.5rem !default;
-$padding_button_top: .5rem !default;
-$padding_button_bottom: .5rem !default;
-
-$padding_badge_left: .6rem !default;
-$padding_badge_right: .6rem !default;
-$padding_badge_top: .266rem !default;
-$padding_badge_bottom: .266rem !default;
+$padding_button_left: 2.6rem !default;
+$padding_button_right: 2.6rem !default;
+$padding_button_top: .4rem !default;
+$padding_button_bottom: .4rem !default;
 
 $padding_table_cell_left: 1rem !default;
 $padding_table_cell_right: 1rem !default;

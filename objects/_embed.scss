@@ -3,7 +3,7 @@
 /*
 Responsive embed
 
-<div class="embed">
+<div class="embed embed--wide">
     <iframe src="https://www.youtube.com/embed/46U5LfRrybY" allowfullscreen></iframe>
 </div>
 */
@@ -25,20 +25,19 @@ Responsive embed
     padding-bottom: 75%;
 }
 
-%embed--widescreen {
-    @extend %embed;
+%embed--wide {
     // 16:9 aspect ratio (HD/widescreen)
     padding-bottom: 56.25%;
 }
 
-@if $export_container_embed {
+@if $export_embed {
 
     .embed {
         @extend %embed;
     }
 
-    .embed--widescreen {
-        @extend %embed--widescreen;
+    .embed--wide {
+        @extend %embed--wide;
     }
 
 } // endif

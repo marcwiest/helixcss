@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// TODO: $value for "clip" needs converter functions
+@mixin clip-path( $value ) {
+    clip: $value;//rect(1px, 1px, 1px, 1px); // depricated
+    // chrome 24+, safari 8+, opera 15+
+    -webkit-clip-path: $value;//inset(1px 1px 1px 1px);
+            clip-path: $value;//inset(1px 1px 1px 1px);
+}

@@ -1,49 +1,31 @@
 @charset "UTF-8";
 
 /////////////////////////////////////
-// Vendors
-/////////////////////////////////////
-
-$export_vendors_print:     true !default;
-$export_vendors_normalize: true !default;
-
-
-/////////////////////////////////////
 // Base
 /////////////////////////////////////
 
-$export_base_document: true !default;
-$export_base_code:     true !default;
-$export_base_form:     true !default;
-$export_base_reset:    true !default;
-$export_base_table:    true !default;
+$export_normalize: true !default;
+$export_document:  true !default;
+$export_code:      true !default;
+$export_form:      true !default;
+$export_reset:     true !default;
+$export_table:     true !default;
 
 
 /////////////////////////////////////
-// Objects > Containers
+// Objects
 /////////////////////////////////////
 
-$export_container_embed:     true !default;
-$export_container_grid:      true !default;
-$export_container_group:     true !default;
-$export_container_scrollbar: true !default;
-
-
-/////////////////////////////////////
-// Objects > Components
-/////////////////////////////////////
-
-$export_component_lead:    true !default;
-$export_component_badge:   true !default;
-$export_component_button:  true !default;
-$export_component_reader:  true !default;
-
-
-/////////////////////////////////////
-// Objects > Utilities
-/////////////////////////////////////
-
-$export_utilities_alignment: true !default;
-$export_utilities_clearfix:  true !default;
-$export_utilities_colors:    true !default;
-$export_utilities_display:   true !default;
+$export_alignment: true !default;
+$export_border: true !default;
+$export_button: true !default;
+$export_color: true !default;
+$export_display: true !default;
+$export_embed: true !default;
+$export_grid: true !default;
+$export_height: true !default;
+$export_lead: true !default;
+$export_list: true !default;
+$export_typography: true !default;
+$export_whitespace: true !default;
+$export_width: true !default;

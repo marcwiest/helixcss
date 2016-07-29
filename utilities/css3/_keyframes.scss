@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+///
+// Keyframe
+//
+// @include keyframes( shrink ) {
+//     0% {}
+//     50% {}
+//     100% {}
+// }
+/// 
+
+@mixin keyframes( $animation_name ) {
+
+    // cache original values
+    $webkit: $is_webkit_included;
+    $mozilla: $is_mozilla_included;
+    $microsoft: $is_microsoft_included;
+    $opera: $is_opera_included;
+
+    // test for original webkit value and only allow -webkit- prefix
+    @if $webkit {
+        @include disable-all-vendors;
+        $is_webkit_included: true !global;
+        @-webkit-keyframes #{$animation_name} { @content; }
+    }
+
+    // test for original mozilla value and only allow -moz- prefix
+    @if $mozilla {
+        @include disable-all-vendors;
+        $is_mozilla_included: true !global;
+        @-moz-keyframes #{$animation_name} { @content; }
+    }
+
+    // test for original microsoft value and only allow -ms- prefix
+    @if $microsoft {
+        @include disable-all-vendors;
+        $is_microsoft_included: true !global;
+        @-ms-keyframes #{$animation_name} { @content; }
+    }
+
+    // test for original opera value and only allow -o- prefix
+    @if $opera {
+        @include disable-all-vendors;
+        $is_opera_included: true !global;
+        @-o-keyframes #{$animation_name} { @content; }
+    }
+
+    // reactivate and use all prefixes for spec keyframes
+    @include enable-all-vendors;
+    @keyframes #{$animation_name} {
+        @content;
+    }
+
+}

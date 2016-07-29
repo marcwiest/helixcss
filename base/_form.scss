@@ -1,23 +1,14 @@
 @charset "UTF-8";
 
-@if $export_base_form {
+@if $export_form {
 
 /*
 Form
 */
 
-label,
 legend,
-input,
-textarea,
-select {
+label, .label {
     display: block;
-    width: 100%;
-    max-width: 100%; // keep inside container
-}
-
-label {
-    margin-bottom: $padding_input_bottom;
     letter-spacing: $letter_spacing_input_label;
     font-weight: $font_weight_input_label;
     font-size: $font_size_input_label;
@@ -25,27 +16,12 @@ label {
     font-style: $font_style_input_label;
     text-transform: $text_transform_input_label;
     color: $color_input_label;
-    &.inline,
-    &.stacked {
-        display: inline-block;
-        float: left;
-        width: auto;
-        font-weight: normal;
-        margin-bottom: 0;
-        margin-right: $padding_input_right * 2;
-        cursor: pointer;
-    }
-    &.stacked {
-        clear: both;
-    }
-}
-
-legend {
-    font-size: $font_size_small;
-    margin-bottom: $padding_input_bottom;
 }
 
 input, textarea, select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
     font-family: $font_family_input;
     font-weight: $font_weight_input;
     font-size: $font_size_input;
@@ -58,8 +34,6 @@ input, textarea, select {
     border-width: $border_width_input;
     border-style: solid;
     box-shadow: none;
-    line-height: inherit;
-    height: auto;
     color: $color_input;
     background-color: $color_input_bg;
     border-color: $color_input_border;
@@ -82,10 +56,16 @@ input, textarea {
     }
 }
 
-// button,
-// input[type=button],
-// input[type=submit],
-// input[type=reset],
+button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=checkbox],
+input[type=radio] {
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+}
 
 // input[type="date"],
 // input[type="datetime"],
@@ -93,48 +73,26 @@ input, textarea {
 // input[type="month"],
 // input[type="time"],
 // input[type="week"],
+//
+// input[type='email'],
+// input[type='number'],
+// input[type='password'],
+// input[type='search'],
+// input[type='tel'],
+// input[type='text'],
+// input[type='url'],
 
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
+input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]),
 textarea,
 select {
     @include appearance(none);
     border-radius: $border_radius_input;
     transition: $transition_input;
-}
-
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
-select {
     height: $height_input;
 }
 
-input[type="checkbox"],
-input[type="radio"],
-input[type="button"],
-input[type="submit"] {
-    width: auto;
-}
-
-input[type="search"] {
+input[type=search] {
     @include appearance(textfield);
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display: inline-block;
-    margin-right: $padding_input_right;
-    cursor: pointer;
 }
 
 textarea {
@@ -144,20 +102,15 @@ textarea {
     padding-bottom: $padding_input_bottom;
     padding-left: $padding_input_left;
     resize: vertical;
-    overflow: auto; // ie scrollbars
+    overflow: auto;
 }
 
 select {
-    letter-spacing: $letter_spacing_input;
     @include appearance(menulist);
     -webkit-appearance: menulist-button;
     cursor: pointer;
     // make multiple select elements height not fixed
     &[multiple], &[size] { height: auto; }
-}
-
-optgroup {
-    font-weight: bold;
 }
 
 } // endif

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@if $export_base_table {
+@if $export_table {
 
 /*
 Table
@@ -14,14 +14,16 @@ table {
 }
 
 caption {
-    margin-bottom: $padding_table_cell_bottom;
+    color: $text_muted;
+    margin: $font_size_small 0;
     font-size: $font_size_small;
     text-align: left;
+    font-style: italic;
     caption-side: bottom;
 }
 
 tr {
-    border-bottom: $border_width_table solid $color_table_border;
+    border-bottom: 1px solid $color_border;
 }
 
 th, td {
@@ -30,10 +32,7 @@ th, td {
     font-style: $font_style_tabel_cell;
     font-weight: $font_weight_tabel_cell;
     font-size: $font_size_tabel_cell;
-    padding-top: $padding_table_cell_top;
-    padding-right: $padding_table_cell_right;
-    padding-bottom: $padding_table_cell_bottom;
-    padding-left: $padding_table_cell_left;
+    padding: $padding_table_cell_top $padding_table_cell_right $padding_table_cell_bottom $padding_table_cell_left;
     &:first-child { padding-left: 0; }
     &:last-child { padding-right: 0; }
     vertical-align: middle;

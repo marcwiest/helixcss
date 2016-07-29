@@ -6,85 +6,50 @@
 
 // Abstracts
 
-$c_primary: #f1c40f !default;
-$c_primary_light: lighten($c_primary,12.5%) !default;
-$c_primary_dark: darken($c_primary,12.5%) !default;
+$accent: #d33257 !default;
+$accent_dark: darken($accent,10%) !default;
 
-$c_accent: #3498db !default;
-$c_accent_light: lighten($c_accent,12.5%) !default;
-$c_accent_dark: darken($c_accent,12.5%) !default;
+$gray: #f4f4f4 !default;
 
-$c_gray_light: #f0f0f0 !default;
-$c_gray_dark: #202020 !default;
-
-$c_text_primary: #202020 !default;
-$c_text_muted: #727272 !default;
-$c_text_inverted: #FFFFFF !default;
-
-// $c_success: #5aba59 !default;
-// $c_info: #118bd9 !default;
-// $c_warning: #fbd30a !default;
-// $c_error: #df5048 !default;
-
-// Utilities
-
-$utility_colors: (
-    'primary' : $c_primary,
-    'primary-light' : $c_primary_light,
-    'primary-dark' : $c_primary_dark,
-    'accent' : $c_accent,
-    'accent-light' : $c_accent_light,
-    'accent-dark' : $c_accent_dark,
-    'gray-light' : $c_gray_light,
-    'gray-dark' : $c_gray_dark,
-    'text-primary' : $c_text_primary,
-    'text-muted' : $c_text_muted,
-    'text-inverted' : $c_text_inverted,
-) !default;
+$text_primary: #202020 !default;
+$text_muted: #727272 !default;
+$text_inverted: rgba(255,255,255,1) !default;
 
 // Elements
 
-$color_text:            $c_text_primary !default;
-$color_text_link:       $c_accent !default;
-$color_text_link_hover: $c_accent_dark !default;
+$color_main_bg: #fff !default;
 
-$color_heading:            $c_text_primary !default;
-$color_heading_link:       $c_text_primary !default;
-$color_heading_link_hover: $c_text_primary !default;
+$color_text:            $text_primary !default;
+$color_text_link:       $accent !default;
+$color_text_link_hover: $accent_dark !default;
 
-$color_button:              $c_text_inverted !default;
-$color_button_hover:        $c_text_inverted !default;
-$color_button_bg:           $c_accent !default;
-$color_button_bg_hover:     $c_accent_dark !default;
+$color_heading:            $text_primary !default;
+$color_heading_link:       $text_primary !default;
+$color_heading_link_hover: $text_primary !default;
+
+$color_button:              $text_inverted !default;
+$color_button_hover:        $text_inverted !default;
+$color_button_bg:           $accent !default;
+$color_button_bg_hover:     $accent_dark !default;
 $color_button_border:       transparent !default;
 $color_button_border_hover: transparent !default;
 
-$color_badge:              $c_text_inverted !default;
-$color_badge_hover:        $c_text_inverted !default;
-$color_badge_bg:           $c_accent_dark !default;
-$color_badge_bg_hover:     $c_accent_light !default;
-$color_badge_border:       transparent !default;
-$color_badge_border_hover: transparent !default;
+$color_input:              $text_primary !default;
+$color_input_hover:        $text_primary !default;
+$color_input_focus:        $text_primary !default;
+$color_input_bg:           #fff !default;
+$color_input_bg_hover:     #fff !default;
+$color_input_bg_focus:     #fff !default;
+$color_input_border:       $gray !default;
+$color_input_border_hover: $gray !default;
+$color_input_border_focus: $gray !default;
+$color_input_placeholder:  $text_muted !default;
+$color_input_label:        $text_primary !default;
 
-$color_input:              $c_text_primary !default;
-$color_input_hover:        $c_text_primary !default;
-$color_input_focus:        $c_text_primary !default;
-$color_input_bg:           $c_gray_light !default;
-$color_input_bg_hover:     $c_gray_light !default;
-$color_input_bg_focus:     $c_gray_light !default;
-$color_input_border:       transparent !default;
-$color_input_border_hover: transparent !default;
-$color_input_border_focus: transparent !default;
-$color_input_placeholder:  $c_text_muted !default;
-$color_input_label:        $c_text_primary !default;
+$color_table_head:   $text_primary !default;
+$color_table_cell:   $text_primary !default;
 
-$color_table_head:   $c_text_primary !default;
-$color_table_cell:   $c_text_primary !default;
-$color_table_border: $c_gray_light !default;
+$color_code:    $text_primary !default;
+$color_code_bg: $gray !default;
 
-$color_pre:    $c_text_primary !default;
-$color_pre_bg: $c_gray_light !default;
-
-$color_hr: $c_gray_light !default;
-
-$color_main_bg: #fff !default;
+$color_border: $gray !default;

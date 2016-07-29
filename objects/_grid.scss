@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/*
+Grid
+
+<div class="grid">
+    <div class="grid-item"> </div>
+    <div class="grid-item"> </div>
+    <div class="grid-item right">
+
+        <div class="grid">
+            <div class="grid-item"> </div>
+            <div class="grid-item"> </div>
+            <div class="grid-item right"> </div>
+        </div>
+
+    </div>
+</div>
+*/
+
+%grid {
+    display: table;
+    font-size: 0 !important;
+    letter-spacing: 0 !important;
+    vertical-align: top;
+    width: 100%;
+    max-width: $grid_max_width;
+    margin-left: auto;
+    margin-right: auto;
+    %grid {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+// Grid Width
+
+%grid--full {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+// Grid Fill Mode
+
+%grid--fill > %grid-item {
+    display: table-cell;
+}
+
+%grid--fill-equal {
+    table-layout: fixed;
+    > %grid-item {
+        display: table-cell;
+    }
+}
+
+// Grid Horizontal Alignment
+
+%grid--left {
+    text-align: left;
+}
+
+%grid--right {
+    text-align: right;
+}
+
+%grid--center {
+    text-align: center;
+}
+
+%grid--justify {
+    display: block;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    // clearfix is needed for this modifier
+    @extend %cf;
+}
+
+// Grid Vertical Alignment
+
+%grid--top > %grid-item { vertical-align: top; }
+%grid--middle > %grid-item { vertical-align: middle; }
+%grid--bottom > %grid-item { vertical-align: bottom; }
+
+// Grid Items
+
+%grid-item {
+    @extend %cf;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-size: medium; // lte ie8 rem fallback
+    font-size: $font_size_text;
+    letter-spacing: $letter_spacing_text;
+}
+
+
+@if $export_grid {
+
+    // grid
+
+    .grid { @extend %grid; }
+
+    .grid--full { @extend %grid--full; }
+
+    .grid--fill { @extend %grid--fill; }
+    .grid--fill-equal { @extend %grid--fill-equal; }
+
+    .grid--center { @extend %grid--center; }
+
+    .grid--justify { @extend %grid--justify; }
+
+    .grid--top { @extend %grid--top; }
+    .grid--middle { @extend %grid--middle; }
+    .grid--bottom { @extend %grid--bottom; }
+
+    // grid-item
+
+    .grid-item { @extend %grid-item; }
+
+} // endif
