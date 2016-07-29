@@ -1,5 +1,5 @@
 /*!
-HelixCSS v2.1 | License: MIT | Author: Marc Wiest (marcwiest.com)
+HelixCSS v2.2 | License: MIT | Author: Marc Wiest (marcwiest.com)
 */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -397,10 +397,6 @@ video, iframe, object, embed {
   outline: 0;
   vertical-align: middle; }
 
-address, hr, p, blockquote, pre, figure, audio, video,
-form, fieldset, table, dl, ol, ul {
-  margin-bottom: 3.15rem; }
-
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -537,6 +533,10 @@ input[type="reset"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+pre, address, hr, p, blockquote, pre, figure, audio, video,
+form, fieldset, table, dl, ol, ul {
+  margin-bottom: 3.15rem; }
+
 .cf:after, .clearfix:after,
 .grid--justify:after,
 .grid-item:after {
@@ -587,11 +587,11 @@ small, .small {
   font-weight: 400; }
 
 a {
-  color: #d33257;
+  color: #3498db;
   transition: all 0.2s ease-in-out;
   text-decoration: none; }
   a:hover {
-    color: #ad2544; }
+    color: #217dbb; }
 
 ul, ol {
   list-style-position: inside; }
@@ -614,6 +614,8 @@ dd, li {
   margin-bottom: 0.7875rem; }
 
 blockquote {
+  padding: 0 3.15rem;
+  border-left: 4px solid #f5f5f5;
   font-style: italic; }
   blockquote small, blockquote cite {
     font-style: normal;
@@ -626,7 +628,7 @@ address {
 
 hr {
   display: block;
-  color: #f4f4f4;
+  color: #f5f5f5;
   border: 0;
   border-bottom-width: 1px;
   border-bottom-style: solid; }
@@ -650,7 +652,7 @@ pre, code, kbd, samp {
   font-weight: 400;
   letter-spacing: 0;
   color: #202020;
-  background-color: #f4f4f4; }
+  background-color: #f5f5f5; }
 
 code, kbd, samp {
   padding: .25rem .5rem;
@@ -688,7 +690,7 @@ caption {
   caption-side: bottom; }
 
 tr {
-  border-bottom: 1px solid #f4f4f4; }
+  border-bottom: 1px solid #f5f5f5; }
 
 th, td {
   color: #202020;
@@ -745,15 +747,15 @@ input, textarea, select {
   box-shadow: none;
   color: #202020;
   background-color: #fff;
-  border-color: #f4f4f4; }
+  border-color: #f5f5f5; }
   input:hover, textarea:hover, select:hover {
     color: #202020;
     background-color: #fff;
-    border-color: #f4f4f4; }
+    border-color: #f5f5f5; }
   input:focus, textarea:focus, select:focus {
     color: #202020;
     background-color: #fff;
-    border-color: #f4f4f4; }
+    border-color: #f5f5f5; }
 
 input:active, input:focus, textarea:active, textarea:focus {
   cursor: text; }
@@ -839,6 +841,178 @@ Scrollable
 </nav>
 */
 /*
+Button
+*/
+button,
+[type=button],
+[type=submit],
+[type=reset],
+.button,
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: inherit;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0.4rem 2.6rem 0.4rem 2.6rem;
+  transition: all 0.2s ease-in-out;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: white;
+  border-color: transparent;
+  background-color: #3498db;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  white-space: nowrap; }
+  button:hover,
+  [type=button]:hover,
+  [type=submit]:hover,
+  [type=reset]:hover,
+  .button:hover,
+  .btn:hover {
+    color: white;
+    border-color: transparent;
+    background-color: #217dbb;
+    text-decoration: none; }
+
+.button--clear,
+.btn--clear, .button--clear:hover,
+.btn--clear:hover {
+  background-color: transparent;
+  border-color: transparent; }
+
+/*
+Responsive embed
+
+<div class="embed embed--wide">
+    <iframe src="https://www.youtube.com/embed/46U5LfRrybY" allowfullscreen></iframe>
+</div>
+*/
+.embed {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 75%; }
+  .embed embed, .embed iframe, .embed object, .embed video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.embed--wide {
+  padding-bottom: 56.25%; }
+
+/*
+Grid
+
+<div class="grid">
+    <div class="grid-item"> </div>
+    <div class="grid-item"> </div>
+    <div class="grid-item right">
+
+        <div class="grid">
+            <div class="grid-item"> </div>
+            <div class="grid-item"> </div>
+            <div class="grid-item right"> </div>
+        </div>
+
+    </div>
+</div>
+*/
+.grid {
+  display: table;
+  font-size: 0 !important;
+  letter-spacing: 0 !important;
+  vertical-align: top;
+  width: 100%;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto; }
+  .grid .grid {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+
+.grid--full {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0; }
+
+.grid--fill > .grid-item {
+  display: table-cell; }
+
+.grid--fill-equal {
+  table-layout: fixed; }
+  .grid--fill-equal > .grid-item {
+    display: table-cell; }
+
+.grid--center {
+  text-align: center; }
+
+.grid--right {
+  text-align: right; }
+
+.grid--justify {
+  display: block;
+  text-align: justify;
+  text-justify: distribute-all-lines; }
+
+.grid--top > .grid-item {
+  vertical-align: top; }
+
+.grid--middle > .grid-item {
+  vertical-align: middle; }
+
+.grid--bottom > .grid-item {
+  vertical-align: bottom; }
+
+.grid-item {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  font-size: medium;
+  font-size: 1.8rem;
+  letter-spacing: 0; }
+
+/*
+Lead
+*/
+.lead {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #202020;
+  letter-spacing: 0;
+  line-height: 1.5; }
+  @media only screen and (min-width: 800px) and (max-width: 1079px) {
+    .lead {
+      line-height: 1.5; } }
+  @media only screen and (min-width: 1080px) {
+    .lead {
+      line-height: 1.5; } }
+
+/*
 Float
 */
 .left {
@@ -868,26 +1042,26 @@ Float
 /**
  * Center
  */
-.mx-auto {
+.center, .mx-auto {
   margin-left: auto;
   margin-right: auto; }
 
 @media only screen and (min-width: 800px) and (max-width: 1079px) {
-  .mx-auto-md {
+  .center-md, .mx-auto-md {
     margin-left: auto;
     margin-right: auto; } }
 @media only screen and (min-width: 800px) {
-  .mx-auto-md-lg {
+  .center-md-lg, .mx-auto-md-lg {
     margin-left: auto;
     margin-right: auto; } }
 @media only screen and (min-width: 1080px) {
-  .mx-auto-lg {
+  .center-lg, .mx-auto-lg {
     margin-left: auto;
     margin-right: auto; } }
 /**
  * Clear
  */
-.clear {
+.clear-both {
   clear: both; }
 
 /**
@@ -950,7 +1124,7 @@ Border
 .bb1, .bb2, .bb3,
 .bl1, .bl2, .bl3 {
   border-style: solid;
-  border-color: #f4f4f4; }
+  border-color: #f5f5f5; }
 
 .ba1 {
   border-width: 1px; }
@@ -1037,60 +1211,6 @@ Radius
   border-radius: 0; }
 
 /*
-Button
-*/
-button,
-[type=button],
-[type=submit],
-[type=reset],
-.button,
-.btn {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: inherit;
-  height: auto;
-  max-width: 100%;
-  margin: 0;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: 0;
-  padding: 0.4rem 2.6rem 0.4rem 2.6rem;
-  transition: all 0.2s ease-in-out;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 3px;
-  color: white;
-  border-color: transparent;
-  background-color: #d33257;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-drag: none;
-  white-space: nowrap; }
-  button:hover,
-  [type=button]:hover,
-  [type=submit]:hover,
-  [type=reset]:hover,
-  .button:hover,
-  .btn:hover {
-    color: white;
-    border-color: transparent;
-    background-color: #ad2544;
-    text-decoration: none; }
-
-/*
 Colors
 */
 .white {
@@ -1100,16 +1220,19 @@ Colors
   background-color: #fff; }
 
 .gray {
-  color: #f4f4f4; }
+  color: #f5f5f5; }
 
 .bg-gray {
-  background-color: #f4f4f4; }
+  background-color: #f5f5f5; }
 
 .accent {
-  color: #d33257; }
+  color: #3498db; }
 
 .bg-accent {
-  background-color: #d33257; }
+  background-color: #3498db; }
+
+.bg-transparent {
+  background-color: transparent; }
 
 .text-primary {
   color: #202020; }
@@ -1169,99 +1292,6 @@ Retina
       display: inherit; } }
 
 /*
-Responsive embed
-
-<div class="embed embed--wide">
-    <iframe src="https://www.youtube.com/embed/46U5LfRrybY" allowfullscreen></iframe>
-</div>
-*/
-.embed {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  max-width: 100%;
-  height: 0;
-  padding-bottom: 75%; }
-  .embed embed, .embed iframe, .embed object, .embed video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-
-.embed--wide {
-  padding-bottom: 56.25%; }
-
-/*
-Grid
-
-<div class="grid">
-    <div class="grid-item"> </div>
-    <div class="grid-item"> </div>
-    <div class="grid-item right">
-
-        <div class="grid">
-            <div class="grid-item"> </div>
-            <div class="grid-item"> </div>
-            <div class="grid-item right"> </div>
-        </div>
-
-    </div>
-</div>
-*/
-.grid {
-  display: table;
-  font-size: 0 !important;
-  letter-spacing: 0 !important;
-  vertical-align: top;
-  width: 100%;
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto; }
-  .grid .grid {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0; }
-
-.grid--full {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0; }
-
-.grid--fill > .grid-item {
-  display: table-cell; }
-
-.grid--fill-equal {
-  table-layout: fixed; }
-  .grid--fill-equal > .grid-item {
-    display: table-cell; }
-
-.grid--center {
-  text-align: center; }
-
-.grid--justify {
-  display: block;
-  text-align: justify;
-  text-justify: distribute-all-lines; }
-
-.grid--top > .grid-item {
-  vertical-align: top; }
-
-.grid--middle > .grid-item {
-  vertical-align: middle; }
-
-.grid--bottom > .grid-item {
-  vertical-align: bottom; }
-
-.grid-item {
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  font-size: medium;
-  font-size: 1.8rem;
-  letter-spacing: 0; }
-
-/*
 Viewport height
 */
 .vh50 {
@@ -1269,22 +1299,6 @@ Viewport height
 
 .vh100 {
   min-height: 100vh; }
-
-/*
-Lead
-*/
-.lead {
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #202020;
-  letter-spacing: 0;
-  line-height: 1.5; }
-  @media only screen and (min-width: 800px) and (max-width: 1079px) {
-    .lead {
-      line-height: 1.5; } }
-  @media only screen and (min-width: 1080px) {
-    .lead {
-      line-height: 1.5; } }
 
 /*
 List Reset

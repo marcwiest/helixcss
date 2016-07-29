@@ -11,6 +11,13 @@ For more information, please visit: [semver.org](semver.org) & [keepachangelog.c
 
 ---
 
+## v2.2 - July 28, 2016
+- [Added] Added dash object.
+- [Added] Added center as an alias for mx-auto.
+- [Added] Added grid center and right modifiers.
+- [Added] Added background-alpha mixin to utilities.
+- [Updated] Updated the default gray and accent color variable values.
+
 ## v2.1 - July 28, 2016
 - [Removed] Removed line-height for code & small.
 - [Removed] Removed line-height variables for code & small.
