@@ -41,6 +41,13 @@ Button
     white-space: nowrap;
 }
 
+%button--clear {
+    &, &:hover {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
 @if $export_button {
 
 button,
@@ -50,6 +57,11 @@ button,
 .button,
 .btn {
     @extend %button;
+}
+
+.button--clear,
+.btn--clear {
+    @extend %button--clear;
 }
 
 } // endif
