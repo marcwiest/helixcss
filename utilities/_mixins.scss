@@ -59,6 +59,14 @@
 }
 
 ///
+// BG Alpha
+///
+
+@mixin background-alpha( $color, $alpha:50% ) {
+    background-color: rgba( $color, ($alpha / 100%) );
+}
+
+///
 // Widths
 // Helps you create widths faster.
 //
