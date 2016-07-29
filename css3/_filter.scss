@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-// Works in all browsers, accept IE.
-
-// <filter-function> [<filter-function]* | none
-@mixin filter( $function:none ) {
-    @include prefixer( filter, $function, webkit spec );
-}

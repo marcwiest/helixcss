@@ -1,4 +1,4 @@
-# Changelog
+# HelixCSS Changelog
 
 **Versioning Model: `major`.`minor`.`patch`**
 
@@ -10,6 +10,9 @@
 For more information, please visit: [semver.org](semver.org) & [keepachangelog.com](keepachangelog.com).
 
 ---
+
+## v2.0 - July 28, 2016
+- All new 2.0 update.
 
 ## v1.1.2 - July 25, 2016
 - [Updated] Refined color variables.
