@@ -11,11 +11,6 @@ pre, code, kbd, samp {
     font-size: $font_size_code;
     font-weight: $font_weight_code;
     letter-spacing: $letter_spacing_code;
-    line-height: $line_height_ratio_code;
-    @if $responsive_typography {
-        @include md { line-height: $line_height_ratio_code_md; }
-        @include lg { line-height: $line_height_ratio_code_lg; }
-    }
     color: $color_code;
     background-color: $color_code_bg;
 }
