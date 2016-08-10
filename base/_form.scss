@@ -8,7 +8,7 @@ Form
 
 legend,
 label, .label {
-    display: block;
+    display: inline-block;
     letter-spacing: $letter_spacing_input_label;
     font-weight: $font_weight_input_label;
     font-size: $font_size_input_label;
@@ -18,10 +18,26 @@ label, .label {
     color: $color_input_label;
 }
 
-input, textarea, select {
-    display: block;
-    width: 100%;
-    max-width: 100%;
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=month],
+[type=time],
+[type=week],
+[type=file],
+[type=email],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=url],
+textarea,
+select {
+    // only apply width when cols or size attributes are not given
+    &:not([size]):not([cols]) {
+        width: 100%;
+    }
     font-family: $font_family_input;
     font-weight: $font_weight_input;
     font-size: $font_size_input;
@@ -32,6 +48,7 @@ input, textarea, select {
     padding-left: $padding_input_left;
     letter-spacing: $letter_spacing_input;
     border-width: $border_width_input;
+    border-radius: $border_radius_input;
     border-style: solid;
     box-shadow: none;
     color: $color_input;
@@ -50,68 +67,40 @@ input, textarea, select {
 }
 
 input, textarea {
-    &:active, &:focus { cursor: text; }
-    @include placeholder {
-        color: $color_input_placeholder;
-    }
-}
-
-button,
-input[type=button],
-input[type=submit],
-input[type=reset],
-input[type=checkbox],
-input[type=radio] {
-    width: auto;
     display: inline-block;
-    cursor: pointer;
-}
-
-// input[type=date],
-// input[type=datetime],
-// input[type=datetime-local],
-// input[type=month],
-// input[type=time],
-// input[type=week],
-//
-// input[type=file],
-// input[type=email],
-// input[type=number],
-// input[type=password],
-// input[type=search],
-// input[type=tel],
-// input[type=text],
-// input[type=url],
-
-input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]),
-textarea,
-select {
-    @include appearance(none);
-    border-radius: $border_radius_input;
-    transition: $transition_input;
-    height: $height_input;
-}
-
-input[type=search] {
-    @include appearance(textfield);
+    @include placeholder { color: $color_input_placeholder; }
 }
 
 textarea {
-    min-height: ($font_size_input * $line_height_ratio_body) * 3;
-    padding-top: $padding_input_top;
-    padding-right: $padding_input_right;
-    padding-bottom: $padding_input_bottom;
-    padding-left: $padding_input_left;
+    // only apply min-height if rows attribute is not given
+    &:not([rows]) {
+        min-height: ($font_size_input * $line_height_ratio_body) * 3;
+    }
     resize: vertical;
     overflow: auto;
 }
 
 select {
+    display: inline-block;
+    height: $select_height;
+    cursor: pointer;
     @include appearance(menulist);
     -webkit-appearance: menulist-button;
+}
+
+button,
+[type=button],
+[type=submit],
+[type=reset] {
+    display: inline-block;
+    @include appearance(none);
+    background-color: transparent;
     cursor: pointer;
-    // make multiple select elements height not fixed
-    &[multiple], &[size] { height: auto; }
+}
+
+[type=checkbox],
+[type=radio] {
+    cursor: pointer;
 }
 
 } // endif

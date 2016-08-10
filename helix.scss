@@ -4,34 +4,34 @@
 HelixCSS v2.2 | License: MIT | Author: Marc Wiest (marcwiest.com)
 */
 
-// Utilities
+// Library
 
 @import
-    "utilities/brands",
-    "utilities/easing",
-    "utilities/functions",
-    "utilities/mixins";
+    "library/brands",
+    "library/easing",
+    "library/functions",
+    "library/mixins";
 
 @import
-    "utilities/css3/animation",
-    "utilities/css3/appearance",
-    "utilities/css3/backface-visibility",
-    "utilities/css3/calc",
-    "utilities/css3/filter",
-    "utilities/css3/flexbox",
-    "utilities/css3/font-smoothing",
-    "utilities/css3/hyphens",
-    "utilities/css3/keyframes",
-    "utilities/css3/linear-gradient",
-    "utilities/css3/perspective",
-    "utilities/css3/placeholder",
-    "utilities/css3/radial-gradient",
-    "utilities/css3/selection",
-    "utilities/css3/text-decoration",
-    "utilities/css3/transform",
-    "utilities/css3/transition",
-    "utilities/css3/user-select",
-    "utilities/css3/word-wrap";
+    "library/css3/animation",
+    "library/css3/appearance",
+    "library/css3/backface-visibility",
+    "library/css3/calc",
+    "library/css3/filter",
+    "library/css3/flexbox",
+    "library/css3/font-smoothing",
+    "library/css3/hyphens",
+    "library/css3/keyframes",
+    "library/css3/linear-gradient",
+    "library/css3/perspective",
+    "library/css3/placeholder",
+    "library/css3/radial-gradient",
+    "library/css3/selection",
+    "library/css3/text-decoration",
+    "library/css3/transform",
+    "library/css3/transition",
+    "library/css3/user-select",
+    "library/css3/word-wrap";
 
 // Variables
 
@@ -41,8 +41,7 @@ HelixCSS v2.2 | License: MIT | Author: Marc Wiest (marcwiest.com)
     "variables/borders",
     "variables/colors",
     "variables/sizes",
-    "variables/exports",
-    "variables/transitions";
+    "variables/exports";
 
 // Base
 
@@ -65,23 +64,21 @@ HelixCSS v2.2 | License: MIT | Author: Marc Wiest (marcwiest.com)
     "objects/mixins/scrollable",
     "objects/mixins/triangle";
 
-// Need to import before the objects below.
-
 @import
     "objects/button",
     "objects/embed",
+    "objects/flag",
     "objects/grid",
     "objects/lead";
 
-// Need to import after the objects above.
-
 @import
-    "objects/alignment",
-    "objects/border",
-    "objects/color",
-    "objects/display",
-    "objects/height",
-    "objects/list",
-    "objects/typography",
-    "objects/whitespace",
-    "objects/width";
+    "objects/utilities/alignment",
+    "objects/utilities/border",
+    "objects/utilities/color",
+    "objects/utilities/display",
+    "objects/utilities/height",
+    "objects/utilities/list",
+    "objects/utilities/position",
+    "objects/utilities/typography",
+    "objects/utilities/whitespace",
+    "objects/utilities/width";

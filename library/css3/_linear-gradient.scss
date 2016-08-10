@@ -8,7 +8,8 @@
 ///
 
 @mixin linear-gradient( $direction, $color-stops... ) {
-    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
+    // Fallback removed because it was preventing transparent gradients.
+    // background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
     background-image: -webkit-linear-gradient(_legacy-direction($direction),$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
     background-image:    -moz-linear-gradient(_legacy-direction($direction),$color-stops...); // Firefox 3.6 to 15
     background-image:      -o-linear-gradient(_legacy-direction($direction),$color-stops...); // Opera 11.1 to 12.0

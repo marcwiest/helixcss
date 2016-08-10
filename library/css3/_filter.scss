@@ -6,3 +6,7 @@
 @mixin filter( $function:none ) {
     @include prefixer( filter, $function, webkit spec );
 }
+
+@mixin drop-shadow( $atts:-12px 10px 10px rgba(0,0,0,.4) ) {
+    @include filter( drop-shadow($atts) );
+}

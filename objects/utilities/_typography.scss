@@ -18,4 +18,14 @@ Font weight
 .bold { font-weight: $fw_bold; }
 .regular { font-weight: $fw_normal; }
 
+/*
+Quotation marks
+*/
+
+.quotes {
+    quotes: "“" "”";
+    &::before { content: open-quote; }
+    &::after { content: close-quote; }
+}
+
 } // endif

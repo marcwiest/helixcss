@@ -6,7 +6,6 @@ Button
 
 %button {
     display: inline-block;
-    vertical-align: middle;
     line-height: inherit;
     height: auto;
     max-width: 100%;
@@ -21,7 +20,6 @@ Button
     text-transform: $text_transform_button;
     letter-spacing: $letter_spacing_button;
     padding: $padding_button_top $padding_button_right $padding_button_bottom $padding_button_left;
-    transition: $transition_button;
     border-style: solid;
     border-width: $border_width_button;
     border-radius: $border_radius_button;
@@ -34,7 +32,6 @@ Button
         background-color: $color_button_bg_hover;
         text-decoration: none;
     }
-    @include appearance(none);
     @include user-select(none);
     -webkit-user-drag: none;
     // prevent button from line breaking
@@ -48,12 +45,13 @@ Button
     }
 }
 
+%button--pill {
+    $radius: $font_size_button + $padding_button_top + $padding_button_bottom;
+    @include calc( border-radius, $radius );
+}
+
 @if $export_button {
 
-button,
-[type=button],
-[type=submit],
-[type=reset],
 .button,
 .btn {
     @extend %button;
@@ -62,6 +60,11 @@ button,
 .button--clear,
 .btn--clear {
     @extend %button--clear;
+}
+
+.button--pill,
+.btn--pill {
+    @extend %button--pill;
 }
 
 } // endif

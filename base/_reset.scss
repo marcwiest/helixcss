@@ -13,7 +13,7 @@ Reset
 	@-ms-viewport { width: device-width; }
 }
 
-html, body, div, span,
+html, body, div, span, button, input, select,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, address, cite, code,
 del, dfn, em, ins, kbd, q, s, samp,
@@ -36,7 +36,6 @@ video, iframe, object, embed {
 	margin: 0;
 	padding: 0;
 	border: 0;
-    outline: 0;
     vertical-align: middle;
 }
 
@@ -91,7 +90,12 @@ fieldset { min-width: 0; }
 // ensures we don't need to unnecessarily redeclare the global font stack.
 input, button, select, textarea {
     line-height: inherit;
-    &:focus { outline: none; }
+    // &:focus { outline: none; }
+}
+
+// Make multiple select elements height not fixed.
+select {
+    &[multiple], &[size] { height: auto; }
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -140,6 +144,12 @@ abbr[title], dfn[title] { cursor: help; }
 // for traditionally non-focusable elements with role="button"
 // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 [role="button"] { cursor: pointer; }
+
+// label has action
+label {
+	cursor: default;
+    &[for], * { cursor: pointer; }
+}
 
 // Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
 //

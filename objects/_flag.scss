@@ -1,0 +1,31 @@
+
+/*
+Flag
+
+The flag object is a design pattern similar to the media object:
+https://github.com/stubbornella/oocss/tree/master/oocss/src/components/media
+
+<div class="flag">
+    <div class="flag-item"> </div>
+    <div class="flag-item"> </div>
+</div>
+*/
+
+%flag {
+    display: table;
+}
+
+%flag-item {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    // responsive image fix
+    &, img { max-width: none; }
+}
+
+@if $export_flag {
+
+    .flag { @extend %flag; }
+    .flag-item { @extend %flag-item; }
+
+}

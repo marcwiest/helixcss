@@ -6,10 +6,10 @@
 
 // Abstracts
 
-$accent: #3498db !default; // d33257
-$accent_dark: darken($accent,10%) !default;
+$accent: #1f8bfc !default;
+$accent_alt: #1f8bfc !default;
 
-$gray: #f5f5f5 !default;
+$gray: #dadada !default;
 
 $text_primary: #202020 !default;
 $text_muted: #727272 !default;
@@ -21,7 +21,7 @@ $color_main_bg: #fff !default;
 
 $color_text:            $text_primary !default;
 $color_text_link:       $accent !default;
-$color_text_link_hover: $accent_dark !default;
+$color_text_link_hover: $accent_alt !default;
 
 $color_heading:            $text_primary !default;
 $color_heading_link:       $text_primary !default;
@@ -30,10 +30,11 @@ $color_heading_link_hover: $text_primary !default;
 $color_button:              $text_inverted !default;
 $color_button_hover:        $text_inverted !default;
 $color_button_bg:           $accent !default;
-$color_button_bg_hover:     $accent_dark !default;
+$color_button_bg_hover:     $accent_alt !default;
 $color_button_border:       transparent !default;
 $color_button_border_hover: transparent !default;
 
+$color_input_label:        $text_primary !default;
 $color_input:              $text_primary !default;
 $color_input_hover:        $text_primary !default;
 $color_input_focus:        $text_primary !default;
@@ -44,12 +45,6 @@ $color_input_border:       $gray !default;
 $color_input_border_hover: $gray !default;
 $color_input_border_focus: $gray !default;
 $color_input_placeholder:  $text_muted !default;
-$color_input_label:        $text_primary !default;
 
 $color_table_head:   $text_primary !default;
 $color_table_cell:   $text_primary !default;
-
-$color_code:    $text_primary !default;
-$color_code_bg: $gray !default;
-
-$color_border: $gray !default;

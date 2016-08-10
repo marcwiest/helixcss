@@ -8,7 +8,8 @@
 ///
 
 @mixin radial-gradient( $color-stops... ) {
-    background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
+    // Fallback removed because it was preventing transparent gradients.
+    // background-color: nth( nth($color-stops, 1), 1); // fallback, gets only the very first value
     background-image: -webkit-radial-gradient(center,ellipse cover,$color-stops...); // Chrome 25, Safari 6, iOS 6.1, Android 4.3
     background-image:    -moz-radial-gradient(center,ellipse cover,$color-stops...); // Firefox 3.6 to 15
     background-image:      -o-radial-gradient(center,ellipse cover,$color-stops...); // Opera 11.1 to 12.0

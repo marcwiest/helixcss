@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+$_spaces: $space1 $space2 $space3 $space4;
+$_spaces_count: length($_spaces);
+
+@mixin _whitespace_margin_css( $i, $breakpoint:'' ) {
+    .mb0#{$breakpoint} { margin-bottom: 0; }
+    .m0#{$breakpoint},
+    .ma0#{$breakpoint} { margin: 0; }
+    .m#{$i}#{$breakpoint},
+    .ma#{$i}#{$breakpoint} { margin: nth($_spaces,$i); }
+    .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); margin-right: nth($_spaces,$i); }
+    .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); margin-bottom: nth($_spaces,$i); }
+    .mt#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); }
+    .mr#{$i}#{$breakpoint} { margin-right: nth($_spaces,$i); }
+    .mb#{$i}#{$breakpoint} { margin-bottom: nth($_spaces,$i); }
+    .ml#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); }
+}
+
+@mixin _whitespace_padding_css( $i, $breakpoint:'' ) {
+    .p0#{$breakpoint},
+    .pa0#{$breakpoint} { padding: 0; }
+    .p#{$i}#{$breakpoint},
+    .pa#{$i}#{$breakpoint} { padding: nth($_spaces,$i); }
+    .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); padding-right: nth($_spaces,$i); }
+    .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); padding-bottom: nth($_spaces,$i); }
+    .pt#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); }
+    .pr#{$i}#{$breakpoint} { padding-right: nth($_spaces,$i); }
+    .pb#{$i}#{$breakpoint} { padding-bottom: nth($_spaces,$i); }
+    .pl#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); }
+}
+
+@mixin _whitespace_vertical_rhythm( $breakpoint:'' ) {
+    .vr25#{$breakpoint} { margin-bottom: $vr / 4; }
+    .vr50#{$breakpoint} { margin-bottom: $vr / 2; }
+    .vr100#{$breakpoint},
+    .vr#{$breakpoint} { margin-bottom: $vr; }
+    .vr150#{$breakpoint} { margin-bottom: $vr * 1.5; }
+    .vr200#{$breakpoint} { margin-bottom: $vr * 2; }
+}
+
+@if $export_whitespace {
+
+/*
+Vertical Rhythm
+*/
+
+@include _whitespace_vertical_rhythm;
+
+@include md {
+    @include _whitespace_vertical_rhythm( '-m' );
+}
+
+@include md-lg {
+    @include _whitespace_vertical_rhythm( '-ml' );
+}
+
+@include lg {
+    @include _whitespace_vertical_rhythm( '-l' );
+}
+
+/*
+Margin
+*/
+
+// .mla { margin-left: auto; }
+// .mra { margin-right: auto; }
+// .mxa
+
+@for $i from 1 through $_spaces_count {
+    @include _whitespace_margin_css( $i );
+}
+
+@include md {
+    @for $i from 1 through $_spaces_count {
+        @include _whitespace_margin_css( $i, '-m' );
+    }
+}
+
+@include md-lg {
+    @for $i from 1 through $_spaces_count {
+        @include _whitespace_margin_css( $i, '-ml' );
+    }
+}
+
+@include lg {
+    @for $i from 1 through $_spaces_count {
+        @include _whitespace_margin_css( $i, '-l' );
+    }
+}
+
+/*
+Padding
+*/
+
+@for $i from 1 through $_spaces_count {
+    @include _whitespace_padding_css( $i );
+}
+
+@include md {
+    @for $i from 1 through $_spaces_count {
+        @include _whitespace_padding_css( $i, '-m' );
+    }
+}
+
+@include md-lg {
+    @for $i from 1 through $_spaces_count {
+        @include _whitespace_padding_css( $i, '-ml' );
+    }
+}
+
+@include lg {
+    @for $i from 1 through $_spaces_count {
+        @include _whitespace_padding_css( $i, '-l' );
+    }
+}
+
+} // endif

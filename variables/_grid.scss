@@ -15,6 +15,6 @@ $grid_columns_count: 12 !default;
 // Breakpoints
 /////////////////////////////////////
 
-$md_begin: 800px !default;
+$lg_min: $grid_max_width !default;
 
-$lg_begin: $grid_max_width !default;
+$md_min: 800px !default;

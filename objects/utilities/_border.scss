@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@if $export_border {
+
+/*
+Border
+*/
+
+.b0, .border0 { border: 0; }
+
+// .border,
+// .border-top,
+// .border-right,
+// .border-bottom,
+// .border-left {
+//     border-style: solid;
+//     border-color: $color_border;
+// }
+//
+// .border { border-width: 1px; }
+// .border-top { border-top-width: 1px; }
+// .border-right { border-right-width: 1px; }
+// .border-bottom { border-bottom-width: 1px; }
+// .border-left { border-left-width: 1px; }
+
+/*
+Radius
+*/
+
+.sharp { border-radius: 0; }
+
+.round { border-radius: 50%; }
+
+.rounded        { border-radius: $border_radius; }
+.rounded-top    { border-radius: $border_radius $border_radius 0 0; }
+.rounded-right  { border-radius: 0 $border_radius $border_radius 0; }
+.rounded-bottom { border-radius: 0 0 $border_radius $border_radius; }
+.rounded-left   { border-radius: $border_radius 0 0 $border_radius; }
+
+} // endif

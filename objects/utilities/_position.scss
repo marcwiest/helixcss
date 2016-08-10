@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@if $export_position {
+
+/*
+Positioning
+*/
+
+.rel, .relative {
+    position: relative;
+}
+
+.abs, .absolute {
+    position: absolute;
+}
+
+// .central,
+// .centered,
+// .center-absolute {
+//     @include center-absolute;
+// }
+
+.top0 { top: 0; }
+.right0 { right: 0; }
+.bottom0 { bottom: 0; }
+.left0 { left: 0; }
+
+} // endif

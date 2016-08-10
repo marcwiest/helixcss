@@ -11,23 +11,15 @@ For more information, please visit: [semver.org](semver.org) & [keepachangelog.c
 
 ---
 
-## v2.2 - July 28, 2016
-- [Added] Added dash object.
-- [Added] Added center as an alias for mx-auto.
-- [Added] Added grid center and right modifiers.
-- [Added] Added background-alpha mixin to utilities.
-- [Updated] Updated the default gray and accent color variable values.
-
-## v2.1 - July 28, 2016
-- [Removed] Removed line-height for code & small.
-- [Removed] Removed line-height variables for code & small.
+## v2.0 - August 10, 2016
+- 2.0 Finalized version.
 
 ## v2.0 - July 28, 2016
 - All new 2.0 update.
 
 ## v1.1.2 - July 25, 2016
 - [Updated] Refined color variables.
-- [Fixed] Reversed grid column with.
+- [Fixed] Reversed grid column width.
 
 ## v1.1.1 – July 23, 2016
 - [Added] Utility colors.

@@ -14,9 +14,9 @@ $border_width_button: 1px !default;
 
 // Abstracts
 
-$br: 3px;
+$border_radius: 3px !default;
 
 // Elements
 
-$border_radius_input: $br !default;
-$border_radius_button: $br !default;
+$border_radius_input: $border_radius !default;
+$border_radius_button: $border_radius !default;

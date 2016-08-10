@@ -14,16 +14,22 @@
     @media only screen and (min-width: $min) and (max-width: $max) { @content; }
 }
 
+// alias of below()
+@mixin max( $max ) { @include below( $max ); }
+
+// alias of above()
+@mixin min( $min ) { @include above( $min ); }
+
 ///
 // Shorthand Queries
 ///
 
-@mixin sm { @include below($md_begin - 1) { @content; } }
-@mixin md { @include between($md_begin, $lg_begin - 1) { @content; } }
-@mixin lg { @include above($lg_begin) { @content; } }
+@mixin sm { @include below($md_min - 1) { @content; } }
+@mixin md { @include between($md_min, $lg_min - 1) { @content; } }
+@mixin lg { @include above($lg_min) { @content; } }
 
-@mixin sm-md { @include below($lg_begin - 1) { @content; } }
-@mixin md-lg { @include above($md_begin) { @content; } }
+@mixin sm-md { @include below($lg_min - 1) { @content; } }
+@mixin md-lg { @include above($md_min) { @content; } }
 
 ///
 // Retina Queries
@@ -67,13 +73,22 @@
 }
 
 ///
+// Background Clip
+// Helps with leaking background-colors and images when using border-radius;
+///
+
+@mixin background-clip {
+    background-clip: padding-box;
+}
+
+///
 // Widths
 // Helps you create widths faster.
 //
-// @params  $lg, $md, $sm  The width in percent (e.g. 50%) for each respective breakpoint.
+// @params  $sm, $md, $lg  The width in percent (e.g. 50%) for each respective breakpoint.
 ///
 
-@mixin widths( $lg, $md:100%, $sm:100% ) {
+@mixin widths( $sm:100%, $md:100%, $lg:100%  ) {
     width: $sm;
     @include md-lg { width: $md; }
     @include lg { width: $lg; }
@@ -107,15 +122,6 @@
             width: 100%;
         }
     }
-}
-
-///
-// Background Clip – Just here for reference.
-// Helps with leaking background-colors and images when using border-radius;
-///
-
-@mixin background-clip {
-    background-clip: padding-box;
 }
 
 ///
@@ -217,6 +223,22 @@
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap;
+}
+
+///
+// CSS Icon
+// Hides the elements text and show an icon instead.
+///
+
+@mixin css-icon {
+    font-size: 0;
+    &::before {
+        font-family: dashicons;
+        font-size: x-large;
+        line-height: 1;
+        content: "\f333";
+        @content;
+    }
 }
 
 ///

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@if $export_display {
+
+/*
+Overflow
+*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/*
+Display
+*/
+
+.hidden { display: none; }
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+@include md {
+    .hidden-m { display: none; }
+    .block-m { display: block; }
+    .inline-m { display: inline; }
+    .inline-block-m { display: inline-block; }
+}
+@include md-lg {
+    .hidden-ml { display: none; }
+    .block-ml { display: block; }
+    .inline-ml { display: inline; }
+    .inline-block-ml { display: inline-block; }
+}
+@include lg {
+    .hidden-l { display: none; }
+    .block-l { display: block; }
+    .inline-l { display: inline; }
+    .inline-block-l { display: inline-block; }
+}
+
+/*
+Retina
+*/
+
+// .not-retina {
+//     display: inherit;
+//     @include retina {
+//         display: none;
+//     }
+// }
+// .for-retina {
+//     display: none;
+//     @include retina {
+//         display: inherit;
+//     }
+// }
+
+} // endif

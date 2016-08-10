@@ -7,12 +7,10 @@ Code
 */
 
 pre, code, kbd, samp {
-    font-family: $font_family_code, monospace; // double monospace ala normalize.css
+    font-family: $font_family_code;
     font-size: $font_size_code;
     font-weight: $font_weight_code;
     letter-spacing: $letter_spacing_code;
-    color: $color_code;
-    background-color: $color_code_bg;
 }
 
 code, kbd, samp {
@@ -28,7 +26,6 @@ pre {
     display: block;
     overflow: auto;
     white-space: normal;
-    padding: $padding_pre_top $padding_pre_right $padding_pre_bottom $padding_pre_left;
     > code {
         display: block;
         padding: 0;

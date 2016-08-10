@@ -15,32 +15,33 @@ detailed documentation will be made available.
 
 To help you find the variables you are looking for faster, variables have their own folder and files.
 Some variable groups have abstract variables. These abstract variables are there to shorten the setup
-of the element variables and are used inside objects.
+of the element variables but are used inside some objects.
 
 #### Base
 
-This folder addresses mostly HTML tags, but there are also a couple of classes within it.
+This folder addresses mostly HTML tags, but there are also a couple of classes within it. Within
+HelixCSS classes that are named exactly like HTML tags, are behaving just like their respective HTML
+tag counter parts.
 
 #### Objects
 
-Objects are the CSS styles. Some objects are more complex than others. Objects that are more complex
-can be extend by the used of their silent classes. The mixin folder holds a few goodies that purely
-exist as SCSS mixin.
+Objects are CSS components. The utilities are there to manipulate the objects and the mixin folder
+holds components that purely exist in SCSS.
 
-#### Utilities
+#### Library
 
-In here are functions, mixins and variables that are useful for SCSS development. Using CSS3 mixins
-rather than a tool like auto-prefixer allows HelixCSS to compiling on the server with, for example,
-[scssphp](http://leafo.net/scssphp/).
+In here are functions, mixins and variables that are useful for SCSS development. Using the CSS3
+mixins rather than a tool like auto-prefixer allows HelixCSS to compile on the server with, for
+example, [scssphp](http://leafo.net/scssphp/).
 
 ## Responsive Sizing
 
-Throughout your project, use `rem` or `em` whenever you want a size to be adaptable to whatever the
+Throughout your project, use `rem` whenever you want a size to be adaptable to whatever the
 HTML's base font-size value is set to. The base font-size varies between breakpoints. This allows for
 responsive typography and sizing. Take a look at the variables inside `_typograpy.scss` to change or
 disable responsive sizing.
 
-## Reminders
+### Reminder
 
 - [IE 9 & 10](http://caniuse.com/#search=rem) do not support rem units when used in the `font`
   shorthand property (the entire declaration is ignored) or when used on pseudo elements like
@@ -53,11 +54,12 @@ HelixCSS supports IE9+ & Android2.3+.
 ## Credits
 
 HelixCSS was inspired by these fine projects:
-- BassCSS
-- Burbon
-- KiteCSS
-- SassBurger
-- InuitCSS
+- [BassCSS](http://www.basscss.com/)
+- [Bourbon](http://bourbon.io/)
+- [KiteCSS](http://hiloki.github.io/kitecss/)
+- [SassBurger](http://joren.co/sass-burger/)
+- [InuitCSS 5](https://github.com/csswizardry/inuit.css)
+- [InuitCSS 6](https://github.com/inuitcss/inuitcss)
 
 ## Resources
 

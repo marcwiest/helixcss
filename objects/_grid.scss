@@ -44,49 +44,48 @@ Grid
 
 // Grid Fill Mode
 
-%grid--fill > %grid-item {
-    display: table-cell;
+%grid--fill {
+    > %grid-item { display: table-cell; }
 }
 
 %grid--fill-equal {
     table-layout: fixed;
-    > %grid-item {
-        display: table-cell;
-    }
+    > %grid-item { display: table-cell; }
 }
 
 // Grid Horizontal Alignment
 
-%grid--center {
-    text-align: center;
-}
+// %grid--center {
+//     text-align: center;
+// }
+//
+// %grid--right {
+//     text-align: right;
+// }
 
-%grid--right {
-    text-align: right;
-}
-
-%grid--justify {
-    display: block;
-    text-align: justify;
-    text-justify: distribute-all-lines;
-    // clearfix is needed for this modifier
-    @extend %cf;
-}
+// NEEDS TESTING & DOCUMENTAION
+// %grid--justify {
+//     display: block;
+//     text-align: justify;
+//     text-justify: distribute-all-lines;
+//     // clearfix is needed for this modifier
+//     @extend %cf;
+// }
 
 // Grid Vertical Alignment
 
-%grid--top > %grid-item { vertical-align: top; }
-%grid--middle > %grid-item { vertical-align: middle; }
-%grid--bottom > %grid-item { vertical-align: bottom; }
+// %grid--top > %grid-item { vertical-align: top; }
+// %grid--middle > %grid-item { vertical-align: middle; }
+// %grid--bottom > %grid-item { vertical-align: bottom; }
 
 // Grid Items
 
 %grid-item {
     @extend %cf;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
-    font-size: medium; // needed lte ie8 rem fallback
+    // needed rem fallback for ie lower than 8
+    font-size: medium;
     font-size: $font_size_text;
     letter-spacing: $letter_spacing_text;
 }
@@ -103,13 +102,13 @@ Grid
     .grid--fill { @extend %grid--fill; }
     .grid--fill-equal { @extend %grid--fill-equal; }
 
-    .grid--center { @extend %grid--center; }
-    .grid--right { @extend %grid--right; }
-    .grid--justify { @extend %grid--justify; }
+    // .grid--center { @extend %grid--center; }
+    // .grid--right { @extend %grid--right; }
+    // .grid--justify { @extend %grid--justify; }
 
-    .grid--top { @extend %grid--top; }
-    .grid--middle { @extend %grid--middle; }
-    .grid--bottom { @extend %grid--bottom; }
+    // .grid--top { @extend %grid--top; }
+    // .grid--middle { @extend %grid--middle; }
+    // .grid--bottom { @extend %grid--bottom; }
 
     // grid-item
 
