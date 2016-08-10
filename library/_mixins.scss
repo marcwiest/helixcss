@@ -88,9 +88,9 @@
 // @params  $sm, $md, $lg  The width in percent (e.g. 50%) for each respective breakpoint.
 ///
 
-@mixin widths( $sm:100%, $md:100%, $lg:100%  ) {
+@mixin widths( $sm:100%, $md:$sm, $lg:$md  ) {
     width: $sm;
-    @include md-lg { width: $md; }
+    @include md { width: $md; }
     @include lg { width: $lg; }
 }
 
