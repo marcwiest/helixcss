@@ -53,7 +53,7 @@ input[type="reset"] {
 
 pre, address, hr, p, blockquote, pre, figure, audio, video,
 form, fieldset, table, dl, ol, ul {
-    margin-bottom: $vertical_rhythm;
+    margin-bottom: $vr;
 }
 
 .cf, .clearfix,
@@ -62,7 +62,7 @@ form, fieldset, table, dl, ol, ul {
 }
 
 %heading {
-    margin-bottom: $vertical_rhythm;
+    margin-bottom: $vr;
     font-family: $font_family_heading;
     font-weight: $font_weight_heading;
     font-style: $font_style_heading;
@@ -112,7 +112,7 @@ ul ol,
 ol ul,
 ol ol {
     margin-bottom: 0;
-    padding-left: $vertical_rhythm;
+    padding-left: $vr;
 }
 
 dl { list-style: none; }
