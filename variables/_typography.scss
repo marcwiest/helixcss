@@ -1,6 +1,16 @@
 @charset "UTF-8";
 
 /////////////////////////////////////
+// Vertical Rhythem
+/////////////////////////////////////
+
+// The margin-bottom for most block-level elements.
+// See: base/_document.scss for elements that this applies to.
+
+$vr: 2rem !default;
+
+
+/////////////////////////////////////
 // Responsive Typography
 /////////////////////////////////////
 
@@ -14,11 +24,11 @@ $html_base_font_size:    9px !default;
 $html_base_font_size_md: 9.5px !default;
 $html_base_font_size_lg: 10px !default;
 
-// All ratios should be unitless numbers.
+// These ratios should be unitless numbers.
 
-$line_height_ratio_body:    1.75 !default;
-$line_height_ratio_body_md: 1.75 !default;
-$line_height_ratio_body_lg: 1.75 !default;
+$line_height_ratio_body:    1.66 !default;
+$line_height_ratio_body_md: 1.66 !default;
+$line_height_ratio_body_lg: 1.66 !default;
 
 $line_height_ratio_heading:    1.25 !default;
 $line_height_ratio_heading_md: 1.25 !default;
@@ -59,20 +69,20 @@ $font_smoothing: true !default;
 
 // Abstracts
 
-$ff_sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$ff_serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
-$ff_mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
+$sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
+$mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
 
 // Elements
 
-$font_family_heading:     $ff_sans !default;
-$font_family_text:        $ff_sans !default;
-$font_family_button:      $ff_sans !default;
-$font_family_code:        $ff_mono !default;
-$font_family_input:       $ff_sans !default;
-$font_family_input_label: $ff_sans !default;
-$font_family_tabel_head:  $ff_sans !default;
-$font_family_tabel_cell:  $ff_sans !default;
+$font_family_heading:     $sans !default;
+$font_family_text:        $sans !default;
+$font_family_button:      $sans !default;
+$font_family_code:        $mono !default;
+$font_family_input:       $sans !default;
+$font_family_input_label: $sans !default;
+$font_family_tabel_head:  $sans !default;
+$font_family_tabel_cell:  $sans !default;
 
 
 /////////////////////////////////////
@@ -81,22 +91,22 @@ $font_family_tabel_cell:  $ff_sans !default;
 
 // Abstracts
 
-$fw_light: 200;
-$fw_normal: 400;
-$fw_bold: 600;
+$light:  200 !default;
+$medium: 400 !default;
+$bold:   600 !default;
 
 // Elements
 
-$font_weight_heading:     $fw_normal !default;
-$font_weight_text:        $fw_normal !default;
-$font_weight_lead:        $fw_normal !default;
-$font_weight_small:       $fw_normal !default;
-$font_weight_button:      $fw_normal !default;
-$font_weight_code:        $fw_normal !default;
-$font_weight_input:       $fw_normal !default;
-$font_weight_input_label: $fw_normal !default;
-$font_weight_tabel_head:  $fw_bold !default;
-$font_weight_tabel_cell:  $fw_normal !default;
+$font_weight_heading:     $medium !default;
+$font_weight_text:        $medium !default;
+$font_weight_lead:        $medium !default;
+$font_weight_small:       $medium !default;
+$font_weight_button:      $medium !default;
+$font_weight_code:        $medium !default;
+$font_weight_input:       $medium !default;
+$font_weight_input_label: $medium !default;
+$font_weight_tabel_head:  $bold !default;
+$font_weight_tabel_cell:  $medium !default;
 
 
 /////////////////////////////////////
@@ -135,12 +145,3 @@ $letter_spacing_text:        0 !default;
 $letter_spacing_button:      0 !default;
 $letter_spacing_tabel_head:  0 !default;
 $letter_spacing_tabel_cell:  0 !default;
-
-
-/////////////////////////////////////
-// Vertical Rhythem
-/////////////////////////////////////
-
-$vertical_rhythm: $font_size_text * $line_height_ratio_body !default;
-
-$vr: $vertical_rhythm !default;
