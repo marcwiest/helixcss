@@ -5,10 +5,8 @@ $_spaces_count: length($_spaces);
 
 @mixin _whitespace_margin_css( $i, $breakpoint:'' ) {
     .mb0#{$breakpoint} { margin-bottom: 0; }
-    .m0#{$breakpoint},
-    .ma0#{$breakpoint} { margin: 0; }
-    .m#{$i}#{$breakpoint},
-    .ma#{$i}#{$breakpoint} { margin: nth($_spaces,$i); }
+    .m0#{$breakpoint} { margin: 0; }
+    .m#{$i}#{$breakpoint} { margin: nth($_spaces,$i); }
     .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); margin-right: nth($_spaces,$i); }
     .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); margin-bottom: nth($_spaces,$i); }
     .mt#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); }
@@ -18,10 +16,8 @@ $_spaces_count: length($_spaces);
 }
 
 @mixin _whitespace_padding_css( $i, $breakpoint:'' ) {
-    .p0#{$breakpoint},
-    .pa0#{$breakpoint} { padding: 0; }
-    .p#{$i}#{$breakpoint},
-    .pa#{$i}#{$breakpoint} { padding: nth($_spaces,$i); }
+    .p0#{$breakpoint} { padding: 0; }
+    .p#{$i}#{$breakpoint} { padding: nth($_spaces,$i); }
     .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); padding-right: nth($_spaces,$i); }
     .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); padding-bottom: nth($_spaces,$i); }
     .pt#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); }
