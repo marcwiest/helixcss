@@ -43,15 +43,23 @@ $line_height_ratio_lead_lg: 1.5 !default;
 // Font Size
 /////////////////////////////////////
 
-$font_size_text:        1.8rem !default;
-$font_size_lead:        2.2rem !default;
-$font_size_small:       1.4rem !default;
-$font_size_button:      1.8rem !default;
-$font_size_code:        1.4rem !default;
-$font_size_input:       1.8rem !default;
-$font_size_input_label: 1.8rem !default;
-$font_size_tabel_head:  1.8rem !default;
-$font_size_tabel_cell:  1.8rem !default;
+// Abstracts
+
+$small:  1.4rem !default;
+$medium: 1.6rem !default;
+$large:  2.0rem !default;
+
+// Elements
+
+$font_size_lead:        $large !default;
+$font_size_small:       $small !default;
+$font_size_code:        $small !default;
+$font_size_text:        $medium !default;
+$font_size_button:      $medium !default;
+$font_size_input:       $medium !default;
+$font_size_input_label: $medium !default;
+$font_size_tabel_head:  $medium !default;
+$font_size_tabel_cell:  $medium !default;
 
 $font_size_h1: 4.6rem !default;
 $font_size_h2: 3.6rem !default;
@@ -92,21 +100,21 @@ $font_family_tabel_cell:  $sans !default;
 // Abstracts
 
 $light:  200 !default;
-$medium: 400 !default;
+$normal: 400 !default;
 $bold:   600 !default;
 
 // Elements
 
-$font_weight_heading:     $medium !default;
-$font_weight_text:        $medium !default;
-$font_weight_lead:        $medium !default;
-$font_weight_small:       $medium !default;
-$font_weight_button:      $medium !default;
-$font_weight_code:        $medium !default;
-$font_weight_input:       $medium !default;
-$font_weight_input_label: $medium !default;
+$font_weight_heading:     $normal !default;
+$font_weight_text:        $normal !default;
+$font_weight_lead:        $normal !default;
+$font_weight_small:       $normal !default;
+$font_weight_button:      $normal !default;
+$font_weight_code:        $normal !default;
+$font_weight_input:       $normal !default;
+$font_weight_input_label: $normal !default;
 $font_weight_tabel_head:  $bold !default;
-$font_weight_tabel_cell:  $medium !default;
+$font_weight_tabel_cell:  $normal !default;
 
 
 /////////////////////////////////////
