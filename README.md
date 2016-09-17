@@ -1,12 +1,15 @@
 
-# HelixCSS v2.0
+# HelixCSS
 
-A lean SCSS framework. HelixCSS primary goal is to give structure to your website or application and
-leave the design decisions to you.
+A lean SCSS library and CSS base. HelixCSS primary goal is to give structure to your website or
+application and leave the design decisions to you.
+
+**Is HelixCSS ready?** Yes and no. Yes in that it's working great and no in that future updates are
+likely to break backwards functionality.
 
 ## Documentation
 
-For the moment there are only code examples available inside the objects folders. Over time, a more
+For the moment there are only code examples available inside the objects folders. Over time, a
 detailed documentation will be made available.
 
 ## Folders & Contents
@@ -15,18 +18,19 @@ detailed documentation will be made available.
 
 To help you find the variables you are looking for faster, variables have their own folder and files.
 Some variable groups have abstract variables. These abstract variables are there to shorten the setup
-of the element variables but are used inside some objects.
+of the element variables but are also used inside some of the objects.
 
 #### Base
 
 This folder addresses mostly HTML tags, but there are also a couple of classes within it. Within
-HelixCSS classes that are named exactly like HTML tags, are behaving just like their respective HTML
+HelixCSS, classes that are named exactly like HTML tags are behaving just like their respective HTML
 tag counter parts.
 
 #### Objects
 
-Objects are CSS components. The utilities are there to manipulate the objects and the mixin folder
-holds components that purely exist in SCSS.
+Objects are CSS components (e.g. buttons). Object utilities are there to manipulate the objects and
+the object mixins folder holds components that purely exist in SCSS which, at this point, aren't fully
+ready and must be used with caution.
 
 #### Library
 
