@@ -7,13 +7,13 @@
 // Abstracts
 
 $accent: #1f8bfc !default;
-$accent_alt: #1f8bfc !default;
+$accent_alt: darken(#1f8bfc,10%) !default;
 
 $gray: #dadada !default;
 
 $text_primary: #202020 !default;
-$text_muted: #727272 !default;
-$text_inverted: rgba(255,255,255,1) !default;
+$text_muted: #707070 !default;
+$text_inverted: rgba(255,255,255,.8) !default;
 
 // Elements
 
