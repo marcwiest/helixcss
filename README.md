@@ -4,8 +4,10 @@
 A lean SCSS library and CSS base. HelixCSS primary goal is to give structure to your website or
 application and leave the design decisions to you.
 
-**Is HelixCSS ready?** Yes and no. Yes in that it's working great and no in that future updates are
-likely to break backwards functionality.
+### Is HelixCSS ready?
+
+Yes and no. Yes in that it's working great and no in that future updates are likely to break backwards
+functionality.
 
 ## Documentation
 
@@ -28,9 +30,9 @@ tag counter parts.
 
 #### Objects
 
-Objects are CSS components (e.g. buttons). Object utilities are there to manipulate the objects and
-the object mixins folder holds components that purely exist in SCSS which, at this point, aren't fully
-ready and must be used with caution.
+Objects are CSS classes that make elements act a certain way (e.g. buttons). Object utilities are
+there to manipulate objects and HTML tags. The object mixins folder holds components that purely
+exist in SCSS which, at this point, aren't fully ready and must be used with caution.
 
 #### Library
 
