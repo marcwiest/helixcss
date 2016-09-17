@@ -39,6 +39,11 @@ video, iframe, object, embed {
     vertical-align: middle;
 }
 
+iframe, object, embed, video,
+figure, figcaption, canvas, audio {
+	max-width: 100%;
+}
+
 html {
 	// Prevent font size adjustments after orientation changes in IE and iOS.
 	-webkit-text-size-adjust: 100%;
