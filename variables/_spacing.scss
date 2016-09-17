@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/////////////////////////////////////
+// Vertical Rhythem
+/////////////////////////////////////
+
+// The margin-bottom for most block-level elements.
+// See: base/_document.scss for elements that this applies to.
+
+$vr: 2rem !default;
+
+
+/////////////////////////////////////
+// Padding
+/////////////////////////////////////
+
+// Abstracts
+
+$space1: 10px !default;
+$space2: 20px !default;
+$space3: 30px !default;
+$space4: 40px !default;
+
+// Elements
+
+$padding_input_left: .8rem !default;
+$padding_input_right: .8rem !default;
+$padding_input_top: .4rem !default;
+$padding_input_bottom: .4rem !default;
+
+$padding_button_left: 2.6rem !default;
+$padding_button_right: 2.6rem !default;
+$padding_button_top: .4rem !default;
+$padding_button_bottom: .4rem !default;
+
+$padding_table_cell_left: 1rem !default;
+$padding_table_cell_right: 1rem !default;
+$padding_table_cell_top: 1rem !default;
+$padding_table_cell_bottom: 1rem !default;
