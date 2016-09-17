@@ -1,20 +1,10 @@
 @charset "UTF-8";
 
 /////////////////////////////////////
-// Vertical Rhythem
-/////////////////////////////////////
-
-// The margin-bottom for most block-level elements.
-// See: base/_document.scss for elements that this applies to.
-
-$vr: 2rem !default;
-
-
-/////////////////////////////////////
 // Responsive Typography
 /////////////////////////////////////
 
-// If false, only mobile sizes will be used.
+// If false, only mobile sizes (_sm) will be used.
 
 $responsive_typography: true !default;
 
