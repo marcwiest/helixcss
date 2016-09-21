@@ -3,11 +3,6 @@
 $_spaces: $space1 $space2 $space3 $space4;
 $_spaces_count: length($_spaces);
 
-@mixin _null_whitespace_margin_css( $i, $breakpoint:'' ) {
-    .mb0#{$breakpoint} { margin-bottom: 0; }
-    .m0#{$breakpoint} { margin: 0; }
-}
-
 @mixin _multi_whitespace_margin_css( $i, $breakpoint:'' ) {
     .m#{$i}#{$breakpoint} { margin: nth($_spaces,$i); }
     .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); margin-right: nth($_spaces,$i); }
@@ -19,10 +14,6 @@ $_spaces_count: length($_spaces);
     .mr#{$i}#{$breakpoint} { margin-right: nth($_spaces,$i); }
     .mb#{$i}#{$breakpoint} { margin-bottom: nth($_spaces,$i); }
     .ml#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); }
-}
-
-@mixin _null_whitespace_padding_css( $i, $breakpoint:'' ) {
-    .p0#{$breakpoint} { padding: 0; }
 }
 
 @mixin _multi_whitespace_padding_css( $i, $breakpoint:'' ) {
@@ -76,18 +67,20 @@ Margin
 // .mxa
 
 // null margin
-@for $i from 1 through $_spaces_count {
-    @include _null_whitespace_margin_css( $i );
+.mb0 { margin-bottom: 0; }
+.m0 { margin: 0; }
+@include md {
+    .mb0-m { margin-bottom: 0; }
+    .m0-m { margin: 0; }
 }
-@include md { @for $i from 1 through $_spaces_count {
-    @include _null_whitespace_margin_css( $i, '-m' );
-}}
-@include md-lg { @for $i from 1 through $_spaces_count {
-    @include _null_whitespace_margin_css( $i, '-ml' );
-}}
-@include lg { @for $i from 1 through $_spaces_count {
-    @include _null_whitespace_margin_css( $i, '-l' );
-}}
+@include md-lg {
+    .mb0-ml { margin-bottom: 0; }
+    .m0-ml { margin: 0; }
+}
+@include lg {
+    .mb0-l { margin-bottom: 0; }
+    .m0-l { margin: 0; }
+}
 
 // multi margin
 @for $i from 1 through $_spaces_count {
@@ -121,19 +114,13 @@ Margin
 Padding
 */
 
-@for $i from 1 through $_spaces_count {
-    @include _null_whitespace_padding_css( $i );
-}
-@include md { @for $i from 1 through $_spaces_count {
-    @include _null_whitespace_padding_css( $i, '-m' );
-}}
-@include md-lg { @for $i from 1 through $_spaces_count {
-    @include _null_whitespace_padding_css( $i, '-ml' );
-}}
-@include lg { @for $i from 1 through $_spaces_count {
-    @include _null_whitespace_padding_css( $i, '-l' );
-}}
+// null padding
+.p0 { margin: 0; }
+@include md { .p0-m { margin: 0; } }
+@include md-lg { .p0-ml { margin: 0; } }
+@include lg { .p0-l { margin: 0; } }
 
+// multi padding
 @for $i from 1 through $_spaces_count {
     @include _multi_whitespace_padding_css( $i );
 }
@@ -147,6 +134,7 @@ Padding
     @include _multi_whitespace_padding_css( $i, '-l' );
 }}
 
+// padding
 @for $i from 1 through $_spaces_count {
     @include _whitespace_padding_css( $i );
 }
