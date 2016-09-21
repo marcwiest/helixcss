@@ -105,7 +105,10 @@ a {
     }
 }
 
-ul, ol { list-style-position: inside; }
+ul, ol {
+    list-style-position: outside;
+    padding-left: $vr;
+}
 
 ul ul,
 ul ol,
