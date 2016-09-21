@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/////////////////////////////////////
+// Border Width
+/////////////////////////////////////
+
+$border_width_input: 1px !default;
+$border_width_button: 1px !default;
+
+
+/////////////////////////////////////
+// Border Radius
+/////////////////////////////////////
+
+// Abstracts
+
+$border_radius: 3px !default;
+
+// Elements
+
+$border_radius_input: $border_radius !default;
+$border_radius_button: $border_radius !default;

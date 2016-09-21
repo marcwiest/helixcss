@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/////////////////////////////////////
+// Base
+/////////////////////////////////////
+
+$export_normalize: true !default;
+$export_document:  true !default;
+$export_code:      true !default;
+$export_form:      true !default;
+$export_reset:     true !default;
+$export_table:     true !default;
+
+
+/////////////////////////////////////
+// Objects
+/////////////////////////////////////
+
+$export_button: true !default;
+$export_embed:  true !default;
+$export_flag:   true !default;
+$export_grid:   true !default;
+$export_lead:   true !default;
+
+$export_alignment:  true !default;
+$export_border:     true !default;
+$export_color:      true !default;
+$export_display:    true !default;
+$export_height:     true !default;
+$export_list:       true !default;
+$export_position:   true !default;
+$export_typography: true !default;
+$export_whitespace: true !default;
+$export_width:      true !default;

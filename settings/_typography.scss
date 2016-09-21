@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/////////////////////////////////////
+// Responsive Typography
+/////////////////////////////////////
+
+// If false, only mobile sizes (_sm) will be used.
+
+$responsive_typography: true !default;
+
+// These set the basis for: em, rem & %.
+
+$html_base_font_size:    9px !default;
+$html_base_font_size_md: 9.5px !default;
+$html_base_font_size_lg: 10px !default;
+
+// These ratios should be unitless numbers.
+
+$line_height_ratio_body:    1.66 !default;
+$line_height_ratio_body_md: 1.66 !default;
+$line_height_ratio_body_lg: 1.66 !default;
+
+$line_height_ratio_heading:    1.25 !default;
+$line_height_ratio_heading_md: 1.25 !default;
+$line_height_ratio_heading_lg: 1.25 !default;
+
+$line_height_ratio_lead:    1.5 !default;
+$line_height_ratio_lead_md: 1.5 !default;
+$line_height_ratio_lead_lg: 1.5 !default;
+
+
+/////////////////////////////////////
+// Font Size
+/////////////////////////////////////
+
+// Abstracts
+
+$small:  1.4rem !default;
+$medium: 1.6rem !default;
+$large:  2.0rem !default;
+
+// Elements
+
+$font_size_lead:        $large !default;
+$font_size_small:       $small !default;
+$font_size_code:        $small !default;
+$font_size_text:        $medium !default;
+$font_size_button:      $medium !default;
+$font_size_input:       $medium !default;
+$font_size_input_label: $medium !default;
+$font_size_tabel_head:  $medium !default;
+$font_size_tabel_cell:  $medium !default;
+
+$font_size_h1: 4.6rem !default;
+$font_size_h2: 3.6rem !default;
+$font_size_h3: 2.8rem !default;
+$font_size_h4: 2.2rem !default;
+$font_size_h5: 1.8rem !default;
+$font_size_h6: 1.4rem !default;
+
+
+/////////////////////////////////////
+// Font Family
+/////////////////////////////////////
+
+$font_smoothing: true !default;
+
+// Abstracts
+
+$sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
+$mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
+
+// Elements
+
+$font_family_heading:     $sans !default;
+$font_family_text:        $sans !default;
+$font_family_button:      $sans !default;
+$font_family_code:        $mono !default;
+$font_family_input:       $sans !default;
+$font_family_input_label: $sans !default;
+$font_family_tabel_head:  $sans !default;
+$font_family_tabel_cell:  $sans !default;
+
+
+/////////////////////////////////////
+// Font Weight
+/////////////////////////////////////
+
+// Abstracts
+
+$light:  200 !default;
+$normal: 400 !default;
+$bold:   600 !default;
+
+// Elements
+
+$font_weight_heading:     $normal !default;
+$font_weight_text:        $normal !default;
+$font_weight_lead:        $normal !default;
+$font_weight_small:       $normal !default;
+$font_weight_button:      $normal !default;
+$font_weight_code:        $normal !default;
+$font_weight_input:       $normal !default;
+$font_weight_input_label: $normal !default;
+$font_weight_tabel_head:  $bold !default;
+$font_weight_tabel_cell:  $normal !default;
+
+
+/////////////////////////////////////
+// Text Transform (uppercase)
+/////////////////////////////////////
+
+$text_transform_heading:     none !default;
+$text_transform_button:      none !default;
+$text_transform_input_label: none !default;
+$text_transform_tabel_head:  none !default;
+
+
+/////////////////////////////////////
+// Font Style (italic)
+/////////////////////////////////////
+
+$font_style_heading:     normal !default;
+$font_style_text:        normal !default;
+$font_style_button:      normal !default;
+$font_style_input:       normal !default;
+$font_style_input_label: normal !default;
+$font_style_tabel_head:  normal !default;
+$font_style_tabel_cell:  normal !default;
+
+
+/////////////////////////////////////
+// Letter Spacing
+/////////////////////////////////////
+
+$letter_spacing_input:       0 !default;
+$letter_spacing_input_label: 0 !default;
+$letter_spacing_code:        0 !default;
+$letter_spacing_heading:     0 !default;
+$letter_spacing_lead:        0 !default;
+$letter_spacing_text:        0 !default;
+$letter_spacing_button:      0 !default;
+$letter_spacing_tabel_head:  0 !default;
+$letter_spacing_tabel_cell:  0 !default;

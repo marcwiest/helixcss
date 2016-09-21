@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/////////////////////////////////////
+// Grid
+/////////////////////////////////////
+
+$website_min_width: 360px !default;
+
+$grid_max_width: 1080px !default;
+
+$grid_columns_count: 12 !default;
+
+
+/////////////////////////////////////
+// Breakpoints
+/////////////////////////////////////
+
+$lg_min: $grid_max_width !default;
+
+$md_min: 800px !default;

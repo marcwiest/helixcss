@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-/*!
-HelixCSS v2.0 | License: MIT | Author: Marc Wiest (marcwiest.com)
-*/
+/*! HelixCSS v2.0 | License: MIT | Author: Marc Wiest (marcwiest.com) */
 
 // Library
 
@@ -33,15 +31,15 @@ HelixCSS v2.0 | License: MIT | Author: Marc Wiest (marcwiest.com)
     "library/css3/user-select",
     "library/css3/word-wrap";
 
-// Variables
+// Settings
 
 @import
-    "variables/typography",
-    "variables/grid",
-    "variables/borders",
-    "variables/colors",
-    "variables/spacing",
-    "variables/exports";
+    "settings/typography",
+    "settings/grid",
+    "settings/borders",
+    "settings/colors",
+    "settings/spacing",
+    "settings/exports";
 
 // Base
 
