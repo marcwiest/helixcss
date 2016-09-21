@@ -72,10 +72,13 @@ input, textarea {
 }
 
 textarea {
+    // remove space below the textarea
+    vertical-align: top;
     // only apply min-height if rows attribute is not given
     &:not([rows]) {
         min-height: ($font_size_input * $line_height_ratio_body) * 3;
     }
+    // only allow vertical resizing
     resize: vertical;
     overflow: auto;
 }
