@@ -32,12 +32,12 @@ $_spaces_count: length($_spaces);
 @mixin _whitespace_vertical_rhythm( $breakpoint:'' ) {
     .vr25#{$breakpoint} { margin-bottom: $vr / 4 !important; }
     .vr50#{$breakpoint} { margin-bottom: $vr / 2 !important; }
-    // @TODO vr75
+    .vr75#{$breakpoint} { margin-bottom: $vr / 1.333333 !important; }
     .vr100#{$breakpoint},
     .vr#{$breakpoint} { margin-bottom: $vr !important; }
-    // @TODO vr125
+    .vr125#{$breakpoint} { margin-bottom: $vr * 1.25 !important; }
     .vr150#{$breakpoint} { margin-bottom: $vr * 1.5 !important; }
-    // @TODO vr175
+    .vr175#{$breakpoint} { margin-bottom: $vr * 1.75 !important; }
     .vr200#{$breakpoint} { margin-bottom: $vr * 2 !important; }
 }
 
