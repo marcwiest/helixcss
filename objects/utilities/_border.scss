@@ -27,14 +27,14 @@ Border
 Radius
 */
 
-.sharp { border-radius: 0; }
+.r0, .sharp { border-radius: 0; }
 
-.round { border-radius: 50%; }
+.r50, .round { border-radius: 50%; }
 
-.rounded        { border-radius: $border_radius; }
-.rounded-top    { border-radius: $border_radius $border_radius 0 0; }
-.rounded-right  { border-radius: 0 $border_radius $border_radius 0; }
-.rounded-bottom { border-radius: 0 0 $border_radius $border_radius; }
-.rounded-left   { border-radius: $border_radius 0 0 $border_radius; }
+.radius        { border-radius: $border_radius; }
+.radius-top    { border-radius: $border_radius $border_radius 0 0; }
+.radius-right  { border-radius: 0 $border_radius $border_radius 0; }
+.radius-bottom { border-radius: 0 0 $border_radius $border_radius; }
+.radius-left   { border-radius: $border_radius 0 0 $border_radius; }
 
 } // endif
