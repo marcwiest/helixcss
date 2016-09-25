@@ -6,26 +6,26 @@
 Font variations
 */
 
-.uppercase { text-transform: uppercase; }
-.lowercase { text-transform: lowercase; }
-.italic { font-style: italic; }
+.uppercase { text-transform: uppercase !important; }
+.lowercase { text-transform: lowercase !important; }
+.italic { font-style: italic !important; }
 
 /*
 Font weight
 */
 
-.light { font-weight: $light; }
-.bold { font-weight: $bold; }
-.medium { font-weight: $medium; }
+.light { font-weight: $light !important; }
+.bold { font-weight: $bold !important; }
+.medium { font-weight: $medium !important; }
 
 /*
 Quotation marks
 */
 
 .quotes {
-    quotes: "“" "”";
-    &::before { content: open-quote; }
-    &::after { content: close-quote; }
+    quotes: "“" "”" !important;
+    &::before { content: open-quote !important; }
+    &::after { content: close-quote !important; }
 }
 
 } // endif

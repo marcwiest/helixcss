@@ -6,24 +6,24 @@
 Float
 */
 
-.left { float: left; }
-.right { float: right; }
-.center { float: none; margin-left: auto; margin-right: auto; }
+.left { float: left !important; }
+.right { float: right !important; }
+.center { float: none; margin-left: auto; margin-right: auto !important; }
 
 @include md {
-    .left-m { float: left; }
-    .right-m { float: right; }
-    .center-m { float: none; margin-left: auto; margin-right: auto; }
+    .left-m { float: left !important; }
+    .right-m { float: right !important; }
+    .center-m { float: none; margin-left: auto; margin-right: auto !important; }
 }
 @include md-lg {
-    .left-ml { float: left; }
-    .right-ml { float: right; }
-    .center-ml { float: none; margin-left: auto; margin-right: auto; }
+    .left-ml { float: left !important; }
+    .right-ml { float: right !important; }
+    .center-ml { float: none; margin-left: auto; margin-right: auto !important; }
 }
 @include lg {
-    .left-l { float: left; }
-    .right-l { float: right; }
-    .center-l { float: none; margin-left: auto; margin-right: auto; }
+    .left-l { float: left !important; }
+    .right-l { float: right !important; }
+    .center-l { float: none; margin-left: auto; margin-right: auto !important; }
 }
 
 /**
@@ -36,47 +36,47 @@ Float
  * Text Align
  */
 
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
 // .text-justify { text-align: justify; }
 // .justify-line { @include justify-line; }
-.vertical-top { vertical-align: top; }
-.vertical-bottom { vertical-align: bottom; }
-.vertical-middle { vertical-align: middle; }
+.vertical-top { vertical-align: top !important; }
+.vertical-bottom { vertical-align: bottom !important; }
+.vertical-middle { vertical-align: middle !important; }
 // .vertical-baseline { vertical-align: baseline; }
 
 @include md {
-    .text-left-m { text-align: left; }
-    .text-right-m { text-align: right; }
-    .text-center-m { text-align: center; }
+    .text-left-m { text-align: left !important; }
+    .text-right-m { text-align: right !important; }
+    .text-center-m { text-align: center !important; }
     // .text-justify-m { text-align: justify; }
     // .justify-line-m { @include justify-line; }
-    .vertical-top-m { vertical-align: top; }
-    .vertical-bottom-m { vertical-align: bottom; }
-    .vertical-middle-m { vertical-align: middle; }
+    .vertical-top-m { vertical-align: top !important; }
+    .vertical-bottom-m { vertical-align: bottom !important; }
+    .vertical-middle-m { vertical-align: middle !important; }
     // .vertical-baseline-m { vertical-align: baseline; }
 }
 @include md-lg {
-    .text-left-ml { text-align: left; }
-    .text-right-ml { text-align: right; }
-    .text-center-ml { text-align: center; }
+    .text-left-ml { text-align: left !important; }
+    .text-right-ml { text-align: right !important; }
+    .text-center-ml { text-align: center !important; }
     // .text-justify-ml { text-align: justify; }
     // .justify-line-ml { @include justify-line; }
-    .vertical-top-ml { vertical-align: top; }
-    .vertical-bottom-ml { vertical-align: bottom; }
-    .vertical-middle-ml { vertical-align: middle; }
+    .vertical-top-ml { vertical-align: top !important; }
+    .vertical-bottom-ml { vertical-align: bottom !important; }
+    .vertical-middle-ml { vertical-align: middle !important; }
     // .vertical-baseline-ml { vertical-align: baseline; }
 }
 @include lg {
-    .text-left-l { text-align: left; }
-    .text-right-l { text-align: right; }
-    .text-center-l { text-align: center; }
+    .text-left-l { text-align: left !important; }
+    .text-right-l { text-align: right !important; }
+    .text-center-l { text-align: center !important; }
     // .text-justify-l { text-align: justify; }
     // .justify-line-l { @include justify-line; }
-    .vertical-top-l { vertical-align: top; }
-    .vertical-bottom-l { vertical-align: bottom; }
-    .vertical-middle-l { vertical-align: middle; }
+    .vertical-top-l { vertical-align: top !important; }
+    .vertical-bottom-l { vertical-align: bottom !important; }
+    .vertical-middle-l { vertical-align: middle !important; }
     // .vertical-baseline-l { vertical-align: baseline; }
 }
 

@@ -4,41 +4,41 @@ $_spaces: $space1 $space2 $space3 $space4;
 $_spaces_count: length($_spaces);
 
 @mixin _multi_whitespace_margin_css( $i, $breakpoint:'' ) {
-    .m#{$i}#{$breakpoint} { margin: nth($_spaces,$i); }
-    .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); margin-right: nth($_spaces,$i); }
-    .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); margin-bottom: nth($_spaces,$i); }
+    .m#{$i}#{$breakpoint} { margin: nth($_spaces,$i) !important; }
+    .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); margin-right: nth($_spaces,$i) !important; }
+    .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); margin-bottom: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_margin_css( $i, $breakpoint:'' ) {
-    .mt#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); }
-    .mr#{$i}#{$breakpoint} { margin-right: nth($_spaces,$i); }
-    .mb#{$i}#{$breakpoint} { margin-bottom: nth($_spaces,$i); }
-    .ml#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); }
+    .mt#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i) !important; }
+    .mr#{$i}#{$breakpoint} { margin-right: nth($_spaces,$i) !important; }
+    .mb#{$i}#{$breakpoint} { margin-bottom: nth($_spaces,$i) !important; }
+    .ml#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i) !important; }
 }
 
 @mixin _multi_whitespace_padding_css( $i, $breakpoint:'' ) {
-    .p#{$i}#{$breakpoint} { padding: nth($_spaces,$i); }
-    .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); padding-right: nth($_spaces,$i); }
-    .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); padding-bottom: nth($_spaces,$i); }
+    .p#{$i}#{$breakpoint} { padding: nth($_spaces,$i) !important; }
+    .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); padding-right: nth($_spaces,$i) !important; }
+    .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); padding-bottom: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_padding_css( $i, $breakpoint:'' ) {
-    .pt#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); }
-    .pr#{$i}#{$breakpoint} { padding-right: nth($_spaces,$i); }
-    .pb#{$i}#{$breakpoint} { padding-bottom: nth($_spaces,$i); }
-    .pl#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); }
+    .pt#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i) !important; }
+    .pr#{$i}#{$breakpoint} { padding-right: nth($_spaces,$i) !important; }
+    .pb#{$i}#{$breakpoint} { padding-bottom: nth($_spaces,$i) !important; }
+    .pl#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_vertical_rhythm( $breakpoint:'' ) {
-    .vr25#{$breakpoint} { margin-bottom: $vr / 4; }
-    .vr50#{$breakpoint} { margin-bottom: $vr / 2; }
+    .vr25#{$breakpoint} { margin-bottom: $vr / 4 !important; }
+    .vr50#{$breakpoint} { margin-bottom: $vr / 2 !important; }
     // @TODO vr75
     .vr100#{$breakpoint},
-    .vr#{$breakpoint} { margin-bottom: $vr; }
+    .vr#{$breakpoint} { margin-bottom: $vr !important; }
     // @TODO vr125
-    .vr150#{$breakpoint} { margin-bottom: $vr * 1.5; }
+    .vr150#{$breakpoint} { margin-bottom: $vr * 1.5 !important; }
     // @TODO vr175
-    .vr200#{$breakpoint} { margin-bottom: $vr * 2; }
+    .vr200#{$breakpoint} { margin-bottom: $vr * 2 !important; }
 }
 
 @if $export_whitespace {
@@ -70,19 +70,19 @@ Margin
 // .mxa
 
 // null margin
-.mb0 { margin-bottom: 0; }
-.m0 { margin: 0; }
+.mb0 { margin-bottom: 0 !important; }
+.m0 { margin: 0 !important; }
 @include md {
-    .mb0-m { margin-bottom: 0; }
-    .m0-m { margin: 0; }
+    .mb0-m { margin-bottom: 0 !important; }
+    .m0-m { margin: 0 !important; }
 }
 @include md-lg {
-    .mb0-ml { margin-bottom: 0; }
-    .m0-ml { margin: 0; }
+    .mb0-ml { margin-bottom: 0 !important; }
+    .m0-ml { margin: 0 !important; }
 }
 @include lg {
-    .mb0-l { margin-bottom: 0; }
-    .m0-l { margin: 0; }
+    .mb0-l { margin-bottom: 0 !important; }
+    .m0-l { margin: 0 !important; }
 }
 
 // multi margin
@@ -118,10 +118,10 @@ Padding
 */
 
 // null padding
-.p0 { padding: 0; }
-@include md { .p0-m { padding: 0; } }
-@include md-lg { .p0-ml { padding: 0; } }
-@include lg { .p0-l { padding: 0; } }
+.p0 { padding: 0 !important; }
+@include md { .p0-m { padding: 0 !important; } }
+@include md-lg { .p0-ml { padding: 0 !important; } }
+@include lg { .p0-l { padding: 0 !important; } }
 
 // multi padding
 @for $i from 1 through $_spaces_count {
