@@ -52,7 +52,7 @@ Width (Column Based)
 .w90 { width: 90%; }
 .w100 { width: 100%; }
 
-.auto, .wa { width: auto; }
+.wauto, .wa { width: auto; }
 
 @include md {
     .w10-m { width: 10%; }
@@ -66,7 +66,7 @@ Width (Column Based)
     .w90-m { width: 90%; }
     .w100-m { width: 100%; }
 
-    .auto-m, .wa-m { width: auto; }
+    .wauto-m, .wa-m { width: auto; }
 }
 @include md-lg {
     .w10-ml { width: 10%; }
@@ -80,7 +80,7 @@ Width (Column Based)
     .w90-ml { width: 90%; }
     .w100-ml { width: 100%; }
 
-    .auto-ml, .wa-ml { width: auto; }
+    .wauto-ml, .wa-ml { width: auto; }
 }
 @include lg {
     .w10-l { width: 10%; }
@@ -94,7 +94,7 @@ Width (Column Based)
     .w90-l { width: 90%; }
     .w100-l { width: 100%; }
 
-    .auto-l, .wa-l { width: auto; }
+    .wauto-l, .wa-l { width: auto; }
 }
 
 } // endif
