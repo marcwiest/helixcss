@@ -14,7 +14,7 @@ table {
 }
 
 caption {
-    color: $text_muted;
+    color: $color_table_cell;
     margin: $font_size_small 0;
     font-size: $font_size_small;
     text-align: left;
@@ -23,7 +23,7 @@ caption {
 }
 
 tr {
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $color_table_border;
 }
 
 th, td {
