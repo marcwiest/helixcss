@@ -138,6 +138,17 @@
 }
 
 ///
+// Select Reset
+// Removes the drop-down indication from a select element.
+///
+
+@mixin select-reset {
+    background-image: none;
+    background-position: 0% 0%;
+    background-size: auto auto;
+}
+
+///
 // List reset
 ///
 
