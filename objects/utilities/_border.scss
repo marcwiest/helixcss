@@ -6,7 +6,7 @@
 Border
 */
 
-.b0, .border0 { border: 0; }
+.b0, .border0 { border: 0 !important; }
 
 // .border,
 // .border-top,
@@ -16,7 +16,6 @@ Border
 //     border-style: solid;
 //     border-color: $color_border;
 // }
-//
 // .border { border-width: 1px; }
 // .border-top { border-top-width: 1px; }
 // .border-right { border-right-width: 1px; }
