@@ -55,14 +55,6 @@ Grid
 
 // Grid Horizontal Alignment
 
-// %grid--center {
-//     text-align: center;
-// }
-//
-// %grid--right {
-//     text-align: right;
-// }
-
 // NEEDS TESTING & DOCUMENTAION
 // %grid--justify {
 //     display: block;
@@ -70,6 +62,15 @@ Grid
 //     text-justify: distribute-all-lines;
 //     // clearfix is needed for this modifier
 //     @extend %cf;
+// }
+//
+// UNWANTED FOR NOW
+// %grid--center {
+//     text-align: center;
+// }
+//
+// %grid--right {
+//     text-align: right;
 // }
 
 // Grid Vertical Alignment
@@ -84,7 +85,7 @@ Grid
     @extend %cf;
     display: inline-block;
     vertical-align: top;
-    // needed rem fallback for ie lower than 8
+    // rem fallback to ensure item is visible 
     font-size: medium;
     font-size: $font_size_text;
     letter-spacing: $letter_spacing_text;
