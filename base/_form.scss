@@ -6,6 +6,10 @@
 Form
 */
 
+form {
+    @extend %cf;
+}
+
 legend,
 label, .label {
     display: inline-block;
