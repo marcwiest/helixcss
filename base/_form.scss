@@ -22,6 +22,12 @@ label, .label {
     color: $color_input_label;
 }
 
+// WAS REMOVED FROM RESET AND PUT HERE FOR LATER
+// label, .label {
+// 	cursor: default;
+//     &[for] { cursor: pointer; }
+// }
+
 [type=date],
 [type=datetime],
 [type=datetime-local],

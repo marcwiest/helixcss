@@ -119,7 +119,10 @@ ol ol {
 }
 
 dl { list-style: none; }
-dt { font-weight: bold; color: $color_heading; }
+dt {
+    font-weight: bold;
+    color: $color_heading;
+}
 
 blockquote * {
     margin-bottom: 0;
