@@ -7,7 +7,7 @@ Lead
 %lead {
     font-size: $font_size_lead;
     font-weight: $font_weight_lead;
-    color: $color_heading;
+    color: $color_text;
     letter-spacing: $letter_spacing_lead;
     line-height: $line_height_ratio_lead;
     @if $responsive_typography {
