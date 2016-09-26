@@ -4,32 +4,45 @@
 // Base
 /////////////////////////////////////
 
-$export_normalize: true !default;
-$export_document:  true !default;
-$export_code:      true !default;
-$export_form:      true !default;
-$export_reset:     true !default;
-$export_table:     true !default;
+// Abstracts
+
+$export_base: true !default;
+
+// Elements
+
+$export_normalize: $export_base !default;
+$export_document:  $export_base !default;
+$export_code:      $export_base !default;
+$export_form:      $export_base !default;
+$export_reset:     $export_base !default;
+$export_table:     $export_base !default;
 
 
 /////////////////////////////////////
 // Objects
 /////////////////////////////////////
 
-$export_button:     true !default;
-$export_embed:      true !default;
-$export_flag:       true !default;
-$export_grid:       true !default;
-$export_lead:       true !default;
-$export_scrollable: true !default;
+// Abstracts
 
-$export_alignment:  true !default;
-$export_border:     true !default;
-$export_color:      true !default;
-$export_display:    true !default;
-$export_height:     true !default;
-$export_list:       true !default;
-$export_position:   true !default;
-$export_typography: true !default;
-$export_whitespace: true !default;
-$export_width:      true !default;
+$export_objects:   true !default;
+$export_utilities: true !default;
+
+// Elements
+
+$export_button:     $export_objects !default;
+$export_embed:      $export_objects !default;
+$export_flag:       $export_objects !default;
+$export_grid:       $export_objects !default;
+$export_lead:       $export_objects !default;
+$export_scrollable: $export_objects !default;
+
+$export_alignment:  $export_utilities !default;
+$export_border:     $export_utilities !default;
+$export_color:      $export_utilities !default;
+$export_display:    $export_utilities !default;
+$export_height:     $export_utilities !default;
+$export_list:       $export_utilities !default;
+$export_position:   $export_utilities !default;
+$export_typography: $export_utilities !default;
+$export_whitespace: $export_utilities !default;
+$export_width:      $export_utilities !default;
