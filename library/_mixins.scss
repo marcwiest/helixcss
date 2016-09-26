@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 ///
-// Custom Media Queries
+// Media Queries
 ///
 
 @mixin above( $min ) {
@@ -20,9 +20,7 @@
 // alias of above()
 @mixin min( $min ) { @include above( $min ); }
 
-///
 // Shorthand Queries
-///
 
 @mixin sm { @include below($md_min - 1) { @content; } }
 @mixin md { @include between($md_min, $lg_min - 1) { @content; } }
@@ -31,11 +29,8 @@
 @mixin sm-md { @include below($lg_min - 1) { @content; } }
 @mixin md-lg { @include above($md_min) { @content; } }
 
-///
 // Retina Queries
 // Default value set to 1.3 to target Google Nexus 7 (bjango.com/articles/min-device-pixel-ratio/)
-///
-
 @mixin retina( $ratio:1.3 ) {
     @media only screen and ( -webkit-min-device-pixel-ratio: $ratio ),
            only screen and (    min--moz-device-pixel-ratio: $ratio ),
@@ -46,39 +41,40 @@
            }
 }
 
-@mixin retina-bg( $url, $width, $height ) {
+///
+// Background
+// The bg-clip mixin helps with leaking background-colors and images when using border-radius.
+///
+
+@mixin bg-retina( $url, $width, $height ) {
     @include retina {
         background-image: url($url);
         background-size: $width $height;
     }
 }
 
-///
-// BG Cover
-///
-
-@mixin background-cover( $img_url, $attachment:scroll ) {
+@mixin bg-cover( $img_url, $attachment:scroll ) {
     background-image: url($url);
     background-attachment: $attachment;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-///
-// BG Alpha
-///
-
-@mixin background-alpha( $color, $alpha:50% ) {
-    background-color: rgba( $color, ($alpha / 100%) );
+@mixin bg-clip {
+    background-clip: padding-box;
 }
 
 ///
-// Background Clip
-// Helps with leaking background-colors and images when using border-radius;
+// Text Shadow
+// Quickly set a simple black or white text-shadow.
 ///
 
-@mixin background-clip {
-    background-clip: padding-box;
+@mixin dark-text-shadow( $alpha: 0.25, $x_y_blur: 1px 1px 1px ) {
+    text-shadow: $x_y_blur rgba(0, 0, 0, $alpha);
+}
+
+@mixin light-text-shadow( $alpha: 0.25, $x_y_blur: 1px 1px 1px ) {
+    text-shadow: $x_y_blur rgba(255, 255, 255, $alpha);
 }
 
 ///
@@ -95,15 +91,18 @@
 }
 
 ///
-// Clearfix
-// Source: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+// CSS Icon
+// Hides the elements text and show an icon instead.
 ///
 
-@mixin clearfix {
-    &:after {
-        content: '';
-        display: table;
-        clear: both;
+@mixin css-icon {
+    font-size: 0;
+    &::before {
+        font-family: dashicons;
+        font-size: x-large;
+        line-height: 1;
+        content: "\f333";
+        @content;
     }
 }
 
@@ -122,19 +121,6 @@
             width: 100%;
         }
     }
-}
-
-///
-// Text Shadow
-// Quickly set a simple black or white text-shadow.
-///
-
-@mixin dark-text-shadow( $alpha: 0.25, $x_y_blur: 1px 1px 1px ) {
-    text-shadow: $x_y_blur rgba(0, 0, 0, $alpha);
-}
-
-@mixin light-text-shadow( $alpha: 0.25, $x_y_blur: 1px 1px 1px ) {
-    text-shadow: $x_y_blur rgba(255, 255, 255, $alpha);
 }
 
 ///
@@ -221,22 +207,6 @@
 }
 
 ///
-// CSS Icon
-// Hides the elements text and show an icon instead.
-///
-
-@mixin css-icon {
-    font-size: 0;
-    &::before {
-        font-family: dashicons;
-        font-size: x-large;
-        line-height: 1;
-        content: "\f333";
-        @content;
-    }
-}
-
-///
 // Truncate
 // Prevents a string of text from breaking into the 2nd line and adds an ellipsis to the end.
 ///
@@ -249,38 +219,27 @@
     white-space: nowrap;
 }
 
-// alias
+// alias of truncate
 @mixin ellipsis( $width:100% ) {
     @include truncate( $width );
 }
 
 ///
-// Creates specific vendor prefixes.
+// Clearfix
+// Source: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 ///
 
-// Do NOT edit these global variables!
-
-$is_webkit_included: true;
-$is_mozilla_included: true;
-$is_microsoft_included: true;
-$is_opera_included: true;
-$is_spec_included: true;
-
-@mixin disable-all-vendors {
-    $is_webkit_included: false !global;
-    $is_mozilla_included: false !global;
-    $is_microsoft_included: false !global;
-    $is_opera_included: false !global;
-    $is_spec_included: false !global;
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
 
-@mixin enable-all-vendors {
-    $is_webkit_included: true !global;
-    $is_mozilla_included: true !global;
-    $is_microsoft_included: true !global;
-    $is_opera_included: true !global;
-    $is_spec_included: true !global;
-}
+///
+// Creates specific vendor prefixes.
+///
 
 @mixin prefixer( $property, $value, $prefixes:null ) {
 
@@ -288,17 +247,41 @@ $is_spec_included: true;
 
     @each $p in $prefixes {
         @if webkit == $p {
-            @if $is_webkit_included { -webkit-#{$property}: $value; }
+            @if $_is_webkit_included { -webkit-#{$property}: $value; }
         } @else if moz == $p {
-            @if $is_mozilla_included { -moz-#{$property}: $value; }
+            @if $_is_mozilla_included { -moz-#{$property}: $value; }
         } @else if ms == $p {
-            @if $is_microsoft_included { -ms-#{$property}: $value; }
+            @if $_is_microsoft_included { -ms-#{$property}: $value; }
         } @else if o == $p {
-            @if $is_opera_included { -o-#{$property}: $value; }
+            @if $_is_opera_included { -o-#{$property}: $value; }
         } @else if spec == $p {
-            @if $is_spec_included { #{$property}: $value; }
+            @if $_is_spec_included { #{$property}: $value; }
         } @else {
             @warn "Unrecognized prefix: #{$p}";
         }
     }
+}
+
+// DO NOT EDIT these global variables!
+
+$_is_webkit_included: true;
+$_is_mozilla_included: true;
+$_is_microsoft_included: true;
+$_is_opera_included: true;
+$_is_spec_included: true;
+
+@mixin disable-all-vendors {
+    $_is_webkit_included: false !global;
+    $_is_mozilla_included: false !global;
+    $_is_microsoft_included: false !global;
+    $_is_opera_included: false !global;
+    $_is_spec_included: false !global;
+}
+
+@mixin enable-all-vendors {
+    $_is_webkit_included: true !global;
+    $_is_mozilla_included: true !global;
+    $_is_microsoft_included: true !global;
+    $_is_opera_included: true !global;
+    $_is_spec_included: true !global;
 }
