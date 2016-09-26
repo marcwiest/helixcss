@@ -36,8 +36,8 @@ $line_height_ratio_lead_lg: 1.5 !default;
 // Abstracts
 
 $small:  1.4rem !default;
-$medium: 1.6rem !default;
-$large:  2.0rem !default;
+$medium: 1.8rem !default;
+$large:  2.2rem !default;
 
 // Elements
 
@@ -56,7 +56,7 @@ $font_size_h2: 3.6rem !default;
 $font_size_h3: 2.8rem !default;
 $font_size_h4: 2.2rem !default;
 $font_size_h5: 1.8rem !default;
-$font_size_h6: 1.4rem !default;
+$font_size_h6: 1.6rem !default;
 
 
 /////////////////////////////////////
@@ -67,9 +67,9 @@ $font_smoothing: true !default;
 
 // Abstracts
 
-$sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serif: "Noto Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif !default;
-$mono: Menlo, "Droid Sans Mono", Consolas, Monaco, "Andale Mono", monospace !default;
+$sans: sans-serif !default;
+$serif: serif !default;
+$mono: monospace !default;
 
 // Elements
 
@@ -97,7 +97,7 @@ $bold:   600 !default;
 
 $font_weight_heading:     $normal !default;
 $font_weight_text:        $normal !default;
-$font_weight_lead:        $normal !default;
+$font_weight_lead:        $light !default;
 $font_weight_small:       $normal !default;
 $font_weight_button:      $normal !default;
 $font_weight_code:        $normal !default;
