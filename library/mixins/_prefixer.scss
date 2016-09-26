@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+///
+// Creates specific vendor prefixes.
+///
+
+@mixin prefixer( $property, $value, $prefixes:null ) {
+
+    @if null == $prefixes { $prefixes: webkit moz ms o spec; }
+
+    @each $p in $prefixes {
+        @if webkit == $p {
+            @if $_is_webkit_included { -webkit-#{$property}: $value; }
+        } @else if moz == $p {
+            @if $_is_mozilla_included { -moz-#{$property}: $value; }
+        } @else if ms == $p {
+            @if $_is_microsoft_included { -ms-#{$property}: $value; }
+        } @else if o == $p {
+            @if $_is_opera_included { -o-#{$property}: $value; }
+        } @else if spec == $p {
+            @if $_is_spec_included { #{$property}: $value; }
+        } @else {
+            @warn "Unrecognized prefix: #{$p}";
+        }
+    }
+}
+
+// DO NOT EDIT these global variables!
+
+$_is_webkit_included: true;
+$_is_mozilla_included: true;
+$_is_microsoft_included: true;
+$_is_opera_included: true;
+$_is_spec_included: true;
+
+@mixin disable-all-vendors {
+    $_is_webkit_included: false !global;
+    $_is_mozilla_included: false !global;
+    $_is_microsoft_included: false !global;
+    $_is_opera_included: false !global;
+    $_is_spec_included: false !global;
+}
+
+@mixin enable-all-vendors {
+    $_is_webkit_included: true !global;
+    $_is_mozilla_included: true !global;
+    $_is_microsoft_included: true !global;
+    $_is_opera_included: true !global;
+    $_is_spec_included: true !global;
+}

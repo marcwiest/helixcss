@@ -7,8 +7,12 @@
 @import
     "library/brands",
     "library/easing",
-    "library/functions",
-    "library/mixins";
+    "library/functions";
+
+@import
+    "library/mixins/prefixer",
+    "library/mixins/media-queries",
+    "library/mixins/css";
 
 @import
     "library/css3/animation",

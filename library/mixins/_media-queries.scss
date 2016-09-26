@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+///
+// Media Queries
+///
+
+@mixin above( $min ) {
+    @media only screen and (min-width: $min) { @content; }
+}
+@mixin below( $max ) {
+    @media only screen and (max-width: $max) { @content; }
+}
+@mixin between( $min, $max ) {
+    @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}
+
+// alias of below()
+@mixin max( $max ) { @include below( $max ); }
+
+// alias of above()
+@mixin min( $min ) { @include above( $min ); }
+
+// Shorthand Queries
+
+@mixin sm { @include below($md_min - 1) { @content; } }
+@mixin md { @include between($md_min, $lg_min - 1) { @content; } }
+@mixin lg { @include above($lg_min) { @content; } }
+
+@mixin sm-md { @include below($lg_min - 1) { @content; } }
+@mixin md-lg { @include above($md_min) { @content; } }
+
+// Retina Queries
+// Default value set to 1.3 to target Google Nexus 7 (bjango.com/articles/min-device-pixel-ratio/)
+@mixin retina( $ratio:1.3 ) {
+    @media only screen and ( -webkit-min-device-pixel-ratio: $ratio ),
+           only screen and (    min--moz-device-pixel-ratio: $ratio ),
+           only screen and (      -o-min-device-pixel-ratio: #{$ratio}/1 ),
+           only screen and ( min-resolution: round($ratio * 96dpi) ),
+           only screen and ( min-resolution: $ratio * 1dppx ) {
+               @content;
+           }
+}
