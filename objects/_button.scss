@@ -46,8 +46,7 @@ Button
 }
 
 %button--pill {
-    $radius: $font_size_button + $padding_button_top + $padding_button_bottom;
-    @include calc( border-radius, $radius );
+    border-radius: $font_size_button + $padding_button_top + $padding_button_bottom;
 }
 
 @if $export_button {
