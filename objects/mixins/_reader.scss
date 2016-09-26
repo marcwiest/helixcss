@@ -19,10 +19,10 @@ Source: github.com/Automattic/_s/blob/master/style.css#L634
     background-color: transparent;
     &:focus {
         background-color: #f1f1f1;
-        border-radius: 3px;
+        border-radius: $border_radius;
         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-        clip: auto;
-        color: #21759b;
+        clip: auto !important;
+        color: $accent;
         display: block;
         font-size: $font_size_text;
         font-weight: bold;
@@ -33,7 +33,6 @@ Source: github.com/Automattic/_s/blob/master/style.css#L634
         text-decoration: none;
         top: 5px;
         width: auto;
-        // make sure it's not covered up
         z-index: 999999;
     }
 }
