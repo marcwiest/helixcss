@@ -20,7 +20,7 @@ https://github.com/stubbornella/oocss/tree/master/oocss/src/components/media
     vertical-align: top;
     width: auto;
     // responsive image fix
-    &, img { max-width: none; }
+    // &, img { max-width: none; }
 }
 
 @if $export_flag {
