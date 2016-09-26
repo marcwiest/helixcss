@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*
+Scrollable
+
+Hides overflow but allows for scrolling either vertically or horizontally.
+
+<div class="scrollbox h400"> </div>
+*/
+
+%scrollbar {
+    @include scrollable;
+}
+
+%scrollbox {
+    @include scrollable( 100px );
+}
+
+@if $export_scrollable {
+
+    .scrollbar { // horizontally scrollable
+        @extend %scrollbar;
+    }
+
+    .scrollbox { // vertically scrollable
+        @extend %scrollbox;
+    }
+
+}
