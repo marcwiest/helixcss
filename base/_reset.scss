@@ -150,12 +150,6 @@ abbr[title], dfn[title] { cursor: help; }
 // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 [role="button"] { cursor: pointer; }
 
-// label has action
-label {
-	cursor: default;
-    &[for], * { cursor: pointer; }
-}
-
 // Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
 //
 // In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch devices and IE Mobile 10-11
