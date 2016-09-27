@@ -5,7 +5,7 @@
 /////////////////////////////////////
 
 // The margin-bottom for most block-level elements.
-// See: base/_document.scss for elements that this applies to.
+// See: base/_document.scss for elements this primarily applies to.
 
 $vr: 2.4rem !default;
 
@@ -23,17 +23,17 @@ $space4: 40px !default;
 
 // Elements
 
-$padding_input_left: .8rem !default;
-$padding_input_right: .8rem !default;
-$padding_input_top: .4rem !default;
-$padding_input_bottom: .4rem !default;
+$padding_input_left:   1rem !default;
+$padding_input_right:  1rem !default;
+$padding_input_top:    .5rem !default;
+$padding_input_bottom: .5rem !default;
 
-$padding_button_left: 2.6rem !default;
-$padding_button_right: 2.6rem !default;
-$padding_button_top: .4rem !default;
-$padding_button_bottom: .4rem !default;
+$padding_button_left:   2rem !default;
+$padding_button_right:  2rem !default;
+$padding_button_top:    1rem !default;
+$padding_button_bottom: 1rem !default;
 
-$padding_table_cell_left: 1rem !default;
-$padding_table_cell_right: 1rem !default;
-$padding_table_cell_top: 1rem !default;
+$padding_table_cell_left:   1rem !default;
+$padding_table_cell_right:  1rem !default;
+$padding_table_cell_top:    1rem !default;
 $padding_table_cell_bottom: 1rem !default;

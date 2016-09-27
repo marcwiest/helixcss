@@ -4,158 +4,103 @@
 // Burger
 //
 // jQuery(document).ready(function($) {
-//     "use strict";
-//     $('.burger').click(function(){
+//     $('.burger').click(function(e) {
+//         e.preventDefault();
 //         $(this).toggleClass('active');
 //     });
 // });
 //
 // .burger {
-//     @include burger((
-//         'padding' : 20px,
-//         'color' : #ccc,
-//     ));
-//     &.active {
-//         @include burger-to-cross;
+//     @include burger;
+//     .burger-item {
+//         @include burger-item;
+//     }
+//     &:hover {
+//         .burger-item {
+//             background-color: $accent;
+//         }
+//     }
+//     @include burger-to-cross;
+//     &.burger--active {
+//         @include burger-to-cross--active;
+//         .burger-item {
+//             background-color: $accent;
+//         }
 //     }
 // }
 //
 // <a class="burger" href="#">
-//     <span></span>
+//     <span class="burger-item burger-item--top"></span>
+//     <span class="burger-item burger-item--middle"></span>
+//     <span class="burger-item burger-item--bottom"></span>
 // </a>
 ///
 
-@mixin burger( $args:() ) {
+@mixin burger( $layer_height:3px, $layer_spacing:4px, $layer_width:25px ) {
 
-    $args: map-merge( (
-        'width'   : 24px,
-        'height'  : 20px,
-        'gutter'  : 3px,
-        'color'   : #000,
-        'speed'   : .3s,
-        'padding' : 0,
-    ), $args );
+    // make burger vars globally available
+    $_burger_layer_height:  $layer_height  !global;
+    $_burger_layer_spacing: $layer_spacing !global;
+    $_burger_layer_width:   $layer_width   !global;
 
-    $width: map-get($args,'width');
-    $height: map-get($args,'height');
-    $gutter: map-get($args,'gutter');
-    $color: map-get($args,'color');
-    $speed: map-get($args,'speed');
-    $padding: map-get($args,'padding');
-
-    $padding: if( $padding == 0, 0px, $padding );
-
-    $layer_height: round(($height - ($gutter * 2)) / 3);
-
-    $new_height: ($layer_height * 3) + ($gutter * 2);
-    $dif: $height - $new_height;
-    @if $new_height > $height {
-        $dif: $new_height - $height;
-    }
-
-    $burger_layer_height: $layer_height !global;
-    $burger_gutter: $gutter !global;
-
+    position: relative;
     display: inline-block;
-    height: $height;
-    width: $width;
-    @if $padding and 0px != $padding {
-        $padding_x: $padding + ($width / 2);
-        $padding_y: $padding + ($height / 2);
-        padding: $padding_y $padding_x;
-        @if $new_height > $height {
-            padding-bottom: $padding_y + $dif;
-        } @else {
-            padding-bottom: $padding_y - $dif;
-        }
-    }
+    height: ($layer_height * 3) + ($layer_spacing * 2);
+    width: $layer_width;
 
-    > * {
-        position: relative;
-        margin-top: $layer_height + $gutter;
-        margin-bottom: $layer_height + $gutter;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-        @if $padding and 0px != $padding {
-            top: -($height / 2);
-            left: -($width / 2);
-        }
-
-        &, &::before, &::after {
-            display: block;
-            width: $width;
-            height: $layer_height;
-            background-color: $color;
-            transition-duration: $speed;
-            -webkit-transition-property: background-color, -webkit-transform;
-               -moz-transition-property: background-color, -moz-transform;
-                    transition-property: background-color, transform;
-        }
-
-        &::before, &::after {
-            position: absolute;
-            content: '';
-        }
-
-        &::before {
-            top: -($layer_height + $gutter);
-        }
-
-        &::after {
-            top: $layer_height + $gutter;
-        }
-    }
 }
 
-// Select parts of the burger
-@mixin burger-parts {
-    > *,
-    > *::before,
-    > *::after {
-        @content;
+@mixin burger-item {
+
+    position: absolute;
+    display: block;
+    width: $_burger_layer_width;
+    height: $_burger_layer_height;
+    background-color: black;
+
+    top: $_burger_layer_height + $_burger_layer_spacing;
+
+    &:first-child {
+        top: 0;
     }
+
+    &:last-child {
+        top: ($_burger_layer_height + $_burger_layer_spacing) * 2;
+    }
+
 }
 
-@mixin burger-top {
-    > *::before {
-        @content;
-    }
-}
-
-@mixin burger-middle {
-    > * {
-        @content;
-    }
-}
-
-@mixin burger-bottom {
-    > *::after {
-        @content;
-    }
-}
-
-
-// Burger animations
-@mixin burger-to-cross() {
-    > * {
+@mixin burger-to-cross( $speed:.193s, $delay:$speed, $timing:ease-in ) {
+    * {
+        @include transition-timing-function( $timing );
         & {
-            background-color: transparent;
+            @include transform( rotate(0deg) );
+            @include transition( transform $speed );
         }
-        &::before {
-            -webkit-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
-               -moz-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
-                -ms-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
-                 -o-transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
-                    transform: translateY( $burger_gutter + $burger_layer_height ) rotate(45deg);
+        &:first-child {
+            @include transition( top $speed $delay, opacity $speed );
         }
-        &::after {
-            -webkit-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
-               -moz-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
-                -ms-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
-                 -o-transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
-                    transform: translateY( -($burger_gutter + $burger_layer_height) ) rotate(-45deg);
+        &:last-child {
+            @include transition( top $speed $delay, transform $speed );
+        }
+    }
+}
+
+@mixin burger-to-cross--active( $speed:.193s, $delay:$speed, $timing:ease-out ) {
+    * {
+        @include transition-timing-function( $timing );
+        & {
+            @include transform( rotate(45deg) );
+            @include transition( transform $speed $delay );
+        }
+        &:first-child {
+            top: $_burger_layer_height + $_burger_layer_spacing;
+            @include transition( top $speed, transform $speed $delay );
+        }
+        &:last-child {
+            top: $_burger_layer_height + $_burger_layer_spacing;
+            @include transform( rotate(-45deg) );
+            @include transition( top $speed, transform $speed $delay );
         }
     }
 }

@@ -51,7 +51,7 @@ input[type="reset"] {
 
 } // endif
 
-pre, address, hr, p, blockquote, pre, figure, audio, video,
+pre, address, p, blockquote, pre, figure, audio, video,
 form, fieldset, table, dl, ol, ul {
     margin-bottom: $vr;
 }
@@ -138,6 +138,7 @@ hr {
     border: 0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    margin: ($vr * 2) 0;
 }
 
 figure, img { display: inline-block; }

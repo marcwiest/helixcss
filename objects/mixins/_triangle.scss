@@ -1,70 +1,55 @@
 @charset "UTF-8";
 
-// www.ilikepixels.co.uk/drop/bubbler/
-
-// davidwalsh.name/css-triangles
-
-// &:before {
-//     content: '';
-//     position: absolute;
-//     left: 1rem;
-//     top: -1rem;
-//     @include triangle( 'up', 1rem, hsla(172,6%,10%,.8) );
-// }
-
 ///
 // Triangle Mixin
 //
 // .triangle {
-//     @include triangle("right");
+//     @include triangle;
+// }
+//
+// or:
+//
+// .triangle::before {
+//     @include triangle;
+//     content: '';
+//     position: absolute;
+//     left: 1rem;
+//     top: -1rem;
 // }
 //
 // <span class=triangle></span>
 ///
 
-@mixin triangle( $direction:"down", $size:1rem, $color:inherit ) {
+@mixin triangle( $color:currentColor, $rotation:0deg, $size:1rem, $thickness:0px ) {
 
-    width: $size;
-    height: $size;
+    $_triangle_thickness: $thickness !global;
+
+    position: relative;
     display: inline-block;
-    border: $size transparent solid;
+    height: $size;
+    width: $size;
+    pointer-events: none;
 
-    @if "up" == $direction {
+    @if strip-unit($thickness) > 0 {
 
-        border-bottom-color: $color;
+        border: $thickness solid $color;
+        border-bottom: 0;
+        border-left: 0;
 
-    } @elseif "right" == $direction {
+    } @else {
 
-        border-left-color: $color;
-
-    } @elseif "down" == $direction {
-
+        border: $size solid transparent;
         border-top-color: $color;
-
-    } @elseif "left" == $direction {
-
-        border-right-color: $color;
-
-    } @elseif "up-right" == $direction or "right-up" == $direction {
-
-        border-top-color: $color;
-        border-right-color: $color;
-
-    } @elseif "down-right" == $direction or "right-down" == $direction {
-
-        border-bottom-color: $color;
-        border-right-color: $color;
-
-    } @elseif "up-left" == $direction or "left-up" == $direction {
-
-        border-top-color: $color;
-        border-left-color: $color;
-
-    } @elseif "down-left" == $direction or "left-down" == $direction {
-
-        border-bottom-color: $color;
-        border-left-color: $color;
 
     }
 
+    @include transform( rotate($rotation) );
+}
+
+@mixin triangle-color( $color ) {
+    @if strip-unit($_triangle_thickness) > 0 {
+        border-color: $color;
+    } @else {
+        border-top-color: $color;
+    }
 }

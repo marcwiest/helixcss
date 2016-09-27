@@ -1,5 +1,12 @@
 @charset "UTF-8";
 /*! HelixCSS v2.0 | License: MIT | Author: Marc Wiest (marcwiest.com) */
+/*
+Extract
+
+Like in PHP, extract makes the values of a list available as a variable. However, currently dynamic
+variable creation is not possible in Sass. That's why as of now only a directional-extract for margin
+and padding extract exists.
+*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /** 1. Change the default font family in all browsers (opinionated). 2. Prevent adjustments of font size after orientation changes in IE and iOS. */
 html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
@@ -196,7 +203,7 @@ body { min-height: 100vh; background-color: #fff; font-size: 1.8rem; font-family
 
 body, button, input[type="button"], input[type="submit"], input[type="reset"] { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-pre, address, hr, p, blockquote, pre, figure, audio, video, form, fieldset, table, dl, ol, ul { margin-bottom: 2.4rem; }
+pre, address, p, blockquote, pre, figure, audio, video, form, fieldset, table, dl, ol, ul { margin-bottom: 2.4rem; }
 
 .cf:after, .clearfix:after, form:after, .grid-item:after { content: ''; display: table; clear: both; }
 
@@ -235,7 +242,7 @@ blockquote * { margin-bottom: 0; }
 
 cite, address { font-style: normal; }
 
-hr { display: block; color: #dadada; border: 0; border-bottom-width: 1px; border-bottom-style: solid; }
+hr { display: block; color: #dadada; border: 0; border-bottom-width: 1px; border-bottom-style: solid; margin: 4.8rem 0; }
 
 figure, img { display: inline-block; }
 
@@ -258,7 +265,9 @@ pre > code { display: block; padding: 0; background-color: transparent; white-sp
 /*
 Table
 */
-table { border-collapse: collapse; border-spacing: 0; max-width: 100%; width: 100%; }
+table { border-collapse: collapse; border-spacing: 0; max-width: 100%; width: 100%; line-height: 1.66; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { table { line-height: 1.66; } }
+@media only screen and (min-width: 1024px) { table { line-height: 1.66; } }
 
 caption { color: #606060; margin: 1.4rem 0; font-size: 1.4rem; text-align: left; font-style: italic; caption-side: bottom; }
 
@@ -273,10 +282,14 @@ th { color: #202020; letter-spacing: 0; font-style: normal; font-weight: 600; fo
 /*
 Form
 */
-legend, label, .label { display: inline-block; letter-spacing: 0; font-weight: 400; font-size: 1.8rem; font-family: sans-serif; font-style: normal; text-transform: none; color: #202020; }
+legend, label, .label { display: inline-block; letter-spacing: 0; line-height: 1.66; font-weight: 400; font-size: 1.8rem; font-family: sans-serif; font-style: normal; text-transform: none; color: #202020; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { legend, label, .label { line-height: 1.66; } }
+@media only screen and (min-width: 1024px) { legend, label, .label { line-height: 1.66; } }
 
-[type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { font-family: sans-serif; font-weight: 400; font-size: 1.8rem; font-style: normal; padding-top: 0.4rem; padding-right: 0.8rem; padding-bottom: 0.4rem; padding-left: 0.8rem; letter-spacing: 0; border-width: 1px; border-radius: 3px; border-style: solid; box-shadow: none; color: #202020; background-color: #fff; border-color: #dadada; }
+[type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { font-family: sans-serif; font-weight: 400; font-size: 1.8rem; font-style: normal; line-height: 1.66; padding-top: 0.5rem; padding-right: 1rem; padding-bottom: 0.5rem; padding-left: 1rem; letter-spacing: 0; border-width: 1px; border-radius: 3px; border-style: solid; box-shadow: none; color: #202020; background-color: #fff; border-color: #dadada; }
 [type=date]:not([size]):not([cols]), [type=datetime]:not([size]):not([cols]), [type=datetime-local]:not([size]):not([cols]), [type=month]:not([size]):not([cols]), [type=time]:not([size]):not([cols]), [type=week]:not([size]):not([cols]), [type=file]:not([size]):not([cols]), [type=email]:not([size]):not([cols]), [type=number]:not([size]):not([cols]), [type=password]:not([size]):not([cols]), [type=search]:not([size]):not([cols]), [type=tel]:not([size]):not([cols]), [type=text]:not([size]):not([cols]), [type=url]:not([size]):not([cols]), input:not([type]):not([size]):not([cols]), textarea:not([size]):not([cols]), select:not([size]):not([cols]) { width: 100%; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { line-height: 1.66; } }
+@media only screen and (min-width: 1024px) { [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { line-height: 1.66; } }
 [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=month]:hover, [type=time]:hover, [type=week]:hover, [type=file]:hover, [type=email]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, input:not([type]):hover, textarea:hover, select:hover { color: #202020; background-color: #fff; border-color: #dadada; }
 [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=time]:focus, [type=week]:focus, [type=file]:focus, [type=email]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=url]:focus, input:not([type]):focus, textarea:focus, select:focus { color: #202020; background-color: #fff; border-color: #dadada; }
 
@@ -287,9 +300,13 @@ input::-moz-placeholder, textarea::-moz-placeholder { color: #606060; opacity: 1
 input::placeholder, textarea::placeholder { color: #606060; }
 
 textarea { vertical-align: top; resize: vertical; overflow: auto; }
-textarea:not([rows]) { min-height: 8.964rem; }
+textarea:not([rows]) { min-height: 9.964rem; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { textarea:not([rows]) { min-height: 9.964rem; } }
+@media only screen and (min-width: 1024px) { textarea:not([rows]) { min-height: 9.964rem; } }
 
-select { display: inline-block; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; height: -webkit-calc(2.988rem + 0.4rem + 0.4rem + 2px); height: calc(2.988rem + 0.4rem + 0.4rem + 2px); cursor: pointer; background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4IiB2aWV3Qm94PSIwIDAgMTAgNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNC4xICgxNTY4MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+YW5nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4KICAgICAgICA8ZyBpZD0iYW5nbGUiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiIGZpbGw9IiMwMDAwMDAiPgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTEiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuODYxOTE1LCAyLjg2MTkxNSkgcm90YXRlKC00NS4wMDAwMDApIHRyYW5zbGF0ZSgtNi44NjE5MTUsIC0yLjg2MTkxNSkgIiB4PSIzLjQ0MjE4ODEiIHk9IjIuMjM0MjgyOSIgd2lkdGg9IjYuODM5NDUzODEiIGhlaWdodD0iMS4yNTUyNjQyMSI+PC9yZWN0PgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTEtQ29weS0yIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjg2MTkxNSwgMi44NjE5MTUpIHJvdGF0ZSgtMzE1LjAwMDAwMCkgdHJhbnNsYXRlKC0yLjg2MTkxNSwgLTIuODYxOTE1KSAiIHg9Ii0wLjU1NzgxMTkwNCIgeT0iMi4yMzQyODI5IiB3aWR0aD0iNi44Mzk0NTM4MSIgaGVpZ2h0PSIxLjI1NTI2NDIxIj48L3JlY3Q+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="); background-size: 1.44rem; background-repeat: no-repeat; background-position: -webkit-calc(100% - 0.8rem) 50%; background-position: calc(100% - 0.8rem) 50%; }
+select { display: inline-block; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); cursor: pointer; background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4IiB2aWV3Qm94PSIwIDAgMTAgNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNC4xICgxNTY4MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+YW5nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4KICAgICAgICA8ZyBpZD0iYW5nbGUiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiIGZpbGw9IiMwMDAwMDAiPgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTEiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuODYxOTE1LCAyLjg2MTkxNSkgcm90YXRlKC00NS4wMDAwMDApIHRyYW5zbGF0ZSgtNi44NjE5MTUsIC0yLjg2MTkxNSkgIiB4PSIzLjQ0MjE4ODEiIHk9IjIuMjM0MjgyOSIgd2lkdGg9IjYuODM5NDUzODEiIGhlaWdodD0iMS4yNTUyNjQyMSI+PC9yZWN0PgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTEtQ29weS0yIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjg2MTkxNSwgMi44NjE5MTUpIHJvdGF0ZSgtMzE1LjAwMDAwMCkgdHJhbnNsYXRlKC0yLjg2MTkxNSwgLTIuODYxOTE1KSAiIHg9Ii0wLjU1NzgxMTkwNCIgeT0iMi4yMzQyODI5IiB3aWR0aD0iNi44Mzk0NTM4MSIgaGVpZ2h0PSIxLjI1NTI2NDIxIj48L3JlY3Q+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="); background-size: 1.44rem; background-repeat: no-repeat; background-position: -webkit-calc(100% - 1rem) 50%; background-position: calc(100% - 1rem) 50%; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { select { height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); } }
+@media only screen and (min-width: 1024px) { select { height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); } }
 
 button, [type=button], [type=submit], [type=reset] { display: inline-block; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; background-color: transparent; cursor: pointer; }
 
@@ -310,12 +327,16 @@ Scrollable
 /*
 Button
 */
-.button, .btn { display: inline-block; line-height: inherit; height: auto; max-width: 100%; margin: 0; text-align: center; cursor: pointer; text-decoration: none; font-family: sans-serif; font-size: 1.8rem; font-weight: 400; font-style: normal; text-transform: none; letter-spacing: 0; padding: 0.4rem 2.6rem 0.4rem 2.6rem; border-style: solid; border-width: 1px; border-radius: 3px; color: #fff; border-color: transparent; background-color: #2199de; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-user-drag: none; white-space: nowrap; }
+.button, .btn { display: inline-block; line-height: 1; height: auto; max-width: 100%; margin: 0; text-align: center; cursor: pointer; text-decoration: none; font-family: sans-serif; font-size: 1.8rem; font-weight: 400; font-style: normal; text-transform: none; letter-spacing: 0; padding: 1rem 2rem 1rem 2rem; border-style: solid; border-width: 1px; border-radius: 3px; color: #fff; border-color: transparent; background-color: #2199de; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-user-drag: none; white-space: nowrap; }
 .button:hover, .btn:hover { color: #fff; border-color: transparent; background-color: #2199de; text-decoration: none; }
 
 .button--clear, .btn--clear, .button--clear:hover, .btn--clear:hover { background-color: transparent; border-color: transparent; }
 
-.button--pill, .btn--pill { border-radius: 2.6rem; }
+.button--pill, .btn--pill { border-radius: 3.8rem; }
+
+.button--input, .btn--input { vertical-align: top; line-height: 2.988rem; padding: 0.5rem 1rem 0.5rem 1rem; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { .button--input, .btn--input { line-height: 2.988rem; } }
+@media only screen and (min-width: 1024px) { .button--input, .btn--input { line-height: 2.988rem; } }
 
 /*
 Responsive embed
@@ -367,6 +388,19 @@ Lead
 .lead { font-size: 2.2rem; font-weight: 200; color: #606060; letter-spacing: 0; line-height: 1.5; }
 @media only screen and (min-width: 768px) and (max-width: 1023px) { .lead { line-height: 1.5; } }
 @media only screen and (min-width: 1024px) { .lead { line-height: 1.5; } }
+
+/*
+Scrollable
+
+Hides overflow but allows for scrolling either vertically or horizontally.
+
+<div class="scrollbox h400"> </div>
+*/
+.scrollbar { -webkit-overflow-scrolling: touch; -ms-overflow-style: none; white-space: nowrap; overflow-y: hidden; overflow-x: auto; }
+.scrollbar::-webkit-scrollbar { display: none; }
+
+.scrollbox { -webkit-overflow-scrolling: touch; -ms-overflow-style: none; white-space: nowrap; overflow-y: scroll; overflow-x: hidden; height: 100px; width: 100%; }
+.scrollbox::-webkit-scrollbar { display: none; }
 
 /*
 Float
@@ -421,14 +455,22 @@ Float
 /*
 Border
 */
-.b0, .border0 { border: 0 !important; }
+.border-0 { border: 0 !important; }
+
+.border-top-0 { border-top: 0 !important; }
+
+.border-right-0 { border-right: 0 !important; }
+
+.border-bottom-0 { border-bottom: 0 !important; }
+
+.border-left-0 { border-left: 0 !important; }
 
 /*
 Radius
 */
-.r0, .sharp { border-radius: 0 !important; }
+.radius-0, .sharp { border-radius: 0 !important; }
 
-.r50, .round { border-radius: 50% !important; }
+.radius-50, .round { border-radius: 50% !important; }
 
 .radius { border-radius: 3px !important; }
 
@@ -495,6 +537,7 @@ Vertical Rythem Height
 
 /*
 Viewport Height
+Min-height, in CSS, overwrites the height property.
 */
 .vh33 { min-height: 33vh !important; }
 
@@ -505,20 +548,20 @@ Viewport Height
 /*
 Positioning
 */
-.rel, .relative { position: relative !important; }
+.relative, .rel { position: relative !important; }
 
-.abs, .absolute { position: absolute !important; }
+.absolute, .abs { position: absolute !important; }
 
-.top0 { top: 0 !important; }
+.top-0 { top: 0 !important; }
 
-.right0 { right: 0 !important; }
+.right-0 { right: 0 !important; }
 
-.bottom0 { bottom: 0 !important; }
+.bottom-0 { bottom: 0 !important; }
 
-.left0 { left: 0 !important; }
+.left-0 { left: 0 !important; }
 
 /*
-Font variations
+Font Variations
 */
 .uppercase { text-transform: uppercase !important; }
 
@@ -527,7 +570,7 @@ Font variations
 .italic { font-style: italic !important; }
 
 /*
-Font weight
+Font Weight
 */
 .light { font-weight: 200 !important; }
 
@@ -536,11 +579,55 @@ Font weight
 .medium { font-weight: 1.8rem !important; }
 
 /*
-Quotation marks
+Quotation Marks
 */
 .quotes { quotes: "“" "”" !important; }
 .quotes::before { content: open-quote !important; }
 .quotes::after { content: close-quote !important; }
+
+/*
+Font Sizes
+*/
+.fz-text { font-size: 1.8rem !important; }
+
+.fz-h1 { font-size: 4.6rem !important; }
+
+.fz-h2 { font-size: 3.6rem !important; }
+
+.fz-h3 { font-size: 2.8rem !important; }
+
+.fz-h4 { font-size: 2.2rem !important; }
+
+.fz-h5 { font-size: 1.8rem !important; }
+
+.fz-h6 { font-size: 1.6rem !important; }
+
+.fz-lead { font-size: 2.2rem !important; }
+
+.fz-small { font-size: 1.4rem !important; }
+
+.fz-input { font-size: 1.8rem !important; }
+
+/*
+Line Height
+*/
+.lh-inherit { line-height: inherit !important; }
+
+.lh-body, .lh-text { line-height: 1.66 !important; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { .lh-body, .lh-text { line-height: 1.66 !important; } }
+@media only screen and (min-width: 1024px) { .lh-body, .lh-text { line-height: 1.66 !important; } }
+
+.lh-heading { line-height: 1.25 !important; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { .lh-heading { line-height: 1.25 !important; } }
+@media only screen and (min-width: 1024px) { .lh-heading { line-height: 1.25 !important; } }
+
+.lh-lead { line-height: 1.5 !important; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { .lh-lead { line-height: 1.5 !important; } }
+@media only screen and (min-width: 1024px) { .lh-lead { line-height: 1.5 !important; } }
+
+.lh-input { line-height: 1.66 !important; }
+@media only screen and (min-width: 768px) and (max-width: 1023px) { .lh-input { line-height: 1.66 !important; } }
+@media only screen and (min-width: 1024px) { .lh-input { line-height: 1.66 !important; } }
 
 /*
 Vertical Rhythm
@@ -594,75 +681,80 @@ Margin
 
 .mxauto, .mxa { margin-left: auto !important; margin-right: auto !important; }
 
+.mi { margin: inherit !important; }
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) { .mb0-m { margin-bottom: 0 !important; }
   .m0-m { margin: 0 !important; }
-  .mxauto-m, .mxa-m { margin-left: auto !important; margin-right: auto !important; } }
+  .mxauto-m, .mxa-m { margin-left: auto !important; margin-right: auto !important; }
+  .mi-m { margin: inherit !important; } }
 @media only screen and (min-width: 768px) { .mb0-ml { margin-bottom: 0 !important; }
   .m0-ml { margin: 0 !important; }
-  .mxauto-ml, .mxa-ml { margin-left: auto !important; margin-right: auto !important; } }
+  .mxauto-ml, .mxa-ml { margin-left: auto !important; margin-right: auto !important; }
+  .mi-ml { margin: inherit !important; } }
 @media only screen and (min-width: 1024px) { .mb0-l { margin-bottom: 0 !important; }
   .m0-l { margin: 0 !important; }
-  .mxauto-l, .mxa-l { margin-left: auto !important; margin-right: auto !important; } }
+  .mxauto-l, .mxa-l { margin-left: auto !important; margin-right: auto !important; }
+  .mi-l { margin: inherit !important; } }
 .m1 { margin: 10px !important; }
 
-.mx1 { margin-left: 10px; margin-right: 10px !important; }
+.mx1 { margin-left: 10px !important; margin-right: 10px !important; }
 
-.my1 { margin-top: 10px; margin-bottom: 10px !important; }
+.my1 { margin-top: 10px !important; margin-bottom: 10px !important; }
 
 .m2 { margin: 20px !important; }
 
-.mx2 { margin-left: 20px; margin-right: 20px !important; }
+.mx2 { margin-left: 20px !important; margin-right: 20px !important; }
 
-.my2 { margin-top: 20px; margin-bottom: 20px !important; }
+.my2 { margin-top: 20px !important; margin-bottom: 20px !important; }
 
 .m3 { margin: 30px !important; }
 
-.mx3 { margin-left: 30px; margin-right: 30px !important; }
+.mx3 { margin-left: 30px !important; margin-right: 30px !important; }
 
-.my3 { margin-top: 30px; margin-bottom: 30px !important; }
+.my3 { margin-top: 30px !important; margin-bottom: 30px !important; }
 
 .m4 { margin: 40px !important; }
 
-.mx4 { margin-left: 40px; margin-right: 40px !important; }
+.mx4 { margin-left: 40px !important; margin-right: 40px !important; }
 
-.my4 { margin-top: 40px; margin-bottom: 40px !important; }
+.my4 { margin-top: 40px !important; margin-bottom: 40px !important; }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) { .m1-m { margin: 10px !important; }
-  .mx1-m { margin-left: 10px; margin-right: 10px !important; }
-  .my1-m { margin-top: 10px; margin-bottom: 10px !important; }
+  .mx1-m { margin-left: 10px !important; margin-right: 10px !important; }
+  .my1-m { margin-top: 10px !important; margin-bottom: 10px !important; }
   .m2-m { margin: 20px !important; }
-  .mx2-m { margin-left: 20px; margin-right: 20px !important; }
-  .my2-m { margin-top: 20px; margin-bottom: 20px !important; }
+  .mx2-m { margin-left: 20px !important; margin-right: 20px !important; }
+  .my2-m { margin-top: 20px !important; margin-bottom: 20px !important; }
   .m3-m { margin: 30px !important; }
-  .mx3-m { margin-left: 30px; margin-right: 30px !important; }
-  .my3-m { margin-top: 30px; margin-bottom: 30px !important; }
+  .mx3-m { margin-left: 30px !important; margin-right: 30px !important; }
+  .my3-m { margin-top: 30px !important; margin-bottom: 30px !important; }
   .m4-m { margin: 40px !important; }
-  .mx4-m { margin-left: 40px; margin-right: 40px !important; }
-  .my4-m { margin-top: 40px; margin-bottom: 40px !important; } }
+  .mx4-m { margin-left: 40px !important; margin-right: 40px !important; }
+  .my4-m { margin-top: 40px !important; margin-bottom: 40px !important; } }
 @media only screen and (min-width: 768px) { .m1-ml { margin: 10px !important; }
-  .mx1-ml { margin-left: 10px; margin-right: 10px !important; }
-  .my1-ml { margin-top: 10px; margin-bottom: 10px !important; }
+  .mx1-ml { margin-left: 10px !important; margin-right: 10px !important; }
+  .my1-ml { margin-top: 10px !important; margin-bottom: 10px !important; }
   .m2-ml { margin: 20px !important; }
-  .mx2-ml { margin-left: 20px; margin-right: 20px !important; }
-  .my2-ml { margin-top: 20px; margin-bottom: 20px !important; }
+  .mx2-ml { margin-left: 20px !important; margin-right: 20px !important; }
+  .my2-ml { margin-top: 20px !important; margin-bottom: 20px !important; }
   .m3-ml { margin: 30px !important; }
-  .mx3-ml { margin-left: 30px; margin-right: 30px !important; }
-  .my3-ml { margin-top: 30px; margin-bottom: 30px !important; }
+  .mx3-ml { margin-left: 30px !important; margin-right: 30px !important; }
+  .my3-ml { margin-top: 30px !important; margin-bottom: 30px !important; }
   .m4-ml { margin: 40px !important; }
-  .mx4-ml { margin-left: 40px; margin-right: 40px !important; }
-  .my4-ml { margin-top: 40px; margin-bottom: 40px !important; } }
+  .mx4-ml { margin-left: 40px !important; margin-right: 40px !important; }
+  .my4-ml { margin-top: 40px !important; margin-bottom: 40px !important; } }
 @media only screen and (min-width: 1024px) { .m1-l { margin: 10px !important; }
-  .mx1-l { margin-left: 10px; margin-right: 10px !important; }
-  .my1-l { margin-top: 10px; margin-bottom: 10px !important; }
+  .mx1-l { margin-left: 10px !important; margin-right: 10px !important; }
+  .my1-l { margin-top: 10px !important; margin-bottom: 10px !important; }
   .m2-l { margin: 20px !important; }
-  .mx2-l { margin-left: 20px; margin-right: 20px !important; }
-  .my2-l { margin-top: 20px; margin-bottom: 20px !important; }
+  .mx2-l { margin-left: 20px !important; margin-right: 20px !important; }
+  .my2-l { margin-top: 20px !important; margin-bottom: 20px !important; }
   .m3-l { margin: 30px !important; }
-  .mx3-l { margin-left: 30px; margin-right: 30px !important; }
-  .my3-l { margin-top: 30px; margin-bottom: 30px !important; }
+  .mx3-l { margin-left: 30px !important; margin-right: 30px !important; }
+  .my3-l { margin-top: 30px !important; margin-bottom: 30px !important; }
   .m4-l { margin: 40px !important; }
-  .mx4-l { margin-left: 40px; margin-right: 40px !important; }
-  .my4-l { margin-top: 40px; margin-bottom: 40px !important; } }
+  .mx4-l { margin-left: 40px !important; margin-right: 40px !important; }
+  .my4-l { margin-top: 40px !important; margin-bottom: 40px !important; } }
 .mt1 { margin-top: 10px !important; }
 
 .mr1 { margin-right: 10px !important; }
@@ -748,69 +840,74 @@ Padding
 */
 .p0 { padding: 0 !important; }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) { .p0-m { padding: 0 !important; } }
-@media only screen and (min-width: 768px) { .p0-ml { padding: 0 !important; } }
-@media only screen and (min-width: 1024px) { .p0-l { padding: 0 !important; } }
+.pi { padding: inherit !important; }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) { .p0-m { padding: 0 !important; }
+  .pi-m { padding: inherit !important; } }
+@media only screen and (min-width: 768px) { .p0-ml { padding: 0 !important; }
+  .pi-ml { padding: inherit !important; } }
+@media only screen and (min-width: 1024px) { .p0-l { padding: 0 !important; }
+  .pi-l { padding: inherit !important; } }
 .p1 { padding: 10px !important; }
 
-.px1 { padding-left: 10px; padding-right: 10px !important; }
+.px1 { padding-left: 10px !important; padding-right: 10px !important; }
 
-.py1 { padding-top: 10px; padding-bottom: 10px !important; }
+.py1 { padding-top: 10px !important; padding-bottom: 10px !important; }
 
 .p2 { padding: 20px !important; }
 
-.px2 { padding-left: 20px; padding-right: 20px !important; }
+.px2 { padding-left: 20px !important; padding-right: 20px !important; }
 
-.py2 { padding-top: 20px; padding-bottom: 20px !important; }
+.py2 { padding-top: 20px !important; padding-bottom: 20px !important; }
 
 .p3 { padding: 30px !important; }
 
-.px3 { padding-left: 30px; padding-right: 30px !important; }
+.px3 { padding-left: 30px !important; padding-right: 30px !important; }
 
-.py3 { padding-top: 30px; padding-bottom: 30px !important; }
+.py3 { padding-top: 30px !important; padding-bottom: 30px !important; }
 
 .p4 { padding: 40px !important; }
 
-.px4 { padding-left: 40px; padding-right: 40px !important; }
+.px4 { padding-left: 40px !important; padding-right: 40px !important; }
 
-.py4 { padding-top: 40px; padding-bottom: 40px !important; }
+.py4 { padding-top: 40px !important; padding-bottom: 40px !important; }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) { .p1-m { padding: 10px !important; }
-  .px1-m { padding-left: 10px; padding-right: 10px !important; }
-  .py1-m { padding-top: 10px; padding-bottom: 10px !important; }
+  .px1-m { padding-left: 10px !important; padding-right: 10px !important; }
+  .py1-m { padding-top: 10px !important; padding-bottom: 10px !important; }
   .p2-m { padding: 20px !important; }
-  .px2-m { padding-left: 20px; padding-right: 20px !important; }
-  .py2-m { padding-top: 20px; padding-bottom: 20px !important; }
+  .px2-m { padding-left: 20px !important; padding-right: 20px !important; }
+  .py2-m { padding-top: 20px !important; padding-bottom: 20px !important; }
   .p3-m { padding: 30px !important; }
-  .px3-m { padding-left: 30px; padding-right: 30px !important; }
-  .py3-m { padding-top: 30px; padding-bottom: 30px !important; }
+  .px3-m { padding-left: 30px !important; padding-right: 30px !important; }
+  .py3-m { padding-top: 30px !important; padding-bottom: 30px !important; }
   .p4-m { padding: 40px !important; }
-  .px4-m { padding-left: 40px; padding-right: 40px !important; }
-  .py4-m { padding-top: 40px; padding-bottom: 40px !important; } }
+  .px4-m { padding-left: 40px !important; padding-right: 40px !important; }
+  .py4-m { padding-top: 40px !important; padding-bottom: 40px !important; } }
 @media only screen and (min-width: 768px) { .p1-ml { padding: 10px !important; }
-  .px1-ml { padding-left: 10px; padding-right: 10px !important; }
-  .py1-ml { padding-top: 10px; padding-bottom: 10px !important; }
+  .px1-ml { padding-left: 10px !important; padding-right: 10px !important; }
+  .py1-ml { padding-top: 10px !important; padding-bottom: 10px !important; }
   .p2-ml { padding: 20px !important; }
-  .px2-ml { padding-left: 20px; padding-right: 20px !important; }
-  .py2-ml { padding-top: 20px; padding-bottom: 20px !important; }
+  .px2-ml { padding-left: 20px !important; padding-right: 20px !important; }
+  .py2-ml { padding-top: 20px !important; padding-bottom: 20px !important; }
   .p3-ml { padding: 30px !important; }
-  .px3-ml { padding-left: 30px; padding-right: 30px !important; }
-  .py3-ml { padding-top: 30px; padding-bottom: 30px !important; }
+  .px3-ml { padding-left: 30px !important; padding-right: 30px !important; }
+  .py3-ml { padding-top: 30px !important; padding-bottom: 30px !important; }
   .p4-ml { padding: 40px !important; }
-  .px4-ml { padding-left: 40px; padding-right: 40px !important; }
-  .py4-ml { padding-top: 40px; padding-bottom: 40px !important; } }
+  .px4-ml { padding-left: 40px !important; padding-right: 40px !important; }
+  .py4-ml { padding-top: 40px !important; padding-bottom: 40px !important; } }
 @media only screen and (min-width: 1024px) { .p1-l { padding: 10px !important; }
-  .px1-l { padding-left: 10px; padding-right: 10px !important; }
-  .py1-l { padding-top: 10px; padding-bottom: 10px !important; }
+  .px1-l { padding-left: 10px !important; padding-right: 10px !important; }
+  .py1-l { padding-top: 10px !important; padding-bottom: 10px !important; }
   .p2-l { padding: 20px !important; }
-  .px2-l { padding-left: 20px; padding-right: 20px !important; }
-  .py2-l { padding-top: 20px; padding-bottom: 20px !important; }
+  .px2-l { padding-left: 20px !important; padding-right: 20px !important; }
+  .py2-l { padding-top: 20px !important; padding-bottom: 20px !important; }
   .p3-l { padding: 30px !important; }
-  .px3-l { padding-left: 30px; padding-right: 30px !important; }
-  .py3-l { padding-top: 30px; padding-bottom: 30px !important; }
+  .px3-l { padding-left: 30px !important; padding-right: 30px !important; }
+  .py3-l { padding-top: 30px !important; padding-bottom: 30px !important; }
   .p4-l { padding: 40px !important; }
-  .px4-l { padding-left: 40px; padding-right: 40px !important; }
-  .py4-l { padding-top: 40px; padding-bottom: 40px !important; } }
+  .px4-l { padding-left: 40px !important; padding-right: 40px !important; }
+  .py4-l { padding-top: 40px !important; padding-bottom: 40px !important; } }
 .pt1 { padding-top: 10px !important; }
 
 .pr1 { padding-right: 10px !important; }

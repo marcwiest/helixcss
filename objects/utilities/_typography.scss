@@ -3,7 +3,7 @@
 @if $export_typography {
 
 /*
-Font variations
+Font Variations
 */
 
 .uppercase { text-transform: uppercase !important; }
@@ -11,7 +11,7 @@ Font variations
 .italic { font-style: italic !important; }
 
 /*
-Font weight
+Font Weight
 */
 
 .light { font-weight: $light !important; }
@@ -19,13 +19,80 @@ Font weight
 .medium { font-weight: $medium !important; }
 
 /*
-Quotation marks
+Quotation Marks
 */
 
 .quotes {
     quotes: "“" "”" !important;
     &::before { content: open-quote !important; }
     &::after { content: close-quote !important; }
+}
+
+/*
+Font Sizes
+*/
+
+.fz-text {
+    font-size: $font_size_text !important;
+}
+
+.fz-h1 { font-size: $font_size_h1 !important; }
+.fz-h2 { font-size: $font_size_h2 !important; }
+.fz-h3 { font-size: $font_size_h3 !important; }
+.fz-h4 { font-size: $font_size_h4 !important; }
+.fz-h5 { font-size: $font_size_h5 !important; }
+.fz-h6 { font-size: $font_size_h6 !important; }
+
+.fz-lead {
+    font-size: $font_size_lead !important;
+}
+
+.fz-small {
+    font-size: $font_size_small !important;
+}
+
+.fz-input {
+    font-size: $font_size_input !important;
+}
+
+/*
+Line Height
+*/
+
+.lh-inherit {
+    line-height: inherit !important;
+}
+
+.lh-body, .lh-text {
+    line-height: $line_height_ratio_body !important;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_body_md !important; }
+        @include lg { line-height: $line_height_ratio_body_lg !important; }
+    }
+}
+
+.lh-heading {
+    line-height: $line_height_ratio_heading !important;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_heading_md !important; }
+        @include lg { line-height: $line_height_ratio_heading_lg !important; }
+    }
+}
+
+.lh-lead {
+    line-height: $line_height_ratio_lead !important;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_lead_md !important; }
+        @include lg { line-height: $line_height_ratio_lead_lg !important; }
+    }
+}
+
+.lh-input {
+    line-height: $line_height_ratio_input !important;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_input_md !important; }
+        @include lg { line-height: $line_height_ratio_input_lg !important; }
+    }
 }
 
 } // endif

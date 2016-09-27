@@ -11,6 +11,7 @@
 
 @import
     "library/mixins/prefixer",
+    "library/mixins/extract",
     "library/mixins/media-queries",
     "library/mixins/css";
 
@@ -59,19 +60,20 @@
 
 @import
     "objects/mixins/burger",
-    "objects/mixins/dash",
     "objects/mixins/flyout",
     "objects/mixins/highlight",
     "objects/mixins/reader",
     "objects/mixins/scrollable",
-    "objects/mixins/triangle";
+    "objects/mixins/triangle",
+    "objects/mixins/underscore";
 
 @import
     "objects/button",
     "objects/embed",
     "objects/flag",
     "objects/grid",
-    "objects/lead";
+    "objects/lead",
+    "objects/scrollable";
 
 @import
     "objects/utilities/alignment",

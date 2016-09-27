@@ -32,8 +32,8 @@
     background-size: cover;
 }
 
-@mixin bg-clip {
-    background-clip: padding-box;
+@mixin bg-clip( $clip:padding-box ) {
+    background-clip: $clip;
 }
 
 ///
@@ -79,12 +79,24 @@
 @mixin hide {
     position: absolute !important; // required by clip
     overflow: hidden;
-    height: 1px; width: 1px;
+    height: 1px;
+    width: 1px;
     clip: rect(1px, 1px, 1px, 1px); // depricated
     // chrome 24+, safari 8+, opera 15+
     -webkit-clip-path: inset(1px 1px 1px 1px);
             clip-path: inset(1px 1px 1px 1px);
 }
+
+// @mixin unhide {
+//     position: inherit !important;
+//     overflow: inherit;
+//     height: inherit;
+//     width: inherit;
+//     clip: inherit; // depricated
+//     // chrome 24+, safari 8+, opera 15+
+//     -webkit-clip-path: inherit;
+//             clip-path: inherit;
+// }
 
 ///
 // Hide Text - Good for image replacement.

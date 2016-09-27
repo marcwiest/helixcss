@@ -22,50 +22,11 @@ Vertical Rythem Height
 
 /*
 Viewport Height
+Min-height, in CSS, overwrites the height property.
 */
 
 .vh33 { min-height: 33vh !important; }
 .vh50 { min-height: 50vh !important; }
 .vh100 { min-height: 100vh !important; }
-
-/*
-Line Height Matching – Loads last to always allow matching.
-*/
-
-.inherit-line-height {
-    line-height: inherit !important;
-}
-
-// .lh-text, .lh-body {
-//     line-height: $line_height_ratio_body !important;
-//     @if $responsive_typography {
-//         @include md { line-height: $line_height_ratio_body_md !important; }
-//         @include lg { line-height: $line_height_ratio_body_lg !important; }
-//     }
-// }
-//
-// .lh-heading {
-//     line-height: $line_height_ratio_heading !important;
-//     @if $responsive_typography {
-//         @include md { line-height: $line_height_ratio_heading_md !important; }
-//         @include lg { line-height: $line_height_ratio_heading_lg !important; }
-//     }
-// }
-//
-// .lh-lead {
-//     line-height: $line_height_ratio_lead !important;
-//     @if $responsive_typography {
-//         @include md { line-height: $line_height_ratio_lead_md !important; }
-//         @include lg { line-height: $line_height_ratio_lead_lg !important; }
-//     }
-// }
-//
-// .lh-input {
-//     line-height: $line_height_ratio_input !important;
-//     @if $responsive_typography {
-//         @include md { line-height: $line_height_ratio_input_md !important; }
-//         @include lg { line-height: $line_height_ratio_input_lg !important; }
-//     }
-// }
 
 } // endif

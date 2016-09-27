@@ -5,8 +5,8 @@ $_spaces_count: length($_spaces);
 
 @mixin _multi_whitespace_margin_css( $i, $breakpoint:'' ) {
     .m#{$i}#{$breakpoint} { margin: nth($_spaces,$i) !important; }
-    .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i); margin-right: nth($_spaces,$i) !important; }
-    .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i); margin-bottom: nth($_spaces,$i) !important; }
+    .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i) !important; margin-right: nth($_spaces,$i) !important; }
+    .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i) !important; margin-bottom: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_margin_css( $i, $breakpoint:'' ) {
@@ -18,8 +18,8 @@ $_spaces_count: length($_spaces);
 
 @mixin _multi_whitespace_padding_css( $i, $breakpoint:'' ) {
     .p#{$i}#{$breakpoint} { padding: nth($_spaces,$i) !important; }
-    .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i); padding-right: nth($_spaces,$i) !important; }
-    .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i); padding-bottom: nth($_spaces,$i) !important; }
+    .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i) !important; padding-right: nth($_spaces,$i) !important; }
+    .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i) !important; padding-bottom: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_padding_css( $i, $breakpoint:'' ) {
@@ -65,17 +65,13 @@ Vertical Rhythm
 Margin
 */
 
-// .mla { margin-left: auto; }
-// .mra { margin-right: auto; }
-// .mxa
-
-// null margin
 .mb0 { margin-bottom: 0 !important; }
 .m0 { margin: 0 !important; }
 .mxauto, .mxa {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+.mi { margin: inherit !important; }
 @include md {
     .mb0-m { margin-bottom: 0 !important; }
     .m0-m { margin: 0 !important; }
@@ -83,6 +79,7 @@ Margin
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    .mi-m { margin: inherit !important; }
 }
 @include md-lg {
     .mb0-ml { margin-bottom: 0 !important; }
@@ -91,6 +88,7 @@ Margin
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    .mi-ml { margin: inherit !important; }
 }
 @include lg {
     .mb0-l { margin-bottom: 0 !important; }
@@ -99,6 +97,7 @@ Margin
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    .mi-l { margin: inherit !important; }
 }
 
 // multi margin
@@ -133,11 +132,20 @@ Margin
 Padding
 */
 
-// null padding
 .p0 { padding: 0 !important; }
-@include md { .p0-m { padding: 0 !important; } }
-@include md-lg { .p0-ml { padding: 0 !important; } }
-@include lg { .p0-l { padding: 0 !important; } }
+.pi { padding: inherit !important; }
+@include md {
+    .p0-m { padding: 0 !important; }
+    .pi-m { padding: inherit !important; }
+}
+@include md-lg {
+    .p0-ml { padding: 0 !important; }
+    .pi-ml { padding: inherit !important; }
+}
+@include lg {
+    .p0-l { padding: 0 !important; }
+    .pi-l { padding: inherit !important; }
+}
 
 // multi padding
 @for $i from 1 through $_spaces_count {

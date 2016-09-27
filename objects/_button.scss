@@ -6,7 +6,7 @@ Button
 
 %button {
     display: inline-block;
-    line-height: inherit;
+    line-height: 1;
     height: auto;
     max-width: 100%;
     margin: 0;
@@ -49,6 +49,16 @@ Button
     border-radius: $font_size_button + $padding_button_top + $padding_button_bottom;
 }
 
+%button--input {
+    vertical-align: top;
+    line-height: $line_height_ratio_input * $font_size_input;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_input_md * $font_size_input; }
+        @include lg { line-height: $line_height_ratio_input_lg * $font_size_input; }
+    }
+    padding: $padding_input_top $padding_input_right $padding_input_bottom $padding_input_left;
+}
+
 @if $export_button {
 
 .button,
@@ -64,6 +74,11 @@ Button
 .button--pill,
 .btn--pill {
     @extend %button--pill;
+}
+
+.button--input,
+.btn--input {
+    @extend %button--input;
 }
 
 } // endif

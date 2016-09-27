@@ -6,29 +6,19 @@
 Border
 */
 
-.b0, .border0 { border: 0 !important; }
-
-// .border,
-// .border-top,
-// .border-right,
-// .border-bottom,
-// .border-left {
-//     border-style: solid;
-//     border-color: $color_border;
-// }
-// .border { border-width: 1px; }
-// .border-top { border-top-width: 1px; }
-// .border-right { border-right-width: 1px; }
-// .border-bottom { border-bottom-width: 1px; }
-// .border-left { border-left-width: 1px; }
+.border-0        { border: 0 !important; }
+.border-top-0    { border-top: 0 !important; }
+.border-right-0  { border-right: 0 !important; }
+.border-bottom-0 { border-bottom: 0 !important; }
+.border-left-0   { border-left: 0 !important; }
 
 /*
 Radius
 */
 
-.r0, .sharp { border-radius: 0 !important; }
+.radius-0, .sharp { border-radius: 0 !important; }
 
-.r50, .round { border-radius: 50% !important; }
+.radius-50, .round { border-radius: 50% !important; }
 
 .radius        { border-radius: $border_radius !important; }
 .radius-top    { border-radius: $border_radius $border_radius 0 0 !important; }

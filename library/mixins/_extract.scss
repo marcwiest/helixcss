@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*
+Extract
+
+Like in PHP, extract makes the values of a list available as a variable. However, currently dynamic
+variable creation is not possible in Sass. That's why as of now only a directional-extract for margin
+and padding extract exists.
+*/
+
+// Get extracts for margin and padding
+// $directions  (list)  e.g. 10px 5px 20px 5px
+@mixin directional-extract( $directions ) {
+    @if 4 == length($directions) {
+        $_directional_extract_top: nth( $directions, 1 ) !global;
+        $_directional_extract_right: nth( $directions, 2 ) !global;
+        $_directional_extract_bottom: nth( $directions, 3 ) !global;
+        $_directional_extract_left: nth( $directions, 4 ) !global;
+    } @else if 3 == length($directions) {
+        $_directional_extract_top: nth( $directions, 1 ) !global;
+        $_directional_extract_right: nth( $directions, 2 ) !global;
+        $_directional_extract_bottom: nth( $directions, 3 ) !global;
+        $_directional_extract_left: nth( $directions, 2 ) !global;
+    } @else if 2 == length($directions) {
+        $_directional_extract_top: nth( $directions, 1 ) !global;
+        $_directional_extract_right: nth( $directions, 2 ) !global;
+        $_directional_extract_bottom: nth( $directions, 1 ) !global;
+        $_directional_extract_left: nth( $directions, 2 ) !global;
+    } @else {
+        $_directional_extract_top: $directions !global;
+        $_directional_extract_right: $directions !global;
+        $_directional_extract_bottom: $directions !global;
+        $_directional_extract_left: $directions !global;
+    }
+}

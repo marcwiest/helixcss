@@ -11,6 +11,11 @@ table {
     border-spacing: 0;
     max-width: 100%;
     width: 100%;
+    line-height: $line_height_ratio_table;
+    @if $responsive_typography {
+        @include md { line-height: $line_height_ratio_table_md; }
+        @include lg { line-height: $line_height_ratio_table_lg; }
+    }
 }
 
 caption {

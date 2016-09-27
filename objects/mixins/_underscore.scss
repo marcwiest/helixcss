@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+///
+// Underscore
+//
+// @param  {$position}  Possible values are: top / bottom & left / right / center.
+//
+// .underscore {
+//     @include underscore( bottom left, 8px, 80px, 20px, $heading, $accent );
+//     @include underscore-hover {
+//         transition: color .33s;
+//     }
+// }
+//
+// <h1 class="underscore"> </h1>
+///
+
+@mixin underscore( $position: bottom left, $height:5px, $width:80px, $padding:15px, $color:#ccc, $hover_color:$color ) {
+
+    position: relative;
+    display: inline-block;
+
+    @if index( $position, 'top' ) {
+        padding-top: $padding;
+    } @else {
+        padding-bottom: $padding;
+    }
+
+    &::after {
+
+        content: '';
+        position: absolute;
+        width: $width;
+        border-top: $height solid $color;
+
+        @if index( $position, 'top' ) {
+            top: 0;
+        } @else {
+            bottom: 0;
+        }
+
+        @if index( $position, 'right' ) {
+            right: 0;
+        } @else {
+            left: 0;
+        }
+
+        @if index( $position, 'center' ) {
+            left: 50%;
+            @include transform( translateX(-50%) );
+        }
+    }
+
+    &:hover::after {
+        border-color: $hover_color;
+    }
+
+}
+
+@mixin underscore-hover {
+    &:hover::after {
+        @content;
+    }
+}

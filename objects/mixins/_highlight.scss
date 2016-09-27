@@ -3,19 +3,61 @@
 ///
 // Highlight Mixin
 //
+// @param  {$padding}  Just like padding, can be: top, right, bottom, left.
+//
 // .highlight {
-//     @include highlight;
-//     color: #fff;
-//     background-color: #000;
+//     @include highlight( #fff, rgba(0,0,0,.5), .5rem 1rem, 2 );
 // }
 //
 // <div class="highlight">
-//    <strong>Text</strong>
+//    <p> </p>
 // </div>
 ///
 
-@mixin highlight( $padding:$sm, $line-height:3 ) {
+@mixin highlight( $color:#fff, $bg:rgba(0,0,0,.5), $padding:.5rem 1rem, $line_height:2 ) {
 
+    @include directional-extract( $padding );
+
+    display: block;
+    padding-right: $_directional_extract_right;
+    padding-left: $_directional_extract_left;
+
+    > * {
+        display: inline;
+        line-height: $line_height;
+        padding-top: $_directional_extract_top;
+        padding-bottom: $_directional_extract_bottom;
+        // line start and end padding is set via box-shadow
+        box-shadow:
+            $_directional_extract_right 0 0 0 $bg,
+            -$_directional_extract_left 0 0 0 $bg;
+        background-color: $bg;
+        color: $color;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin _highlight( $padding:1rem, $line-height:8 ) {
+
+    display: inherit;
     padding: $padding;
     line-height: $padding * $line-height;
 
@@ -25,8 +67,9 @@
         padding-left: 0;
         padding-right: 0;
         box-shadow:
-            $padding 0 0 $bg,
-            -$padding 0 0 $bg;
+            $padding 0 0 #000,
+            -$padding 0 0 #000;
+        @content;
     }
 
 }

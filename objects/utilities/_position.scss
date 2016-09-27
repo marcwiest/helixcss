@@ -6,11 +6,11 @@
 Positioning
 */
 
-.rel, .relative {
+.relative, .rel {
     position: relative !important;
 }
 
-.abs, .absolute {
+.absolute, .abs {
     position: absolute !important;
 }
 
@@ -20,9 +20,9 @@ Positioning
 //     @include center-absolute;
 // }
 
-.top0 { top: 0 !important; }
-.right0 { right: 0 !important; }
-.bottom0 { bottom: 0 !important; }
-.left0 { left: 0 !important; }
+.top-0 { top: 0 !important; }
+.right-0 { right: 0 !important; }
+.bottom-0 { bottom: 0 !important; }
+.left-0 { left: 0 !important; }
 
 } // endif

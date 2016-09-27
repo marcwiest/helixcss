@@ -3,51 +3,38 @@
 ///
 // Flyout
 //
-// jQuery(document).ready(function() {
-//     jQuery('.flyout').click( function(event) {
-//         event.preventDefault;
-//         jQuery(this).toggleClass('flyout-visible');
-//     });
-// });
-//
 // .flyout {
-//     @include flyout((
-//         'direction' : 'down'
-//     ));
+//     @include flyout( ':hover', '.flyout-item', 'down-right' );
 // }
 //
 // <div class=flyout>
-//     <strong>Lid</strong>
-//     <div class=release></div>
+//     <strong>Flyout</strong>
+//     <div class=flyout-item> </div>
 // </div>
+//
+// You can changed the $event_selector to a class name (e.g. flyout--visible) and add some jQuery to
+// trigger the flyout on click for example.
+//
+// jQuery(document).ready(function($) {
+//     $('.flyout').click( function(e) {
+//         e.preventDefault;
+//         $(this).toggleClass('flyout--visible');
+//     });
+// });
 ///
 
-@mixin flyout( $args:() ) {
+@mixin flyout( $event_selector:':hover', $target_selector:'.flyout-item', $direction:'down-right' ) {
 
-    $args: map-merge( (
-        "direction" : "down-right",
-        "target" : ".release",
-        "event" : "hover", // or click
-        "event_selector" : ".flyout-visible",
-    ), $args );
-
-    $direction: map-get($args,direction);
-    $target: map-get($args,target);
-    $event: map-get($args,event);
-    $event_selector: map-get($args,event_selector);
-
-    position: relative;
-    overflow: hidden; // messes up inline-block parents
-    vertical-align: bottom; // fixes inline-block issue
     display: inline-block;
-
-    @if "click" != $event {
-        $event_selector: ":hover";
-    }
+    position: relative;
+    // required but messes up inline-block flyout
+    overflow: hidden;
+    // fixes inline-block flyout issue
+    vertical-align: bottom;
 
     &#{$event_selector} { overflow: visible; }
 
-    #{$target} {
+    #{$target_selector} {
         white-space: normal;
         position: absolute;
         left: -99999px;
@@ -60,7 +47,7 @@
 
     @if "up" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: auto;
             right: -50%;
             bottom: 100%;
@@ -69,7 +56,7 @@
 
     } @elseif "up-left" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: auto;
             right: 0;
             bottom: 100%;
@@ -78,7 +65,7 @@
 
     } @elseif "up-right" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: auto;
             right: auto;
             bottom: 100%;
@@ -87,7 +74,7 @@
 
     } @elseif "right" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 50%;
             right: auto;
             bottom: auto;
@@ -97,7 +84,7 @@
 
     } @elseif "right-up" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: auto;
             right: auto;
             bottom: 0;
@@ -106,7 +93,7 @@
 
     } @elseif "right-down" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 0;
             right: auto;
             bottom: auto;
@@ -115,7 +102,7 @@
 
     } @elseif "down" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 100%;
             right: -50%;
             bottom: auto;
@@ -124,7 +111,7 @@
 
     } @elseif "down-left" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 100%;
             right: 0;
             bottom: auto;
@@ -133,7 +120,7 @@
 
     } @elseif "down-right" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 100%;
             right: auto;
             bottom: auto;
@@ -142,7 +129,7 @@
 
     } @elseif "left" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 50%;
             right: 100%;
             bottom: auto;
@@ -152,7 +139,7 @@
 
     } @elseif "left-up" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: auto;
             right: 100%;
             bottom: 0;
@@ -161,13 +148,13 @@
 
     } @elseif "left-down" == $direction {
 
-        &#{$event_selector} > #{$target} {
+        &#{$event_selector} > #{$target_selector} {
             top: 0;
             right: 100%;
             bottom: auto;
             left: auto;
         }
 
-    }
+    } // endif
 
 }
