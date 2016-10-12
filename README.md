@@ -1,8 +1,12 @@
 
 # HelixCSS
 
-A lean SCSS library and CSS base. HelixCSS primary goal is to give structure to your website or
-application and leave the design decisions to you.
+**Version:** 1.0
+
+## About
+
+HelixCSS primary goal is to give structure to your website or application and leave the design
+decisions to you.
 
 ## Documentation
 
