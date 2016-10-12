@@ -3,7 +3,7 @@
 /*
 Extract
 
-Like in PHP, extract makes the values of a list available as a variable. However, currently dynamic
+Like in PHP, extract makes each key of a list available as a variable. However, currently dynamic
 variable creation is not possible in Sass. That's why as of now only a directional-extract for margin
 and padding extract exists.
 */
