@@ -107,15 +107,15 @@ a {
 
 ul, ol {
     list-style-position: outside;
-    padding-left: $vr;
+    padding-left: 2ch;
 }
 
 ul ul,
 ul ol,
 ol ul,
 ol ol {
+    padding-left: 2ch;
     margin-bottom: 0;
-    padding-left: $vr;
 }
 
 dl { list-style: none; }
