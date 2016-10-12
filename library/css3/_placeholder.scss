@@ -2,11 +2,19 @@
 
 ///
 // Placeholder Styling
+// css-tricks.com/almanac/selectors/p/placeholder/
 ///
 
 @mixin placeholder {
     &::-webkit-input-placeholder { @content; } // Safari and Chrome
          &:-ms-input-placeholder { @content; } // Internet Explorer 10+
+             // by default, all placeholders in Firefox have an opacity value applied
              &::-moz-placeholder { @content; opacity: 1; } // Firefox 19+
                   &::placeholder { @content; }
-} 
+}
+
+// css-tricks.com/almanac/selectors/p/placeholder/
+// @mixin placeholder-shown {
+//     :placeholder-shown {
+//     }
+// }
