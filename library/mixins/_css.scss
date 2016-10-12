@@ -15,7 +15,6 @@
 
 ///
 // Background
-// The bg-clip mixin helps with leaking background-colors and images when using border-radius.
 ///
 
 @mixin bg-retina( $url, $width, $height ) {
@@ -32,6 +31,7 @@
     background-size: cover;
 }
 
+// helps with leaking background-colors and images when using border-radius
 @mixin bg-clip( $clip:padding-box ) {
     background-clip: $clip;
 }
@@ -102,10 +102,12 @@
 // Hide Text - Good for image replacement.
 ///
 
-@mixin hide-text {
-    overflow: hidden;
-    text-indent: 101%;
-    white-space: nowrap;
+@mixin hide-text( $method:transparent ) {
+    @if transparent == $method {
+        color: transparent;
+    } @else {
+        font-size: 0;
+    }
 }
 
 ///
