@@ -3,7 +3,7 @@
 /*
 Extract
 
-Like in PHP, extract makes the values of a list available as a variable. However, currently dynamic
+Like in PHP, extract makes each key of a list available as a variable. However, currently dynamic
 variable creation is not possible in Sass. That's why as of now only a directional-extract for margin
 and padding extract exists.
 */
@@ -230,9 +230,9 @@ small, .small { font-size: 1.4rem; font-weight: 400; }
 a { color: #2199de; text-decoration: none; }
 a:hover { color: #2199de; }
 
-ul, ol { list-style-position: outside; padding-left: 2.4rem; }
+ul, ol { list-style-position: outside; padding-left: 2ch; }
 
-ul ul, ul ol, ol ul, ol ol { margin-bottom: 0; padding-left: 2.4rem; }
+ul ul, ul ol, ol ul, ol ol { padding-left: 2ch; margin-bottom: 0; }
 
 dl { list-style: none; }
 
@@ -286,6 +286,8 @@ legend, label, .label { display: inline-block; letter-spacing: 0; line-height: 1
 @media only screen and (min-width: 768px) and (max-width: 1023px) { legend, label, .label { line-height: 1.66; } }
 @media only screen and (min-width: 1024px) { legend, label, .label { line-height: 1.66; } }
 
+input { display: inline-block; }
+
 [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { font-family: sans-serif; font-weight: 400; font-size: 1.8rem; font-style: normal; line-height: 1.66; padding-top: 0.5rem; padding-right: 1rem; padding-bottom: 0.5rem; padding-left: 1rem; letter-spacing: 0; border-width: 1px; border-radius: 3px; border-style: solid; box-shadow: none; color: #202020; background-color: #fff; border-color: #dadada; }
 [type=date]:not([size]):not([cols]), [type=datetime]:not([size]):not([cols]), [type=datetime-local]:not([size]):not([cols]), [type=month]:not([size]):not([cols]), [type=time]:not([size]):not([cols]), [type=week]:not([size]):not([cols]), [type=file]:not([size]):not([cols]), [type=email]:not([size]):not([cols]), [type=number]:not([size]):not([cols]), [type=password]:not([size]):not([cols]), [type=search]:not([size]):not([cols]), [type=tel]:not([size]):not([cols]), [type=text]:not([size]):not([cols]), [type=url]:not([size]):not([cols]), input:not([type]):not([size]):not([cols]), textarea:not([size]):not([cols]), select:not([size]):not([cols]) { width: 100%; }
 @media only screen and (min-width: 768px) and (max-width: 1023px) { [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { line-height: 1.66; } }
@@ -293,13 +295,12 @@ legend, label, .label { display: inline-block; letter-spacing: 0; line-height: 1
 [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=month]:hover, [type=time]:hover, [type=week]:hover, [type=file]:hover, [type=email]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, input:not([type]):hover, textarea:hover, select:hover { color: #202020; background-color: #fff; border-color: #dadada; }
 [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=time]:focus, [type=week]:focus, [type=file]:focus, [type=email]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=url]:focus, input:not([type]):focus, textarea:focus, select:focus { color: #202020; background-color: #fff; border-color: #dadada; }
 
-input, textarea { display: inline-block; }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #606060; }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #606060; }
-input::-moz-placeholder, textarea::-moz-placeholder { color: #606060; opacity: 1; }
-input::placeholder, textarea::placeholder { color: #606060; }
+[type=date]::-webkit-input-placeholder, [type=datetime]::-webkit-input-placeholder, [type=datetime-local]::-webkit-input-placeholder, [type=month]::-webkit-input-placeholder, [type=time]::-webkit-input-placeholder, [type=week]::-webkit-input-placeholder, [type=file]::-webkit-input-placeholder, [type=email]::-webkit-input-placeholder, [type=number]::-webkit-input-placeholder, [type=password]::-webkit-input-placeholder, [type=search]::-webkit-input-placeholder, [type=tel]::-webkit-input-placeholder, [type=text]::-webkit-input-placeholder, [type=url]::-webkit-input-placeholder, input:not([type])::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #606060; }
+[type=date]:-ms-input-placeholder, [type=datetime]:-ms-input-placeholder, [type=datetime-local]:-ms-input-placeholder, [type=month]:-ms-input-placeholder, [type=time]:-ms-input-placeholder, [type=week]:-ms-input-placeholder, [type=file]:-ms-input-placeholder, [type=email]:-ms-input-placeholder, [type=number]:-ms-input-placeholder, [type=password]:-ms-input-placeholder, [type=search]:-ms-input-placeholder, [type=tel]:-ms-input-placeholder, [type=text]:-ms-input-placeholder, [type=url]:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder { color: #606060; }
+[type=date]::-moz-placeholder, [type=datetime]::-moz-placeholder, [type=datetime-local]::-moz-placeholder, [type=month]::-moz-placeholder, [type=time]::-moz-placeholder, [type=week]::-moz-placeholder, [type=file]::-moz-placeholder, [type=email]::-moz-placeholder, [type=number]::-moz-placeholder, [type=password]::-moz-placeholder, [type=search]::-moz-placeholder, [type=tel]::-moz-placeholder, [type=text]::-moz-placeholder, [type=url]::-moz-placeholder, input:not([type])::-moz-placeholder, textarea::-moz-placeholder { color: #606060; opacity: 1; }
+[type=date]::placeholder, [type=datetime]::placeholder, [type=datetime-local]::placeholder, [type=month]::placeholder, [type=time]::placeholder, [type=week]::placeholder, [type=file]::placeholder, [type=email]::placeholder, [type=number]::placeholder, [type=password]::placeholder, [type=search]::placeholder, [type=tel]::placeholder, [type=text]::placeholder, [type=url]::placeholder, input:not([type])::placeholder, textarea::placeholder { color: #606060; }
 
-textarea { vertical-align: top; resize: vertical; overflow: auto; }
+textarea { display: inline-block; vertical-align: top; resize: vertical; overflow: auto; }
 textarea:not([rows]) { min-height: 9.964rem; }
 @media only screen and (min-width: 768px) and (max-width: 1023px) { textarea:not([rows]) { min-height: 9.964rem; } }
 @media only screen and (min-width: 1024px) { textarea:not([rows]) { min-height: 9.964rem; } }

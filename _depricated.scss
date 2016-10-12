@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
-///
 // File for keeping depricated material around.
-///
+// This file is not imported via helix.scss.
 
-@if $export_depricated {
+/////////////////////////////////////
+// Depricated since beta
+/////////////////////////////////////
 
-// Depricated since v1
-
-} // endif
+// REPLACED because it's hacky.
+@mixin hide-text {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+}
