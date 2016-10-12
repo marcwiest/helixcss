@@ -33,6 +33,10 @@ label, .label {
 //     &[for] { cursor: pointer; }
 // }
 
+input {
+    display: inline-block;
+}
+
 [type=date],
 [type=datetime],
 [type=datetime-local],
@@ -87,12 +91,27 @@ select {
     }
 }
 
-input, textarea {
-    display: inline-block;
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=month],
+[type=time],
+[type=week],
+[type=file],
+[type=email],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=url],
+input:not([type]),
+textarea {
     @include placeholder { color: $color_input_placeholder; }
 }
 
 textarea {
+    display: inline-block;
     // remove space below the textarea
     vertical-align: top;
     // only apply min-height if "rows" attribute is not given
@@ -115,7 +134,7 @@ textarea {
 select {
     display: inline-block;
     @include appearance(none);
-    // height is required, because padding alone will not size this input appropriately
+    // height is required, because padding alone will not size this input appropriately – this calc of height matches the input height
     height: -webkit-calc(#{$font_size_input * $line_height_ratio_input} + #{$padding_input_top} + #{$padding_input_bottom} + #{$border_width_input * 2});
     height:         calc(#{$font_size_input * $line_height_ratio_input} + #{$padding_input_top} + #{$padding_input_bottom} + #{$border_width_input * 2});
     @if $responsive_typography {
