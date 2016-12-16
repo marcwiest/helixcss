@@ -54,10 +54,7 @@ input {
 input:not([type]),
 textarea,
 select {
-    // only apply width when cols or size attributes are not given
-    &:not([size]):not([cols]) {
-        width: 100%;
-    }
+    &:not([size]) { width: 100%; }
     font-family: $font_family_input;
     font-weight: $font_weight_input;
     font-size: $font_size_input;
@@ -114,7 +111,9 @@ textarea {
     display: inline-block;
     // remove space below the textarea
     vertical-align: top;
-    // only apply min-height if "rows" attribute is not given
+    &:not([cols]) {
+        width: 100%;
+    }
     &:not([rows]) {
         min-height: ( ($font_size_input * $line_height_ratio_input) * 3 ) + $padding_input_top + $padding_input_bottom;
         @if $responsive_typography {
@@ -134,7 +133,7 @@ textarea {
 select {
     display: inline-block;
     @include appearance(none);
-    // height is required, because padding alone will not size this input appropriately – this calc of height matches the input height
+    // height is required, because padding alone will not size this input appropriately – this calculation of height matches the input height
     height: -webkit-calc(#{$font_size_input * $line_height_ratio_input} + #{$padding_input_top} + #{$padding_input_bottom} + #{$border_width_input * 2});
     height:         calc(#{$font_size_input * $line_height_ratio_input} + #{$padding_input_top} + #{$padding_input_bottom} + #{$border_width_input * 2});
     @if $responsive_typography {

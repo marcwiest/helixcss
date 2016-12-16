@@ -9,5 +9,8 @@
 
 ---
 
+## v1.0.1 – December 16, 2016
+- Decreased input selector specificity.
+
 ## v1.0.0 – October 11, 2016
 - Initial release.
