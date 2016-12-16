@@ -1,8 +1,6 @@
 
 # HelixCSS
 
-**Version:** 1.0.1
-
 ## About
 
 HelixCSS primary goal is to give structure to your website or application and leave the design
