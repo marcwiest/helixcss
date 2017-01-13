@@ -33,10 +33,6 @@ label, .label {
 //     &[for] { cursor: pointer; }
 // }
 
-input {
-    display: inline-block;
-}
-
 [type=date],
 [type=datetime],
 [type=datetime-local],
@@ -88,23 +84,15 @@ select {
     }
 }
 
-[type=date],
-[type=datetime],
-[type=datetime-local],
-[type=month],
-[type=time],
-[type=week],
-[type=file],
-[type=email],
-[type=number],
-[type=password],
-[type=search],
-[type=tel],
-[type=text],
-[type=url],
-input:not([type]),
+input {
+    display: inline-block;
+}
+
+input,
 textarea {
     @include placeholder { color: $color_input_placeholder; }
+    &:hover { @include placeholder { color: $color_input_placeholder_hover; } }
+    &:focus { @include placeholder { color: $color_input_placeholder_focus; } }
 }
 
 textarea {
