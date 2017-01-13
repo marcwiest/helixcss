@@ -6,7 +6,8 @@
 ///
 
 @mixin placeholder {
-    &::-webkit-input-placeholder { @content; } // Safari and Chrome
+    // normalize.css applies an opacity value below 1
+    &::-webkit-input-placeholder { @content; opacity: 1; } // Safari and Chrome
          &::-ms-input-placeholder { @content; } // Internet Explorer 10+
              // by default, all placeholders in Firefox have an opacity value applied
              &::-moz-placeholder { @content; opacity: 1; } // Firefox 19+
