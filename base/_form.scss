@@ -50,7 +50,6 @@ label, .label {
 input:not([type]),
 textarea,
 select {
-    &:not([size]) { width: 100%; }
     font-family: $font_family_input;
     font-weight: $font_weight_input;
     font-size: $font_size_input;
@@ -99,9 +98,6 @@ textarea {
     display: inline-block;
     // remove space below the textarea
     vertical-align: top;
-    &:not([cols]) {
-        width: 100%;
-    }
     &:not([rows]) {
         min-height: ( ($font_size_input * $line_height_ratio_input) * 3 ) + $padding_input_top + $padding_input_bottom;
         @if $responsive_typography {
