@@ -98,17 +98,6 @@ textarea {
     display: inline-block;
     // remove space below the textarea
     vertical-align: top;
-    &:not([rows]) {
-        min-height: ( ($font_size_input * $line_height_ratio_input) * 3 ) + $padding_input_top + $padding_input_bottom;
-        @if $responsive_typography {
-            @include md {
-                min-height: ( ($font_size_input * $line_height_ratio_input_md) * 3 ) + $padding_input_top + $padding_input_bottom;
-            }
-            @include lg {
-                min-height: ( ($font_size_input * $line_height_ratio_input_lg) * 3 ) + $padding_input_top + $padding_input_bottom;
-            }
-        }
-    }
     // only allow vertical resizing
     resize: vertical;
     overflow: auto;
