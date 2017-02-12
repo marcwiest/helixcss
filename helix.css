@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! HelixCSS v1.0.1 | License: MIT | Author: Marc Wiest (marcwiest.com) */
+/*! HelixCSS v1.1.1 | License: MIT | Author: Marc Wiest (marcwiest.com) */
 /*
 Extract
 
@@ -287,7 +287,6 @@ legend, label, .label { display: inline-block; letter-spacing: 0; line-height: 1
 @media only screen and (min-width: 1024px) { legend, label, .label { line-height: 1.66; } }
 
 [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { font-family: sans-serif; font-weight: 400; font-size: 1.8rem; font-style: normal; line-height: 1.66; padding-top: 0.5rem; padding-right: 1rem; padding-bottom: 0.5rem; padding-left: 1rem; letter-spacing: 0; border-width: 1px; border-radius: 3px; border-style: solid; box-shadow: none; color: #202020; background-color: #fff; border-color: #dadada; }
-[type=date]:not([size]), [type=datetime]:not([size]), [type=datetime-local]:not([size]), [type=month]:not([size]), [type=time]:not([size]), [type=week]:not([size]), [type=file]:not([size]), [type=email]:not([size]), [type=number]:not([size]), [type=password]:not([size]), [type=search]:not([size]), [type=tel]:not([size]), [type=text]:not([size]), [type=url]:not([size]), input:not([type]):not([size]), textarea:not([size]), select:not([size]) { width: 100%; }
 @media only screen and (min-width: 768px) and (max-width: 1023px) { [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { line-height: 1.66; } }
 @media only screen and (min-width: 1024px) { [type=date], [type=datetime], [type=datetime-local], [type=month], [type=time], [type=week], [type=file], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], input:not([type]), textarea, select { line-height: 1.66; } }
 [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=month]:hover, [type=time]:hover, [type=week]:hover, [type=file]:hover, [type=email]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, input:not([type]):hover, textarea:hover, select:hover { color: #202020; background-color: #fff; border-color: #dadada; }
@@ -309,12 +308,8 @@ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: #606060
 input:focus::placeholder, textarea:focus::placeholder { color: #606060; }
 
 textarea { display: inline-block; vertical-align: top; resize: vertical; overflow: auto; }
-textarea:not([cols]) { width: 100%; }
-textarea:not([rows]) { min-height: 9.964rem; }
-@media only screen and (min-width: 768px) and (max-width: 1023px) { textarea:not([rows]) { min-height: 9.964rem; } }
-@media only screen and (min-width: 1024px) { textarea:not([rows]) { min-height: 9.964rem; } }
 
-select { display: inline-block; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); cursor: pointer; background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4IiB2aWV3Qm94PSIwIDAgMTAgNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNC4xICgxNTY4MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+YW5nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4KICAgICAgICA8ZyBpZD0iYW5nbGUiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiIGZpbGw9IiMwMDAwMDAiPgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTEiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuODYxOTE1LCAyLjg2MTkxNSkgcm90YXRlKC00NS4wMDAwMDApIHRyYW5zbGF0ZSgtNi44NjE5MTUsIC0yLjg2MTkxNSkgIiB4PSIzLjQ0MjE4ODEiIHk9IjIuMjM0MjgyOSIgd2lkdGg9IjYuODM5NDUzODEiIGhlaWdodD0iMS4yNTUyNjQyMSI+PC9yZWN0PgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTEtQ29weS0yIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjg2MTkxNSwgMi44NjE5MTUpIHJvdGF0ZSgtMzE1LjAwMDAwMCkgdHJhbnNsYXRlKC0yLjg2MTkxNSwgLTIuODYxOTE1KSAiIHg9Ii0wLjU1NzgxMTkwNCIgeT0iMi4yMzQyODI5IiB3aWR0aD0iNi44Mzk0NTM4MSIgaGVpZ2h0PSIxLjI1NTI2NDIxIj48L3JlY3Q+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="); background-size: 1.44rem; background-repeat: no-repeat; background-position: -webkit-calc(100% - 1rem) 50%; background-position: calc(100% - 1rem) 50%; }
+select { display: inline-block; -webkit-appearance: menulist; -moz-appearance: menulist; -ms-appearance: menulist; -o-appearance: menulist; appearance: menulist; -webkit-appearance: menulist-button; height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); cursor: pointer; }
 @media only screen and (min-width: 768px) and (max-width: 1023px) { select { height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); } }
 @media only screen and (min-width: 1024px) { select { height: -webkit-calc(2.988rem + 0.5rem + 0.5rem + 2px); height: calc(2.988rem + 0.5rem + 0.5rem + 2px); } }
 

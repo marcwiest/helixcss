@@ -8,6 +8,12 @@
 
 ---
 
+## v1.1.1 – February 11, 2017
+- Removed old export variables.
+- Removed width 100% for text based form inputs.
+- Removed min-height for textarea.
+- Removed custom select styling in favor of appearance menulist.
+
 ## v1.1.0 – January 13, 2017
 - Added placeholder hover & focus color variables.
 - Improved placeholder mixin to overwrite normalize.css opacity for webkit systems.
