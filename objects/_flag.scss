@@ -25,7 +25,7 @@ https://github.com/stubbornella/oocss/tree/master/oocss/src/components/media
 
 @if $export_flag {
 
-    .flag { @extend %flag; }
-    .flag-item { @extend %flag-item; }
+    .#{$ns}flag { @extend %flag; }
+    .#{$ns}flag-item { @extend %flag-item; }
 
 }

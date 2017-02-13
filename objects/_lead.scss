@@ -18,6 +18,6 @@ Lead
 
 @if $export_lead {
 
-    .lead { @extend %lead; }
+    .#{$ns}lead { @extend %lead; }
 
 }

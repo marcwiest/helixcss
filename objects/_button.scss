@@ -61,23 +61,23 @@ Button
 
 @if $export_button {
 
-.button,
-.btn {
+.#{$ns}button,
+.#{$ns}btn {
     @extend %button;
 }
 
-.button--clear,
-.btn--clear {
+.#{$ns}button--clear,
+.#{$ns}btn--clear {
     @extend %button--clear;
 }
 
-.button--pill,
-.btn--pill {
+.#{$ns}button--pill,
+.#{$ns}btn--pill {
     @extend %button--pill;
 }
 
-.button--input,
-.btn--input {
+.#{$ns}button--input,
+.#{$ns}btn--input {
     @extend %button--input;
 }
 

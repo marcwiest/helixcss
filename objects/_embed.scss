@@ -32,11 +32,11 @@ Responsive embed
 
 @if $export_embed {
 
-    .embed {
+    .#{$ns}embed {
         @extend %embed;
     }
 
-    .embed--wide {
+    .#{$ns}embed--wide {
         @extend %embed--wide;
     }
 

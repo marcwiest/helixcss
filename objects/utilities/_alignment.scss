@@ -6,24 +6,24 @@
 Float
 */
 
-.left { float: left !important; }
-.right { float: right !important; }
-.center { float: none; margin-left: auto; margin-right: auto !important; }
+.#{$ns}left { float: left !important; }
+.#{$ns}right { float: right !important; }
+.#{$ns}center { float: none; margin-left: auto; margin-right: auto !important; }
 
 @include md {
-    .left-m { float: left !important; }
-    .right-m { float: right !important; }
-    .center-m { float: none; margin-left: auto; margin-right: auto !important; }
+    .#{$ns}left-m { float: left !important; }
+    .#{$ns}right-m { float: right !important; }
+    .#{$ns}center-m { float: none; margin-left: auto; margin-right: auto !important; }
 }
 @include md-lg {
-    .left-ml { float: left !important; }
-    .right-ml { float: right !important; }
-    .center-ml { float: none; margin-left: auto; margin-right: auto !important; }
+    .#{$ns}left-ml { float: left !important; }
+    .#{$ns}right-ml { float: right !important; }
+    .#{$ns}center-ml { float: none; margin-left: auto; margin-right: auto !important; }
 }
 @include lg {
-    .left-l { float: left !important; }
-    .right-l { float: right !important; }
-    .center-l { float: none; margin-left: auto; margin-right: auto !important; }
+    .#{$ns}left-l { float: left !important; }
+    .#{$ns}right-l { float: right !important; }
+    .#{$ns}center-l { float: none; margin-left: auto; margin-right: auto !important; }
 }
 
 /**
@@ -36,48 +36,48 @@ Float
  * Text Align
  */
 
-.text-left { text-align: left !important; }
-.text-right { text-align: right !important; }
-.text-center { text-align: center !important; }
-// .text-justify { text-align: justify; }
-// .justify-line { @include justify-line; }
-.vertical-top { vertical-align: top !important; }
-.vertical-bottom { vertical-align: bottom !important; }
-.vertical-middle { vertical-align: middle !important; }
-// .vertical-baseline { vertical-align: baseline; }
+.#{$ns}text-left { text-align: left !important; }
+.#{$ns}text-right { text-align: right !important; }
+.#{$ns}text-center { text-align: center !important; }
+// .#{$ns}text-justify { text-align: justify; }
+// .#{$ns}justify-line { @include justify-line; }
+.#{$ns}vertical-top { vertical-align: top !important; }
+.#{$ns}vertical-bottom { vertical-align: bottom !important; }
+.#{$ns}vertical-middle { vertical-align: middle !important; }
+// .#{$ns}vertical-baseline { vertical-align: baseline; }
 
 @include md {
-    .text-left-m { text-align: left !important; }
-    .text-right-m { text-align: right !important; }
-    .text-center-m { text-align: center !important; }
-    // .text-justify-m { text-align: justify; }
-    // .justify-line-m { @include justify-line; }
-    .vertical-top-m { vertical-align: top !important; }
-    .vertical-bottom-m { vertical-align: bottom !important; }
-    .vertical-middle-m { vertical-align: middle !important; }
-    // .vertical-baseline-m { vertical-align: baseline; }
+    .#{$ns}text-left-m { text-align: left !important; }
+    .#{$ns}text-right-m { text-align: right !important; }
+    .#{$ns}text-center-m { text-align: center !important; }
+    // .#{$ns}text-justify-m { text-align: justify; }
+    // .#{$ns}justify-line-m { @include justify-line; }
+    .#{$ns}vertical-top-m { vertical-align: top !important; }
+    .#{$ns}vertical-bottom-m { vertical-align: bottom !important; }
+    .#{$ns}vertical-middle-m { vertical-align: middle !important; }
+    // .#{$ns}vertical-baseline-m { vertical-align: baseline; }
 }
 @include md-lg {
-    .text-left-ml { text-align: left !important; }
-    .text-right-ml { text-align: right !important; }
-    .text-center-ml { text-align: center !important; }
-    // .text-justify-ml { text-align: justify; }
-    // .justify-line-ml { @include justify-line; }
-    .vertical-top-ml { vertical-align: top !important; }
-    .vertical-bottom-ml { vertical-align: bottom !important; }
-    .vertical-middle-ml { vertical-align: middle !important; }
-    // .vertical-baseline-ml { vertical-align: baseline; }
+    .#{$ns}text-left-ml { text-align: left !important; }
+    .#{$ns}text-right-ml { text-align: right !important; }
+    .#{$ns}text-center-ml { text-align: center !important; }
+    // .#{$ns}text-justify-ml { text-align: justify; }
+    // .#{$ns}justify-line-ml { @include justify-line; }
+    .#{$ns}vertical-top-ml { vertical-align: top !important; }
+    .#{$ns}vertical-bottom-ml { vertical-align: bottom !important; }
+    .#{$ns}vertical-middle-ml { vertical-align: middle !important; }
+    // .#{$ns}vertical-baseline-ml { vertical-align: baseline; }
 }
 @include lg {
-    .text-left-l { text-align: left !important; }
-    .text-right-l { text-align: right !important; }
-    .text-center-l { text-align: center !important; }
-    // .text-justify-l { text-align: justify; }
-    // .justify-line-l { @include justify-line; }
-    .vertical-top-l { vertical-align: top !important; }
-    .vertical-bottom-l { vertical-align: bottom !important; }
-    .vertical-middle-l { vertical-align: middle !important; }
-    // .vertical-baseline-l { vertical-align: baseline; }
+    .#{$ns}text-left-l { text-align: left !important; }
+    .#{$ns}text-right-l { text-align: right !important; }
+    .#{$ns}text-center-l { text-align: center !important; }
+    // .#{$ns}text-justify-l { text-align: justify; }
+    // .#{$ns}justify-line-l { @include justify-line; }
+    .#{$ns}vertical-top-l { vertical-align: top !important; }
+    .#{$ns}vertical-bottom-l { vertical-align: bottom !important; }
+    .#{$ns}vertical-middle-l { vertical-align: middle !important; }
+    // .#{$ns}vertical-baseline-l { vertical-align: baseline; }
 }
 
 } // endif

@@ -6,23 +6,23 @@
 Font Variations
 */
 
-.uppercase { text-transform: uppercase !important; }
-.lowercase { text-transform: lowercase !important; }
-.italic { font-style: italic !important; }
+.#{$ns}uppercase { text-transform: uppercase !important; }
+.#{$ns}lowercase { text-transform: lowercase !important; }
+.#{$ns}italic { font-style: italic !important; }
 
 /*
 Font Weight
 */
 
-.light { font-weight: $light !important; }
-.bold { font-weight: $bold !important; }
-.medium { font-weight: $medium !important; }
+.#{$ns}light { font-weight: $light !important; }
+.#{$ns}bold { font-weight: $bold !important; }
+.#{$ns}medium { font-weight: $medium !important; }
 
 /*
 Quotation Marks
 */
 
-.quotes {
+.#{$ns}quotes {
     quotes: "“" "”" !important;
     &::before { content: open-quote !important; }
     &::after { content: close-quote !important; }
@@ -32,26 +32,26 @@ Quotation Marks
 Font Sizes
 */
 
-.fz-text {
+.#{$ns}fz-text {
     font-size: $font_size_text !important;
 }
 
-.fz-h1 { font-size: $font_size_h1 !important; }
-.fz-h2 { font-size: $font_size_h2 !important; }
-.fz-h3 { font-size: $font_size_h3 !important; }
-.fz-h4 { font-size: $font_size_h4 !important; }
-.fz-h5 { font-size: $font_size_h5 !important; }
-.fz-h6 { font-size: $font_size_h6 !important; }
+.#{$ns}fz-h1 { font-size: $font_size_h1 !important; }
+.#{$ns}fz-h2 { font-size: $font_size_h2 !important; }
+.#{$ns}fz-h3 { font-size: $font_size_h3 !important; }
+.#{$ns}fz-h4 { font-size: $font_size_h4 !important; }
+.#{$ns}fz-h5 { font-size: $font_size_h5 !important; }
+.#{$ns}fz-h6 { font-size: $font_size_h6 !important; }
 
-.fz-lead {
+.#{$ns}fz-lead {
     font-size: $font_size_lead !important;
 }
 
-.fz-small {
+.#{$ns}fz-small {
     font-size: $font_size_small !important;
 }
 
-.fz-input {
+.#{$ns}fz-input {
     font-size: $font_size_input !important;
 }
 
@@ -59,11 +59,11 @@ Font Sizes
 Line Height
 */
 
-.lh-inherit {
+.#{$ns}lh-inherit {
     line-height: inherit !important;
 }
 
-.lh-body, .lh-text {
+.#{$ns}lh-body, .#{$ns}lh-text {
     line-height: $line_height_ratio_body !important;
     @if $responsive_typography {
         @include md { line-height: $line_height_ratio_body_md !important; }
@@ -71,7 +71,7 @@ Line Height
     }
 }
 
-.lh-heading {
+.#{$ns}lh-heading {
     line-height: $line_height_ratio_heading !important;
     @if $responsive_typography {
         @include md { line-height: $line_height_ratio_heading_md !important; }
@@ -79,7 +79,7 @@ Line Height
     }
 }
 
-.lh-lead {
+.#{$ns}lh-lead {
     line-height: $line_height_ratio_lead !important;
     @if $responsive_typography {
         @include md { line-height: $line_height_ratio_lead_md !important; }
@@ -87,7 +87,7 @@ Line Height
     }
 }
 
-.lh-input {
+.#{$ns}lh-input {
     line-height: $line_height_ratio_input !important;
     @if $responsive_typography {
         @include md { line-height: $line_height_ratio_input_md !important; }

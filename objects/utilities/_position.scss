@@ -6,23 +6,23 @@
 Positioning
 */
 
-.relative, .rel {
+.#{$ns}relative, .#{$ns}rel {
     position: relative !important;
 }
 
-.absolute, .abs {
+.#{$ns}absolute, .#{$ns}abs {
     position: absolute !important;
 }
 
-// .central,
-// .centered,
-// .center-absolute {
+// .#{$ns}central,
+// .#{$ns}centered,
+// .#{$ns}center-absolute {
 //     @include center-absolute;
 // }
 
-.top-0 { top: 0 !important; }
-.right-0 { right: 0 !important; }
-.bottom-0 { bottom: 0 !important; }
-.left-0 { left: 0 !important; }
+.#{$ns}top-0 { top: 0 !important; }
+.#{$ns}right-0 { right: 0 !important; }
+.#{$ns}bottom-0 { bottom: 0 !important; }
+.#{$ns}left-0 { left: 0 !important; }
 
 } // endif

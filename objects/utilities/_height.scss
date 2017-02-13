@@ -6,27 +6,26 @@
 Height
 */
 
-.h100 { height: 100px !important; }
-.h200 { height: 200px !important; }
-.h300 { height: 300px !important; }
-.h400 { height: 400px !important; }
+.#{$ns}h100 { height: 100px !important; }
+.#{$ns}h200 { height: 200px !important; }
+.#{$ns}h300 { height: 300px !important; }
+.#{$ns}h400 { height: 400px !important; }
 
 /*
 Vertical Rythem Height
 */
 
-.vrh1, .vrh { height: $vr !important; }
-.vrh2 { height: $vr * 2 !important; }
-.vrh3 { height: $vr * 3 !important; }
-.vrh4 { height: $vr * 4 !important; }
+.#{$ns}vrh1, .#{$ns}vrh { height: $vr !important; }
+.#{$ns}vrh2 { height: $vr * 2 !important; }
+.#{$ns}vrh3 { height: $vr * 3 !important; }
+.#{$ns}vrh4 { height: $vr * 4 !important; }
 
 /*
 Viewport Height
-Min-height, in CSS, overwrites the height property.
 */
 
-.vh33 { min-height: 33vh !important; }
-.vh50 { min-height: 50vh !important; }
-.vh100 { min-height: 100vh !important; }
+.#{$ns}vh33 { min-height: 33vh !important; }
+.#{$ns}vh50 { min-height: 50vh !important; }
+.#{$ns}vh100 { min-height: 100vh !important; }
 
 } // endif

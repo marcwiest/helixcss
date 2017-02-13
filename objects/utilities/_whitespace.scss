@@ -4,41 +4,41 @@ $_spaces: $space1 $space2 $space3 $space4;
 $_spaces_count: length($_spaces);
 
 @mixin _multi_whitespace_margin_css( $i, $breakpoint:'' ) {
-    .m#{$i}#{$breakpoint} { margin: nth($_spaces,$i) !important; }
-    .mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i) !important; margin-right: nth($_spaces,$i) !important; }
-    .my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i) !important; margin-bottom: nth($_spaces,$i) !important; }
+    .#{$ns}m#{$i}#{$breakpoint} { margin: nth($_spaces,$i) !important; }
+    .#{$ns}mx#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i) !important; margin-right: nth($_spaces,$i) !important; }
+    .#{$ns}my#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i) !important; margin-bottom: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_margin_css( $i, $breakpoint:'' ) {
-    .mt#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i) !important; }
-    .mr#{$i}#{$breakpoint} { margin-right: nth($_spaces,$i) !important; }
-    .mb#{$i}#{$breakpoint} { margin-bottom: nth($_spaces,$i) !important; }
-    .ml#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i) !important; }
+    .#{$ns}mt#{$i}#{$breakpoint} { margin-top: nth($_spaces,$i) !important; }
+    .#{$ns}mr#{$i}#{$breakpoint} { margin-right: nth($_spaces,$i) !important; }
+    .#{$ns}mb#{$i}#{$breakpoint} { margin-bottom: nth($_spaces,$i) !important; }
+    .#{$ns}ml#{$i}#{$breakpoint} { margin-left: nth($_spaces,$i) !important; }
 }
 
 @mixin _multi_whitespace_padding_css( $i, $breakpoint:'' ) {
-    .p#{$i}#{$breakpoint} { padding: nth($_spaces,$i) !important; }
-    .px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i) !important; padding-right: nth($_spaces,$i) !important; }
-    .py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i) !important; padding-bottom: nth($_spaces,$i) !important; }
+    .#{$ns}p#{$i}#{$breakpoint} { padding: nth($_spaces,$i) !important; }
+    .#{$ns}px#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i) !important; padding-right: nth($_spaces,$i) !important; }
+    .#{$ns}py#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i) !important; padding-bottom: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_padding_css( $i, $breakpoint:'' ) {
-    .pt#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i) !important; }
-    .pr#{$i}#{$breakpoint} { padding-right: nth($_spaces,$i) !important; }
-    .pb#{$i}#{$breakpoint} { padding-bottom: nth($_spaces,$i) !important; }
-    .pl#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i) !important; }
+    .#{$ns}pt#{$i}#{$breakpoint} { padding-top: nth($_spaces,$i) !important; }
+    .#{$ns}pr#{$i}#{$breakpoint} { padding-right: nth($_spaces,$i) !important; }
+    .#{$ns}pb#{$i}#{$breakpoint} { padding-bottom: nth($_spaces,$i) !important; }
+    .#{$ns}pl#{$i}#{$breakpoint} { padding-left: nth($_spaces,$i) !important; }
 }
 
 @mixin _whitespace_vertical_rhythm( $breakpoint:'' ) {
-    .vr25#{$breakpoint} { margin-bottom: $vr / 4 !important; }
-    .vr50#{$breakpoint} { margin-bottom: $vr / 2 !important; }
-    .vr75#{$breakpoint} { margin-bottom: $vr / 1.333333 !important; }
-    .vr100#{$breakpoint},
-    .vr#{$breakpoint} { margin-bottom: $vr !important; }
-    .vr125#{$breakpoint} { margin-bottom: $vr * 1.25 !important; }
-    .vr150#{$breakpoint} { margin-bottom: $vr * 1.5 !important; }
-    .vr175#{$breakpoint} { margin-bottom: $vr * 1.75 !important; }
-    .vr200#{$breakpoint} { margin-bottom: $vr * 2 !important; }
+    .#{$ns}vr25#{$breakpoint} { margin-bottom: $vr / 4 !important; }
+    .#{$ns}vr50#{$breakpoint} { margin-bottom: $vr / 2 !important; }
+    .#{$ns}vr75#{$breakpoint} { margin-bottom: $vr / 1.333333 !important; }
+    .#{$ns}vr100#{$breakpoint},
+    .#{$ns}vr#{$breakpoint} { margin-bottom: $vr !important; }
+    .#{$ns}vr125#{$breakpoint} { margin-bottom: $vr * 1.25 !important; }
+    .#{$ns}vr150#{$breakpoint} { margin-bottom: $vr * 1.5 !important; }
+    .#{$ns}vr175#{$breakpoint} { margin-bottom: $vr * 1.75 !important; }
+    .#{$ns}vr200#{$breakpoint} { margin-bottom: $vr * 2 !important; }
 }
 
 @if $export_whitespace {
@@ -65,39 +65,39 @@ Vertical Rhythm
 Margin
 */
 
-.mb0 { margin-bottom: 0 !important; }
-.m0 { margin: 0 !important; }
-.mxauto, .mxa {
+.#{$ns}mb0 { margin-bottom: 0 !important; }
+.#{$ns}m0 { margin: 0 !important; }
+.#{$ns}mxauto, .#{$ns}mxa {
     margin-left: auto !important;
     margin-right: auto !important;
 }
-.mi { margin: inherit !important; }
+.#{$ns}mi { margin: inherit !important; }
 @include md {
-    .mb0-m { margin-bottom: 0 !important; }
-    .m0-m { margin: 0 !important; }
-    .mxauto-m, .mxa-m {
+    .#{$ns}mb0-m { margin-bottom: 0 !important; }
+    .#{$ns}m0-m { margin: 0 !important; }
+    .#{$ns}mxauto-m, .#{$ns}mxa-m {
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    .mi-m { margin: inherit !important; }
+    .#{$ns}mi-m { margin: inherit !important; }
 }
 @include md-lg {
-    .mb0-ml { margin-bottom: 0 !important; }
-    .m0-ml { margin: 0 !important; }
-    .mxauto-ml, .mxa-ml {
+    .#{$ns}mb0-ml { margin-bottom: 0 !important; }
+    .#{$ns}m0-ml { margin: 0 !important; }
+    .#{$ns}mxauto-ml, .#{$ns}mxa-ml {
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    .mi-ml { margin: inherit !important; }
+    .#{$ns}mi-ml { margin: inherit !important; }
 }
 @include lg {
-    .mb0-l { margin-bottom: 0 !important; }
-    .m0-l { margin: 0 !important; }
-    .mxauto-l, .mxa-l {
+    .#{$ns}mb0-l { margin-bottom: 0 !important; }
+    .#{$ns}m0-l { margin: 0 !important; }
+    .#{$ns}mxauto-l, .#{$ns}mxa-l {
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    .mi-l { margin: inherit !important; }
+    .#{$ns}mi-l { margin: inherit !important; }
 }
 
 // multi margin
@@ -132,19 +132,19 @@ Margin
 Padding
 */
 
-.p0 { padding: 0 !important; }
-.pi { padding: inherit !important; }
+.#{$ns}p0 { padding: 0 !important; }
+.#{$ns}pi { padding: inherit !important; }
 @include md {
-    .p0-m { padding: 0 !important; }
-    .pi-m { padding: inherit !important; }
+    .#{$ns}p0-m { padding: 0 !important; }
+    .#{$ns}pi-m { padding: inherit !important; }
 }
 @include md-lg {
-    .p0-ml { padding: 0 !important; }
-    .pi-ml { padding: inherit !important; }
+    .#{$ns}p0-ml { padding: 0 !important; }
+    .#{$ns}pi-ml { padding: inherit !important; }
 }
 @include lg {
-    .p0-l { padding: 0 !important; }
-    .pi-l { padding: inherit !important; }
+    .#{$ns}p0-l { padding: 0 !important; }
+    .#{$ns}pi-l { padding: inherit !important; }
 }
 
 // multi padding

@@ -85,7 +85,7 @@ Grid
     @extend %cf;
     display: inline-block;
     vertical-align: top;
-    // rem fallback to ensure item is visible 
+    // rem fallback to ensure item is visible
     font-size: medium;
     font-size: $font_size_text;
     letter-spacing: $letter_spacing_text;
@@ -96,23 +96,23 @@ Grid
 
     // grid
 
-    .grid { @extend %grid; }
+    .#{$ns}grid { @extend %grid; }
 
-    .grid--full { @extend %grid--full; }
+    .#{$ns}grid--full { @extend %grid--full; }
 
-    .grid--fill { @extend %grid--fill; }
-    .grid--fill-equal { @extend %grid--fill-equal; }
+    .#{$ns}grid--fill { @extend %grid--fill; }
+    .#{$ns}grid--fill-equal { @extend %grid--fill-equal; }
 
-    // .grid--center { @extend %grid--center; }
-    // .grid--right { @extend %grid--right; }
-    // .grid--justify { @extend %grid--justify; }
+    // .#{$ns}grid--center { @extend %grid--center; }
+    // .#{$ns}grid--right { @extend %grid--right; }
+    // .#{$ns}grid--justify { @extend %grid--justify; }
 
-    // .grid--top { @extend %grid--top; }
-    // .grid--middle { @extend %grid--middle; }
-    // .grid--bottom { @extend %grid--bottom; }
+    // .#{$ns}grid--top { @extend %grid--top; }
+    // .#{$ns}grid--middle { @extend %grid--middle; }
+    // .#{$ns}grid--bottom { @extend %grid--bottom; }
 
     // grid-item
 
-    .grid-item { @extend %grid-item; }
+    .#{$ns}grid-item { @extend %grid-item; }
 
 } // endif

@@ -18,11 +18,11 @@ Hides overflow but allows for scrolling either vertically or horizontally.
 
 @if $export_scrollable {
 
-    .scrollbar { // horizontally scrollable
+    .#{$ns}scrollbar { // horizontally scrollable
         @extend %scrollbar;
     }
 
-    .scrollbox { // vertically scrollable
+    .#{$ns}scrollbox { // vertically scrollable
         @extend %scrollbox;
     }
 
