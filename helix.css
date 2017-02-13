@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! HelixCSS v1.1.1 | License: MIT | Author: Marc Wiest (marcwiest.com) */
+/*! HelixCSS v1.2 | License: MIT | Author: Marc Wiest (marcwiest.com) */
 /*
 Extract
 
@@ -542,7 +542,6 @@ Vertical Rythem Height
 
 /*
 Viewport Height
-Min-height, in CSS, overwrites the height property.
 */
 .vh33 { min-height: 33vh !important; }
 

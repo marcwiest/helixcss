@@ -8,6 +8,9 @@
 
 ---
 
+## v1.2 – February 13, 2017
+- Added namespace variable.
+
 ## v1.1.1 – February 11, 2017
 - Removed old export variables.
 - Removed width 100% for text based form inputs.
